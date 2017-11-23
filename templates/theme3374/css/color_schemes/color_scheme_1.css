@@ -140,7 +140,7 @@
   color: #3ec7c2;
 }
 .parallax {
-  background: #3ec7c2;
+  background: #1b5df9; /* Was #3ec7c2
 }
 .parallax ul.systems li {
   color: #229692;
@@ -206,7 +206,7 @@ div.chzn-container .chzn-results li.highlighted {
 .input-prepend {
   /* .add-on:first-child,
   .btn:first-child {
-    
+
     } */
 }
 .input-prepend .add-on i,
@@ -235,46 +235,46 @@ div.chzn-container .chzn-results li.highlighted {
   background: #229692;
 }
 /* .btn-info {
-  
-  
+
+
   &:hover {
-    
-    
+
+
   }
 } */
 /* .btn-default {
-    
+
 }
 .btn-primary {
-    
+
 }
 
 .btn-success {
-    
+
 }
 
 .btn-info {
-    
+
 }
 
 .btn-warning {
-    
+
 }
 
 .btn-danger {
-    
+
 }
  */
-/* 
+/*
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  
+
 }
 .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
-  
+
 } */
 .nav-tabs > li > a {
   background: #3ec7c2;
@@ -294,27 +294,27 @@ div.chzn-container .chzn-results li.highlighted {
   background: #3ec7c2;
 }
 /*.label-default {
-  
+
 }
 
 .label-primary {
-  
+
 }
 
 .label-success {
-  
+
 }
 
 .label-info {
-  
+
 }
 
 .label-warning {
-  
+
 }
 
 .label-danger {
-  
+
 }
 */
 .progress-bar-default .progress-bar__stroke {
@@ -364,22 +364,22 @@ ul.icons li a:hover {
   color: #3ec7c2 !important;
 }
 /* .panel-default {
-     
+
   } */
 /*.panel-primary {
-     
+
 }
 .panel-success {
-     
+
 }
 .panel-info {
-     
+
 }
 .panel-warning {
-     
+
 }
 .panel-danger {
-     
+
 }*/
 .modal {
   background: #3ec7c2;
@@ -456,36 +456,36 @@ div#fixed-sidebar-right .moduletable.login .mod_login_wrapper .input-prepend .ad
 .icemegamenu > ul > li > a.iceMenuTitle:hover,
 .icemegamenu > ul > li > a.iceMenuTitle.hover,
 .icemegamenu > ul > li > a.iceMenuTitle.icemega_active {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 .icemegamenu > ul > li > a.iceMenuTitle:hover:before,
 .icemegamenu > ul > li > a.iceMenuTitle.hover:before,
 .icemegamenu > ul > li > a.iceMenuTitle.icemega_active:before {
-  background: #3ec7c2;
+  background: #1b5df9; /* was #3ec7c2 */
 }
 .icemegamenu > ul > li.active > a.iceMenuTitle,
 .icemegamenu > ul > li.hover > a.iceMenuTitle {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 .icemegamenu > ul > li.active > a.iceMenuTitle:before,
 .icemegamenu > ul > li.hover > a.iceMenuTitle:before {
-  background: #3ec7c2;
+  background: #1b5df9; /* was #3ec7c2 */
 }
 ul.icesubMenu li.active > a.iceMenuTitle,
 ul.icesubMenu li:hover > a.iceMenuTitle,
 ul.icesubMenu li.hover > a.iceMenuTitle {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 @media (max-width: 767px) {
   .rd-mobilemenu_ul a.iceMenuTitle:hover {
-    background: #3ec7c2;
+    background: #1b5df9; /* was #3ec7c2 */
   }
   .rd-mobilemenu_ul a.active,
   .rd-mobilemenu_ul li.level_1.active > a {
-    color: #3ec7c2;
-    background: #3ec7c2;
+    color: #1b5df9; /* was #3ec7c2 */
+    background: #1b5df9; /* was #3ec7c2 */;
   }
   .rd-mobilemenu_submenu li.active > a {
-    color: #3ec7c2;
+    color: #1b5df9; /* was #3ec7c2 */
   }
 }

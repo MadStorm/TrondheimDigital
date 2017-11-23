@@ -9434,7 +9434,7 @@ div#fixed-sidebar-right .moduletable.login .mod_login_wrapper .input-prepend .ad
   display: block;
   font: 18px / 24px 'Raleway', sans-serif;
   padding: 0px;
-  color: #ffffff;
+  color: #000000;  /* Changed - #ffffff */
   background: transparent;
   text-transform: uppercase;
   position: relative;
@@ -10228,7 +10228,7 @@ body:not(.modal-open) .stuck {
   max-width: none;
 }
 #top {
-  background: #1b1b1b;
+  background: #ffffff; /* changed - #1b1b1b */
   padding-top: 35px;
   width: 100%;
 }
@@ -10253,6 +10253,7 @@ body:not(.modal-open) .stuck {
   font-weight: bold;
   color: white !important;
   margin-right: -8px;
+  display: none; /* Added this line */
 }
 .search-block {
   text-align: right;
