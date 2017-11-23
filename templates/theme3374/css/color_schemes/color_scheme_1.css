@@ -112,32 +112,32 @@
 @keyframes fadeIn {
 }
 .mod-newsflash-adv *[class*=puppets] {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 .mod-newsflash-adv.services .item_title {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 .mod-newsflash-adv.mod-newsflash-adv__type1 .item_title,
 .mod-newsflash-adv.mod-newsflash-adv__type2 .item_title {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 .mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item .item_content {
-  border: 1px solid #3ec7c2;
+  border: 1px solid #1b5df9; /* was #3ec7c2 */
 }
 .mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item .item_content .item_title {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 .mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item.featured .item_content .btn:hover {
-  background: #3ec7c2;
+  background: #1b5df9; /* was #3ec7c2 */
 }
 .mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .item_title {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 .mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item i.caption {
-  background: #3ec7c2;
+  background: #1b5df9; /* was #3ec7c2 */
 }
 .mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .item_content ul li.fa-check-circle:before {
-  color: #3ec7c2;
+  color: #1b5df9; /* was #3ec7c2 */
 }
 .parallax {
   background: #1b5df9; /* Was #3ec7c2
@@ -219,8 +219,8 @@ div.chzn-container .chzn-results li.highlighted {
 /* Allow for input prepend/append in search forms */
 .btn,
 .kbutton {
-  background: #3ec7c2;
-  border-bottom: 4px solid #229692;
+  background: #1b5df9; /* was #3ec7c2 */
+  border-bottom: 4px solid #0a0b37; /* Was #229692 */
 }
 .btn:hover,
 .kbutton:hover,
@@ -232,7 +232,7 @@ div.chzn-container .chzn-results li.highlighted {
 .kbutton.active,
 .btn.selected,
 .kbutton.selected {
-  background: #229692;
+  background: #0a0b37; /* was #229692 */
 }
 /* .btn-info {
 
