@@ -1,0 +1,646 @@
+/*===== Privacy Page ======*/
+
+.page-item__privacy_policy .item_fulltext {
+  *[class*=heading-style] {
+  }
+}
+
+/*===== History Page ======*/
+.page-category__history {
+  .items-row {
+    position: relative;
+    > div {
+      clear: both;
+      position: relative;
+      &:before {
+        color: @white;
+        content: '\f073';
+        display: block;
+        font-family: @fa;
+        position: absolute;
+        line-height: 40px;
+        .border-radius(1000px);
+        right: -21px;
+        text-align: center;
+        top: 15px;
+        width: 40px;
+        background: @global-color;
+      }
+      .item {
+        border: 1px solid @table-border-color;
+        margin-right: 25px;
+        padding: 30px;
+        position: relative;
+        &:before,
+        &:after {
+          border-bottom: 10px solid transparent;
+          border-top: 10px solid transparent;
+          content: '';
+          position: absolute;
+          top: 24px;
+        }
+        &:before {
+          border-left: 10px solid @table-border-color;
+          right: -10px;
+        }
+        &:after {
+          border-left: 10px solid @body-bg;
+          right: -9px;
+        }
+        .item_introtext {
+          p {
+            padding-bottom: 0;
+          }
+        }
+        .item_info {
+          left: 100%;
+          margin-left: 80px;
+          position: absolute;
+          top: 20px;
+        }
+
+        @media(max-width: 767px){
+          margin-bottom: 30px;
+        }
+      }
+      & + div {
+        float: right;
+        &:before {
+          left: -19px;
+          right: auto;
+        }
+        .item {
+          margin-left: 25px;
+          margin-right: 0;
+          &:before,
+          &:after {
+            border-bottom: 10px solid transparent;
+            border-left: none;
+            border-top: 10px solid transparent;
+            content: '';
+            position: absolute;
+            right: auto;
+            top: 24px;
+          }
+          &:before {
+            border-right: 10px solid @table-border-color;
+            left: -10px;
+          }
+          &:after {
+            border-right: 10px solid @body-bg;
+            left: -9px;
+          }
+          .item_info {
+            left: auto;
+            margin-left: 0;
+            margin-right: 80px;
+            right: 100%;
+          }
+        }
+      }
+    }
+    &:before {
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 50%;
+      margin-left: 0;
+      position: absolute;
+      top: 0;
+      width: 2px;
+      background: @global-color;
+
+      @media(max-width: 767px){
+        display: none;
+      }
+    }
+  }
+  .item_info_dl {
+    font-size: inherit;
+  }
+}
+
+/*===== FAQ Page ======*/
+
+.page-category__faqs {
+  .item_title {
+    span.item_title_part0 {
+      color: @global-color;
+    }
+  }
+  .to_top {
+    margin-bottom: 30px;
+    position: relative;
+    text-align: right;
+    &:before {
+      background: @text-color;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+    }
+    a {
+      font-size: 18px;
+    }
+  }
+  .item {
+    margin-bottom: 0;
+  }
+}
+
+/*======================= Archives Page ========================*/
+
+.page-archive_filters {
+  .filter-search {
+    overflow: hidden;
+    padding-bottom: 21px;
+  }
+  select,
+  button {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+}
+
+/*======================= Contacts Page ========================*/
+
+#jform_contact_message {
+  height: 149px;
+  resize: none;
+  width: 100%;
+}
+
+#contact-form {
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
+
+.contact_misc {
+  margin-bottom: 15px;
+}
+
+#contact {
+  margin-top: 15px;
+}
+
+.phone-num {
+  display: inline-block;
+}
+
+#jform_contact_name,
+#jform_contact_email,
+#jform_contact_emailmsg {
+  width: 100%;
+}
+
+.contact_email-copy,
+.contact_vcard {
+  display: inline-block;
+  height: @input-height-base;
+  line-height: @input-height-base;
+  margin: 0 @input-height-base/2 0 0;
+}
+
+.contact_vcard {
+  margin: 0;
+}
+
+.contact_details {
+  .icons-marker {
+    display: block;
+    float: left;
+    line-height: @line-height-base;
+    margin-right: 5px;
+    width: 16px;
+    color: @text-color;
+  }
+
+  h5{
+    text-align: left;
+  }
+
+  @media(max-width:767px){
+    margin-bottom: 30px;
+  }
+}
+
+.contact_address {
+  overflow: hidden;
+  padding-bottom: @line-height-base;
+}
+
+.contact_details_fax {
+  padding-bottom: @line-height-base;
+}
+
+#contact_map {
+  margin-bottom: @line-height-base;
+  .map {
+    border: 1px solid darken(@body-bg, 15%);
+    .box-sizing(border-box);
+    &.mfp-hide {
+      display: block !important;
+    }
+  }
+}
+
+#map {
+  margin-bottom: 30px;
+  header {
+    margin-bottom: 30px;
+  }
+}
+
+.map {
+  img {
+    max-width: none !important;
+  }
+}
+
+.mfp-content {
+  .map {
+    max-width: @container-large-desktop;
+  }
+}
+
+.contact_details_item {
+  margin-bottom: 20px;
+}
+
+/*======================= 404 PAGE =======================*/
+
+.errorBox {
+  background: none;
+  text-align: left;
+}
+
+#error {
+  .well {
+    margin-bottom: 0;
+  }
+}
+
+.body__404 {
+  .big-404 {
+    text-align: center;
+  }
+  big {
+    display: block;
+    font-weight: bold;
+    padding: 0 0 @font-size-base;
+  }
+
+  .page-item__404 {
+    padding: 50px 0 100px 0;
+  }
+
+  img{
+    .box-shadow(none);
+
+    @media(max-width: 767px){
+      width: 100%;
+    }
+  }
+
+  input{
+    width: auto;
+    float: left;
+    margin-right: 5px;
+  }
+
+  .mod-search_searchword + .btn {
+    margin-top: 0;
+  }
+
+  .navbar-form{
+    padding: 0;
+  }
+}
+
+/*======================= Site Map =======================*/
+.site_map {
+
+  h1, h2, h3, h4, h5, h6{
+    text-align: left;
+  }
+  
+  .menu ul {
+    padding-left: 15px;
+    ul {
+      padding-left: 30px;
+      ul {
+        padding-left: 45px;
+      }
+    }
+  }
+}
+
+/*======================= Registration =======================*/
+#member-registration,
+#member-profile,
+#user-registration {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  .chzn-container {
+    width: 100% !important;
+  }
+  #helpsite-refresh {
+    margin-top: 10px;
+  }
+  .btn {
+    vertical-align: top;
+  }
+  .input-append {
+    .box-sizing(border-box);
+    padding-right: @input-height-base;
+    width: 50%;
+  }
+  .calendar_wrapper {
+    #jform_profile_dob_spacer-lbl {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
+
+.page-login {
+  text-align: center;
+  .btn {
+    vertical-align: inherit;
+  }
+  width: 50%;
+  margin: 0 auto;
+  .input-prepend {
+    width: 100%;
+  }
+
+  form mark{
+    top: 0;
+  }
+}
+
+/*======================= ADMIN EDIT PAGES =======================*/
+#modules-form, #adminForm {
+  .chzn-container {
+    width: 100% !important;
+  }
+  .input-prepend, .input-append {
+    .btn + .btn {
+      margin-left: 1px;
+    }
+  }
+  .radio.btn-group > label {
+  }
+  .btn-toolbar > .btn {
+    margin: 0 5px 5px 0;
+    + .btn {
+      margin-left: 0;
+    }
+  }
+  .accordion-inner{
+    padding: 5px;
+  }
+
+  span.radio{
+    display: none;
+  }
+
+  #jform_published{
+    .btn{
+      display: inline-block !important;
+    }
+  }
+
+  .btn-toolbar{
+    margin-bottom: 20px;
+  }
+}
+
+#adminForm #images {
+  .input-prepend.input-append {
+    width: 100%;
+    .btn {
+      width: 5%;
+      + input {
+        width: 85%;
+        + .btn {
+          width: 5%;
+          + .btn{ 
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #contact_map {
+    height: 376px;
+  }
+
+  .page-category__history .items-row {
+    &:before {
+      margin-left: 9px;
+    }
+    > div:before {
+      right: -31px;
+    }
+    > div + div:before {
+      left: -10px;
+    }
+  }
+}
+
+@media (max-width: 979px) {
+  .page-category__history .items-row {
+    &:before {
+      margin-left: 5px;
+    }
+    > div:before {
+      right: -27px;
+    }
+    > div + div::before {
+      left: -18px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // History
+  .page-category__history .items-row {
+    &:before {
+      left: 19px;
+      margin-left: 0;
+    }
+    > div + div {
+      float: none;
+      &:before {
+        left: 0;
+        display: none;
+      }
+    }
+    > div::before {
+      left: 0;
+      right: auto;
+      display: none;
+    }
+    > div .item {
+      margin-left: 50px !important;
+      margin-right: 0 !important;
+      &:before {
+        border-left: none;
+        border-right: 10px solid #E5E5E5;
+        left: -10px;
+        right: auto;
+        display: none;
+      }
+      &:after {
+        border-left: none;
+        border-right: 10px solid #E5E5E5;
+        left: -10px;
+        right: auto;
+        display: none;
+      }
+    }
+    > div .item .item_info,
+    > div + div .item .item_info {
+      margin: 0;
+      position: static;
+    }
+  }
+
+  .body__404 .big-404 {
+    margin-bottom: 15px;
+  }
+
+  #member-registration,
+  #member-profile,
+  #user-registration,
+  .page-login {
+    width: 100%;
+  }
+
+  #helpsite-refresh {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .page_profile {
+    .btn-toolbar {
+      float: none;
+    }
+  }
+
+  .input-prepend input {
+    width: 100%;
+  }
+
+  .page-category__history .items-row > div .item{
+    margin-left: 0 !important;
+  }
+
+  #adminForm #images .input-prepend.input-append .btn {
+    width: 10%;
+    + input {
+      width: 75%;
+      padding-left: 12%;
+      + .btn {
+        width: 10%;
+      }
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  #modules-form {
+    fieldset#jform_published {
+      label.btn {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .row-fluid [class*="span"].site_map {
+    float: left;
+    width: 50%;
+    &:nth-child(2n-1) {
+      clear: both;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .control-label + .controls {
+    margin-top: 10px;
+  }
+
+  .page-category__history .items-row > div .item {
+    padding: 20px;
+  }
+
+  .page-item__privacy_policy .item_fulltext {
+    *[class*=heading-style] {
+      float: none;
+      width: 100%;
+    }
+    p {
+      margin-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  #modules-form {
+    .btn {
+      span:not(.icon-calendar) {
+        display: none;
+      }
+    }
+    .form-horizontal .control-label {
+      padding-bottom: 10px;
+      padding-top: 0;
+    }
+  }
+
+  #adminForm #images .input-prepend.input-append .btn {
+    width: 13%;
+    + input {
+      width: 64%;
+      padding-left: 15%;
+      + .btn {
+        width: 15%;
+      }
+    }
+  }
+  #login-form,
+  #member-registration,
+  #member-profile,
+  #user-registration{
+    .controls {
+      .input-prepend,.input-append{
+        .btn{
+          margin-bottom: 0;
+        }
+      }
+      .btn{
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  #adminForm .btn-toolbar .btn-group{
+    margin-bottom: 10px;
+  }
+
+}
+

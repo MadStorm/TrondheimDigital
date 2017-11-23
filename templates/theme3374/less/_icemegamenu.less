@@ -1,0 +1,274 @@
+@import "_variables.less";
+@import "bootstrap/_mixins.less";
+
+// =======================
+// Mega Menu
+// =======================
+
+//Level 0
+//Font
+@menu-item-font-size: @font-size-base + 4;
+@menu-item-line-height: @line-height-base;
+@menu-item-font-family: @font-family-base;
+
+//Margin
+@menu-item-margin: 31px;
+
+//Colors
+@menu-item-color: @text-color;
+@menu-item-act-color: @global-color;
+@menu-item-bg-color: transparent;
+@menu-item-bg-act-color: transparent;
+@menu-item-desc-color: @text-color;
+
+//Parent Icon
+@menu-parent-icon: '\f078';
+@menu-parent-icon-size: 8px;
+@menu-parent-icon-color: inherit;
+@menu-parent-icon-margin: 5px;
+
+//Level 1+
+//Font
+
+@sub-menu-item-font-size: @menu-item-font-size;
+@sub-menu-item-line-height: @menu-item-line-height;
+@sub-menu-item-font-family: @font-family-sans-serif;
+
+//Colors
+@sub-menu-bg: #1b1b1b;
+@sub-menu-item-color: white;
+@sub-menu-item-act-color: @global-color;
+@sub-menu-item-bg-color: transparent;
+@sub-menu-item-bg-act-color: transparent;
+
+//Layout
+@sub-menu-border: none;
+@sub-menu-margin-top: 20px;
+
+.icemegamenu {
+  float: right;
+  position: static;
+  > ul {
+    clear: both;
+    margin: 22px 0 0;
+    padding: 0;
+    width: 100%;
+    z-index: 999;
+    .clearfix;
+    > li {
+      display: block;
+      float: left;
+      position: relative;
+      + li {
+        margin-left: @menu-item-margin;
+      }
+      > a.iceMenuTitle {
+        display: block;
+        font: (@menu-item-font-size)~"/"(@menu-item-line-height) @menu-item-font-family;
+        padding: 0px;
+        color: @menu-item-color;
+        background: @menu-item-bg-color;
+        text-transform: uppercase;
+        position: relative;
+        &:before {
+          content: '';
+          height: 1px;
+          width: 0px;
+          background: transparent;
+          position: absolute;
+          left: 50%;
+          top: 100%;
+          .translate(-50%, 0%);
+          .transition(all .2s linear);
+          margin-top: 10px;
+        }
+        * {
+          font: inherit;
+        }
+        &:hover,
+        &.hover,
+        &.icemega_active {
+          color: @menu-item-act-color;
+          background: @menu-item-bg-act-color;
+          &:before {
+            content: '';
+            height: 1px;
+            width: 29px;
+            background: @menu-item-act-color;
+          }
+        }
+      }
+      &.active,
+      &.hover {
+        > a.iceMenuTitle {
+          color: @menu-item-act-color;
+          background: @menu-item-bg-act-color;
+          &:before {
+            content: '';
+            height: 1px;
+            width: 29px;
+            background: @menu-item-act-color;
+          }
+        }
+      }
+      span.icemega_desc {
+        color: @menu-item-desc-color;
+        display: block;
+        line-height: 1.25em;
+        padding: 0;
+      }
+    }
+  }
+  .ice-megamenu-toggle {
+    display: none;
+  }
+}
+
+/* when dont have subtitle */
+.icemegamenu > ul > li > a.iceMenuTitle > span.icemega_nosubtitle {
+  display: inline-block;
+}
+
+// Submenu
+ul.icesubMenu {
+  height: 0;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 18px 0;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  .transition(all .25s ease-out);
+  .translate(0%, 30px);
+  z-index: 9999;
+  background: @sub-menu-bg;
+  border: @sub-menu-border;
+  > li {
+    .clearfix();
+  }
+  li {
+    a.iceMenuTitle {
+      display: block;
+      font: (@sub-menu-item-font-size)~"/"(@sub-menu-item-line-height) @sub-menu-item-font-family;
+      padding: 4px 20px;
+      color: @sub-menu-item-color;
+      text-transform: uppercase;
+    }
+    &.active,
+    &:hover,
+    &.hover {
+      > a.iceMenuTitle {
+        color: @sub-menu-item-act-color;
+        background: @sub-menu-item-bg-act-color;
+      }
+    }
+  }
+  &.sub_level_1 {
+    margin-top: @sub-menu-margin-top;
+  }
+  &.sub_level_2 {
+    margin-top: -15px;
+  }
+}
+
+li[class*=iceMenuLiLevel] {
+  padding: 0;
+  &:before {
+    display: none;
+  }
+}
+
+#icemegamenu li.iceMenuLiLevel_1.hover {
+  > ul.icesubMenu {
+    opacity: 1;
+    overflow: visible;
+    pointer-events: auto;
+    .translate(0%, 0px);
+  }
+}
+
+#icemegamenu li.iceMenuLiLevel_1 li.hover > ul.icesubMenu {
+  height: auto;
+  opacity: 1;
+  overflow: visible;
+  pointer-events: auto;
+  .translate(0, 0px);
+}
+
+#icemegamenu ul.icesubMenu.visible {
+  height: auto;
+}
+
+ul.icesubMenu ul > li {
+  position: relative;
+}
+
+/* when is parent */
+ul.icesubMenu {
+  > li {
+    &:before {
+      display: none;
+    }
+    > .iceCols {
+      max-width: 100% !important;
+      width: 100%;
+    }
+  }
+}
+
+/* Second Level Dropdown */
+ul.sub_level_2,
+ul.sub_level_3,
+ul.sub_level_4,
+ul.sub_level_5 {
+  left: 100%;
+  margin-top: -15px;
+  top: 0px;
+  .translate(30px, 0);
+  z-index: 99999;
+}
+
+ul.icesubMenu ul > li.hover > ul {
+  opacity: 1;
+  overflow: visible;
+  .translate(0, 0);
+  visibility: visible;
+}
+
+.icesubMenu .icemega_cover_module span.iceModuleTile {
+  display: block;
+}
+
+.ice_righttoleft {
+  left: auto !important;
+  right: 0;
+}
+
+.icemega_modulewrap {
+  padding: 20px;
+}
+
+.nav-collapse .icesubMenu {
+  .nav > li > a,
+  .dropdown-menu a {
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.nav-collapse.collapse {
+  height: auto;
+}
+
+.rd-mobilemenu_ul a.active, .rd-mobilemenu_ul li.level_1.active > a {
+  color: white !important;
+}
+
+@media (max-width: 979px) {
+  .icemegamenu {
+    overflow: visible !important;
+  }
+}

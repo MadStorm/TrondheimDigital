@@ -1,0 +1,1 @@
+this.onmessage=function(a){var b=a.data.imgData,intensity=a.data.intensity,px=b.data,grey=null,length=px.length;for(var i=0;i<length;i+=4){var k=px[i]*0.3+px[i+1]*0.59+px[i+2]*0.11;px[i]=~~(k*intensity+px[i]*(1-intensity));px[i+1]=~~(k*intensity+px[i+1]*(1-intensity));px[i+2]=~~(k*intensity+px[i+2]*(1-intensity))}postMessage(b)};

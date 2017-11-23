@@ -1,0 +1,77 @@
+//
+// Alerts
+// --------------------------------------------------
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: 28px 128px 28px;
+  min-height: 60px;
+  margin-bottom: @line-height-base;
+  background-color: @alert-warning-bg;
+  position: relative;
+  color: @alert-warning-text;
+  h4 {
+    color: @alert-warning-text;
+  }
+  &:before {
+    position: absolute;
+    font-family: FontAwesome;
+    left: 26px;
+    top: 50%;
+    line-height: 0;
+    content: '\f071';
+    font-size: 79px;
+    color: @warning-icon-color;
+  }
+}
+
+// Adjust close link position
+.alert .close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  line-height: @line-height-base;
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissible {
+  padding-right: (@alert-padding + 20);
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+  }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-success {
+  .alert-variant(@alert-success-bg; @alert-success-border; @alert-success-text);
+}
+
+.alert-info {
+  .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+}
+
+.alert-warning {
+  .alert-variant(@alert-warning-bg; @alert-warning-border; @alert-warning-text);
+}
+
+.alert-danger {
+  .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+}

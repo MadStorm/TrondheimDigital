@@ -1,0 +1,106 @@
+//
+// Progress bars
+// --------------------------------------------------
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+
+@bgColor: @global-color;
+@stroke-color: @global-color;
+@trail-color: @text-color;
+
+.progress-bar-wrap{
+  max-width: 100%;
+  width: 210px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  .progress-bar__body {
+    position: absolute;
+    right: 50%;
+    width: 100%;
+    top: 50%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    &:after{
+      content: '%';
+    }
+  }
+  .progress-bar__stroke,
+  .progress-bar__trail{
+    stroke-linejoin: round;
+  }
+}
+
+.progress-bar-horizontal{
+  text-align: left;
+  > svg{
+    margin-top: 7px;
+  }
+  .progress-bar__body{
+    width: auto!important;
+    top: -29px;
+    right: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+
+.progress-bar-radial{
+  position: relative;
+  padding-bottom: 100%;
+  > svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    .border-radius(50%);
+    overflow: hidden;
+  }
+  .progress-bar__stroke,
+  .progress-bar__trail{
+    stroke-location: outside;
+  }
+  //--------IE fix----------------------
+  &.progress-zero .progress-bar__stroke{
+    stroke-dasharray: 279, 280 !important;
+  }
+  &.progress-full .progress-bar__stroke{
+    stroke-dasharray: 280, 280 !important;
+  }
+  //--------End IE fix------------------
+  .progress-bar__body{
+    .translate(50%, -50%);
+    font-size: 60px;
+    line-height: 60px;
+    @media(max-width:1199px){
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+
+.progress-bar-default {
+  .progress-bar__stroke{
+    stroke: @global-color;
+  }
+  .progress-bar__trail{
+    stroke: @trail-color;
+  }
+  &.progress-bar-radial{
+    .progress-bar__stroke{
+    stroke: @global-color;
+  }
+  .progress-bar__trail{
+      stroke: @text-color;
+    }
+  }
+}

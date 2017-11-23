@@ -1,0 +1,415 @@
+@import "_variables.less";
+@import "bootstrap/_mixins.less";
+
+// =======================
+// Komento
+// =======================
+
+//Avatar
+@avatar-width: 48px;
+@avatar-border-radius: 50%;
+@avatar-margin: 20px;
+
+//Author
+@author-font-size: 24px;
+@author-font-weight: 400;
+@author-font-family: @font-family-base;
+@author-line-height: 30px;
+@author-color: @text-color;
+@author-name-color: @headings-color;
+
+//InReplyTo
+@in-reply-color: @headings-color;
+@in-reply-link-color: @headings-color;
+@in-reply-link-hover-color: @text-color;
+
+//Comment
+@comment-bg: transparent;
+@comment-color: @text-color;
+@comment-margin-bottom: 20px;
+@comment-padding: 20px;
+@comment-border: none;
+@comment-border-radius: 0px;
+
+//Time
+@time-font-size: 16px;
+@time-color: @headings-color;
+@time-hover-color: @text-color;
+
+//Time Icon
+@time-icon: '\f017';
+@time-icon-font-family: @fa;
+@time-icon-font-size: 18px;
+@time-icon-color: @text-color;
+
+//Like, Share Buttons
+@like-btn-height: 23px;
+@like-btn-width: 30px;
+@like-btn-border: none;
+@like-btn-border-radius: 0px;
+@like-btn-font-size: 14px;
+@like-btn-background: transparent;
+@like-btn-color: @text-color;
+@like-btn-hover-background: @headings-color;
+@like-btn-hover-color: @text-color;
+
+//LikeCounter
+@counter-border-color: #FFF;
+@counter-bg: transparent;
+@counter-color: @text-color;
+@counter-hover-bg: @headings-color;
+@counter-hover-color: @text-color;
+
+.kmt-disabled{
+  cursor: inherit !important;
+}
+
+.page-blog {
+  .item {
+    > .kmt-readon {
+      display: none;
+    }
+  }
+}
+
+.kmt-readon {
+  vertical-align: top;
+  width: auto !important;
+
+}
+
+.komento .kmt-readon  span.kmt-comment{
+  background: none;
+}
+
+#section-kmt {
+  .kmt-author {
+    height: auto;
+    text-transform: none;
+    color: inherit;
+    a {
+      height: auto;
+    }
+  }
+
+  // Avatar
+
+  .kmt-avatar {
+    float: left;
+    margin-right: @avatar-margin;
+    position: relative;
+    width: @avatar-width;
+    z-index: 10;
+    a,
+    a img {
+      .border-radius(@avatar-border-radius);
+      width: 100%;
+    }
+  }
+  .kmt-avatar + .kmt-content,
+  .kmt-rank + .kmt-content {
+    margin-left: @avatar-width+@avatar-margin;
+  }
+  #kmt-fame {
+    margin: 0;
+  }
+
+  // Comment
+
+  .kmt-list.reset-child {
+    text-align: left;
+    > li.kmt-empty-comment {
+      margin-top: 0;
+    }
+    li + li .kmt-wrap {
+      margin-top: @comment-margin-bottom;
+    }
+    .kmt-wrap {
+      padding: @comment-padding;
+      background: @comment-bg;
+      border: 1px solid @table-border-color;;
+      color: @comment-color;
+      .border-radius(@comment-border-radius);
+    }
+  }
+
+  // Author
+
+  .kmt-head {
+    font: @author-font-weight (@author-font-size)~"/"(@author-line-height) @author-font-family;
+    color: @author-color;
+    height: auto !important;
+    .author-kmt span span {
+      color: @author-name-color;
+    }
+    .author-kmt a {
+      color: @in-reply-link-color;
+      &:hover {
+        color: @in-reply-link-hover-color;
+      }
+    }
+  }
+
+  // InReplyTo
+
+  .kmt-inreplyto {
+    color: @in-reply-color;
+    a {
+      color: @in-reply-link-color;
+      &:hover {
+        color: @in-reply-link-hover-color;
+      }
+    }
+  }
+  .kmt-form-content {
+    .kmt-form-addon > div {
+      max-width: 90%;
+      b {
+        margin-bottom: 10px !important;
+      }
+      .input.kmt-location {
+        max-width: 100%;
+      }
+    }
+  }
+  .kmt-content {
+    .parentContainer {
+      left: -70px;
+      right: -15px;
+      .kmt-author {
+        margin-left: 7px;
+      }
+    }
+  }
+  .input[type="checkbox"] {
+    margin-top: 0;
+  }
+  .radio input[type="radio"],
+  .checkbox input[type="checkbox"] {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  .radio, .checkbox {
+    background: none !important;
+    border: none !important;
+    padding: 0;
+  }
+  .kmt-profile-avatar {
+    width: 60px;
+  }
+  .kmt-profile-activity {
+    li {
+      min-width: 0 !important;
+      padding: 15px 8px !important;
+    }
+  }
+
+  // Time
+  .kmt-time {
+    font-size: 16px;
+    color: @time-color;
+    &:before {
+      content: @time-icon;
+      font-family: @time-icon-font-family;
+      font-size: @time-icon-font-size;
+      color: @time-icon-color;
+    }
+    a {
+      color: inherit;
+      &:hover {
+        color: @time-hover-color;
+      }
+    }
+    i {
+      margin-right: 3px;
+    }
+  }
+
+  //Like, Share Buttons
+
+  .kmt-control-user .kmt-btn {
+    font-size: @like-btn-font-size;
+    margin-left: 5px;
+    padding: 0;
+    width: @like-btn-width;
+    line-height: @like-btn-height;
+    height: @like-btn-height;
+    border: 1px solid lighten(desaturate(spin(@global-color, -0.16473648355727732), 2.310186695320141%), 10.196078431372555%);
+    background: @like-btn-background;
+    color: lighten(desaturate(spin(@global-color, 0.07780082987554238), 6.43160969610004%), 20.588235294117645%);;
+    text-align: center;
+    .border-radius(@like-btn-border-radius);
+    .box-sizing(border-box);
+    &:hover {
+      color: @like-btn-hover-color;
+    }
+  }
+  .kmt-toolbar {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  //LikeCounter
+
+  .kmt-like-counter {
+    border: 1px solid lighten(desaturate(spin(@global-color, -0.16473648355727732), 2.310186695320141%), 10.196078431372555%);
+    line-height: @like-btn-height;
+    background: @counter-bg;
+    color: @counter-color;
+    height: @like-btn-height;
+    .border-radius(@like-btn-border-radius);
+    .box-sizing(border-box);
+    .transition(.3s all ease);
+    &:before,
+    &:after {
+      border-bottom: 5px solid transparent;
+      border-top: 5px solid transparent;
+      content: '';
+      left: 100%;
+      margin-top: -5px;
+      position: absolute;
+      top: 50%;
+      .transition(.3s all ease);
+    }
+    &:before {
+      border-left: 5px solid lighten(desaturate(spin(@global-color, -0.16473648355727732), 2.310186695320141%), 10.196078431372555%);
+      margin-left: 1px;
+    }
+    &:after {
+      border-left: 5px solid @counter-bg;
+    }
+    &:hover {
+      color: @counter-hover-color;
+    }
+  }
+  .kmt-control-user .kmt-like.cancel,
+  .kmt-control-user .kmt-reply.cancel {
+    color: @linkColorHover;
+  }
+  .kmt-option > span.kmt-admin-wrap > ul {
+    background: @dropdown-bg;
+    border: 1px solid @dropdown-border;
+  }
+  .kmt-admin-list {
+    font-size: ceil(@font-size-base*.85);
+  }
+  .kmt-admin-wrap:hover {
+    a.kmt-admin-link {
+      color: @linkColorHover;
+    }
+  }
+  .kmt-form-content .kmt-form-addon {
+   // border: @table-border-color;
+    border-top: none;
+  }
+  .markItUpContainer {
+    //border: @table-border-color;
+  }
+  .kmt-rank-bar {
+    background: @text-color;
+  }
+  .kmt-rank-progress {
+    background: @global-color;
+  }
+  .kmt-form-author ul {
+    margin: 0 0 0 -@grid-gutter-width;
+    li.col {
+      .box-sizing(border-box);
+      padding-left: @grid-gutter-width;
+      width: 33.33%;
+      div {
+        position: relative;
+      }
+    }
+  }
+  .kmt-form {
+    margin: 30px 0;
+  }
+  .kmt-form-editor {
+    > div {
+      position: relative;
+      > .input.textarea {
+        height: 193px;
+      }
+    }
+  }
+  .kmt-form-submit {
+    position: relative;
+  }
+  .kmt-item {
+    .kmt-form-submit {
+
+      .btn {
+        margin-right: 6px;
+      }
+    }
+  }
+  .kmt-body {
+    margin-bottom: 0;
+  }
+  #kmt-form {
+    //border-bottom: 1px solid @table-border-color;;
+    padding-bottom: 60px;
+  }
+  .kmt-text p {
+    padding-bottom: 20px;
+  }
+  .editInput.kmt-edit-form-input {
+    height: 193px;
+    width: 100%;
+  }
+  .submitButton {
+    border: none;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    img {
+      display: none;
+    }
+  }
+}
+
+.kmt-readon span.kmt-comment {
+  background: none;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+.foundryDialog .dialog-head {
+  padding-right: 24px;
+}
+
+@media (max-width: 767px) {
+  #section-kmt {
+    .kmt-form-author ul {
+      li.col {
+        width: 100%;
+        + li {
+          margin-top: 10px;
+        }
+      }
+    }
+    .kmt-control-user {
+      .clearfix();
+      margin-top: 5px;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  #section-kmt {
+    .kmt-avatar {
+      float: none;
+      margin: 0 auto 15px;
+      + .kmt-content {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}

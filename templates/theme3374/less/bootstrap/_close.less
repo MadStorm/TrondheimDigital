@@ -1,0 +1,64 @@
+//
+// Close icons
+// --------------------------------------------------
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+
+.close {
+  position: absolute;
+  right: 0;
+  font-size: (@font-size-base * 1.5);
+  font-weight: @close-font-weight;
+  line-height: 1;
+  color: @close-color;
+  text-shadow: @close-text-shadow;
+  .opacity(.2);
+  z-index: 2;
+  &:hover,
+  &:focus {
+    color: @close-color;
+    text-decoration: none;
+    cursor: pointer;
+    .opacity(.5);
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+  button&,
+  button.close {
+    padding: 3px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
+
+#modal{
+  .close{
+    color: @white;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+    margin-right: 9px;
+    margin-top: 1px;
+    opacity: 1;
+    position: absolute;
+    right: 6%;
+    top: 5%;
+    z-index: 2;
+
+    &:hover{
+      color: @text-color;
+    }
+
+    @media(max-width:479px){
+      top: 0;
+      right: 0;
+    }
+  }
+}

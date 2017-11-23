@@ -1,0 +1,294 @@
+//=======================
+// Social Module Shell
+//=======================
+.login_shell {
+
+  background: darken(@global-color, 10%);
+
+  @media(max-width: 479px){
+    .lr_providericons{
+      font-size: 13px;
+    }
+  }
+  *[class*=heading-style] {
+    color: white;
+  }
+  form {
+    margin-bottom: 0;
+  }
+  button {
+    vertical-align: inherit;
+  }
+  .moduleTitle {
+    color: inherit;
+  }
+  .controls {
+    text-align: center;
+  }
+  .control{
+    position: relative;
+  }
+  input, textarea {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    padding: 0 14px;
+  }
+  .btn {
+    background: white;
+    color: black;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    padding: 0 14px;
+    &:focus,
+    &:hover {
+      background: @global-color2;
+      color: white;
+    }
+  }
+  .control-group{
+    & + .control-group{
+      margin-top: 5px;
+    }
+  }
+  .input-prepend {
+    display: block;
+  }
+  .add-on {
+    border: none;
+  }
+  * + .mod-login_submit {
+    margin: 0px;
+  }
+  .mod-login_submit{
+    .btn{
+      vertical-align: middle;
+    }
+  }  
+  label.checkbox {
+    color: white;
+    cursor: inherit;
+    span.checkbox input[type="checkbox"] {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .reset_remind {
+    color: white;
+    margin: 16px 0;
+    font-size: 14px;
+    font-weight: 300;
+    a {
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .login-greeting {
+    a {
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+//Social Buttons
+
+div[class*="lr_social_login_basic"] {
+  > a {
+    display: none;
+  }
+}
+
+* + .lr_social_login_basic_150 {
+
+}
+
+.lr_social_login_basic_150 {
+  width: 100% !important;
+  .lr_providers {
+    .lr_icons_box {
+      float: none !important;
+      width: 100% !important;
+      div {
+        float: none !important;
+        margin: 0 0 10px !important;
+      }
+    }
+    .lr_providericons {
+      color: #FFF;
+      display: block;
+      font-weight: 500;
+      height: 50px !important;
+      line-height: 49px;
+      position: relative;
+      text-align: center;
+      .transition(.2s);
+      width: auto !important;
+      z-index: 1 !important;
+      &:before {
+        display: inline-block;
+        font-family: @fa;
+        font-size: 21px;
+        vertical-align: middle;
+      }
+      &:hover {
+        .scale(1.05);
+      }
+    }
+    .lr_facebook {
+      background: #3B5998 !important;
+      &:before {
+        content: '\f09a';
+        margin-right: 13px;
+      }
+    }
+    .lr_google {
+      background: #DF4A32 !important;
+      &:before {
+        content: '\f0d5';
+        margin-right: 9px;
+      }
+    }
+  }
+}
+
+// =======================
+// Fixed Sidebar Right
+// =======================
+
+@sidebarIconWidth: 40px;
+@sidebarIconHeight: 40px;
+@sidebarIconFontSize: 18px;
+
+div#fixed-sidebar-right {
+  bottom: 0;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 0;
+  z-index: 1034;
+  .moduletable.login {
+    .box-sizing(border-box);
+    right: 0;
+    position: absolute;
+    top: 133px;
+    width: 0;
+    left: auto;
+    transition: width .2s ease;
+    > i.fa-user {
+      color: @white;
+      cursor: pointer;
+      font-size: @sidebarIconFontSize;
+      height: @sidebarIconHeight;
+      left: -@sidebarIconWidth;
+      line-height: @sidebarIconHeight;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: @sidebarIconWidth;
+  background: darken(@global-color, 10%);
+      .transition(all .2s ease);
+      &:hover {
+        font-size: @sidebarIconFontSize+4;
+      }
+    }
+    &.shown {
+      width: 330px;
+      .mod_login_wrapper {
+        overflow: auto;
+        padding: 30px 30px;
+        width: 330px;
+        right: 0;
+        transition: width 0s linear 0s, padding 0s linear 0s, right 0s linear 0s;
+      }
+    }
+    .mod_login_wrapper {
+      .box-sizing(border-box);
+      max-height: 100%;
+      position: relative;
+      right: 330px;
+      width: 0;
+      padding: 30px 0px;
+      overflow: hidden;
+  background: darken(@global-color, 10%);
+      transition: width 0s linear .2s, padding 0s linear .2s, right 0s linear .2s;      
+      *[class*=heading-style] {
+        color: white;
+      }
+      .login-greeting {
+        margin-bottom: @line-height-base;
+      }
+      .input-prepend .add-on:hover i {
+        background: transparent;
+        color: @global-color;
+      }
+    }
+  }
+}
+
+// =======================
+// IceMegaMenu
+// =======================
+.menu-login-form {
+  > ul:before {
+    .triangle(top, 22px, 11px, @global-color);
+  }
+  .icemega_modulewrap.login_megamenu {
+    background: @global-color;
+    padding: 30px;
+    .input-prepend .add-on span {
+      color: #000;
+    }
+    *[class*=heading-style] {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .login_shell {
+    .control-group + * {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-height: 550px) {
+  #style_switcher,
+  div#fixed-sidebar-right .moduletable.login,
+  div#fixed-sidebar-right .login_shell {
+    padding-bottom: 10px;
+    bottom: 0;
+    .mod_login_wrapper {
+      max-height: 100%;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  div#fixed-sidebar-right .moduletable.login {
+    bottom: 0;
+    .mod_login_wrapper {
+      right: 280px;
+    }
+    &.shown{
+      width: 280px;
+      .mod_login_wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 280px;
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+// CSS Reset
+// Core variables and mixins
+@import "_variables.less";
+@import "bootstrap/_mixins";
+
+// Reset and dependencies
+@import "bootstrap/_normalize.less";
+@import "bootstrap/_print.less";
+@import "bootstrap/_glyphicons";
+
+// Core CSS
+@import "bootstrap/_scaffolding.less";
+@import "bootstrap/_type.less";
+@import "bootstrap/_code.less";
+@import "bootstrap/_grid";
+@import "bootstrap/_tables.less";
+@import "bootstrap/_forms.less";
+@import "bootstrap/_buttons.less";
+
+// Components
+@import "bootstrap/_component-animations";
+@import "bootstrap/_dropdowns";
+@import "bootstrap/_button-groups";
+@import "bootstrap/_input-groups.less";
+@import "bootstrap/_navs.less";
+@import "bootstrap/_navbar.less";
+@import "bootstrap/_breadcrumbs.less";
+@import "bootstrap/_pagination.less";
+@import "bootstrap/_pager.less";
+@import "bootstrap/_labels.less";
+@import "bootstrap/_badges.less";
+@import "bootstrap/_jumbotron.less";
+@import "bootstrap/_thumbnails.less";
+@import "bootstrap/_alerts.less";
+@import "bootstrap/_progress-bars.less";
+@import "bootstrap/_media.less";
+@import "bootstrap/_list-group.less";
+@import "bootstrap/_list.less";
+@import "bootstrap/_panels.less";
+@import "bootstrap/_responsive-embed";
+@import "bootstrap/_wells.less";
+@import "bootstrap/_close.less";
+
+// Components w/ JavaScript
+@import "bootstrap/_modals.less";
+@import "bootstrap/_tooltip.less";
+@import "bootstrap/_popovers.less";
+@import "bootstrap/_carousel.less";
+
+// Utility classes
+@import "bootstrap/_utilities";
+@import "bootstrap/_responsive-utilities";
+// Icon Font
+.fa-file-add:before { content: "\f016"; }
+
+.fa-remove:before { content: "\f00d"; }
+
+.fa-picture:before { content: "\f03e"; }
+
+.icon-edit:before { content: "\f044"; }
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}

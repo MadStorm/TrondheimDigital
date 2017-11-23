@@ -1,0 +1,562 @@
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+
+//Icon
+@forum-category-icon-fontfamily: @fa;
+@forum-category-icon-size: 24px;
+@forum-category-icon-line-height: 24px;
+@forum-category-icon-color: @text-color;
+@forum-category-icon-hover-color: @white;
+
+@forum-category-icon-bg: none;
+@forum-category-icon-hover-bg: none;
+@forum-category-icon-width: auto;
+@forum-category-icon-height: auto;
+@forum-category-icon-border-radius: 0px;
+
+#Kunena td,
+#Kunena table,
+#Kunena th,
+#Kunena div,
+#Kunena p,
+#Kunena span,
+#Kunena .knewchar,
+#Kunena #ktab a span {
+  font-family: inherit;
+}
+
+#Kunena {
+  margin-bottom: @line-height-base*2;
+  .progress-bar-horizontal .progress-bar__body {
+    top: -22px;
+  }
+  #sel_chzn,
+  #catid_chzn,
+  #mode_chzn,
+  #date_chzn,
+  #beforeafter_chzn,
+  #sort_chzn,
+  #order_chzn {
+    margin-bottom: 10px;
+    width: auto !important;
+  }  
+  #categorylist_chzn {
+    width: 100% !important;
+  }
+
+  & + div[style] {
+    display: none;
+  }
+
+  div.kblock {
+    margin-top: 30px;
+  }
+
+  .kfile-hide {
+    .kbutton,
+    .kfile-input {
+      background: @global-color;
+    }
+  }
+
+  .kbutton {
+    vertical-align: top;
+    &.ks {
+      margin-bottom: 10px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  td {
+    border: 1px solid @table-border-color;
+  }
+
+  a {
+    &:hover {
+      color: @global-color;
+    }
+  }
+
+  ul {
+    li {
+      a {
+        &:hover {
+          color: @global-color;
+        }
+      }
+    }
+  }
+
+  .chzn-container-single .chzn-single span {
+    text-overflow: clip;
+  }
+
+  div.chzn-container {
+    margin-bottom: 0;
+    .chzn-results {
+      li {
+        background: @white;
+        color: #333333;
+        padding: 10px 20px;
+        min-width: auto;
+        &:hover {
+          background: @global-color;
+          color: @white;
+        }
+      }
+    }
+  }
+  
+  a.ktoggler,
+  .ktoggler {
+    display: none !important;
+  }
+
+  #ktop {
+    border: none;
+    margin-bottom: 30px;
+    #ktopmenu {
+      #ktab {
+        text-align: center;
+        margin: 0;
+        ul.menu {
+          li {
+            display: inline-block;
+            margin: 0px 8px 8px 0 !important;
+            padding: 0;
+            a {
+              background: transparent;
+              padding: 0;
+              font-size: 16px;
+              line-height: 20px;
+              border-bottom: 2px solid transparent
+            }
+            &.active,
+            &:hover {
+              a {
+                border-bottom-color: @text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .klist-markallcatsread {
+    border: none;
+    background: transparent;
+    margin-bottom: 30px;
+    .clearfix();
+    .ksectionbody {
+      > div {
+        margin-right: 15px;
+        & + div {
+          margin-right: 0;
+        }
+      }
+    }
+    & + div.kblock {
+      margin-top: 0
+    }
+  }
+
+  .klist-markallcatsread, .klist-jump-all,
+  .klist-times-all, div.kmoderatorslist-jump {
+    form#jumpto, form#timeselect {
+      select {
+        &#catid {
+          width: 370px;
+        }
+        &#sel {
+          width: 194px;
+        }
+        &#catid, &#sel {
+          max-width: 370px;
+        }
+      }
+    }
+  }
+
+  div.kblock {
+    border-bottom: none;
+    div.kheader {
+      background: @global-color;
+      padding: 0;
+      text-align: center;
+      border-bottom: none;
+      padding: 16px 0 20px 0;
+      .kheader-title {
+        a {
+          font: 24px/30px @font-family-base !important;
+          color: white !important;
+          text-transform: uppercase;
+          &:hover {
+            color: fade(white, 50%) !important;
+          }
+        }
+      }
+    }
+
+    .kcontainer {
+      .kbody {
+        border: none;
+        overflow: visible;
+        @media(max-width:767px) {
+          overflow-x: scroll;
+        }
+        .kblocktable {
+          border: 1px solid @table-border-color;
+          tbody {
+            tr {
+              .kcol-category-icon {
+                padding: 34px 17px;
+                .kicon {
+                  &.kreadforum {
+                    border-radius: 0;
+                    font-size: @forum-category-icon-size;
+                    height: auto;
+                    line-height: @forum-category-icon-line-height;
+                    padding-top: 0;
+                    .transition(.3s);
+                    width: auto;
+                    color: @forum-category-icon-color;                    
+                    &:before {
+                      content: '\f115';
+                      font-family: @fa;
+                      .transition(.3s);
+                    }
+                    &:hover {
+                      &:before {
+                        //color: @forum-category-icon-hover-color;
+                      }
+                    }
+                  }
+                }
+                &.kcol-first {
+                  border-bottom: 1px solid @table-border-color;
+                }
+              }
+              td.kcol-first {
+                border-bottom: 1px solid @table-border-color;
+              }
+              td.kcol-mid {
+                border-bottom: 1px solid @table-border-color;
+              }
+              .kcol-kcattitle {
+                min-width: 300px;
+                padding: 21px 22px 14px;
+                .kthead-title {
+                  display: inline-block;
+                  margin-bottom: 8px;
+                  a {
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                    &:hover {
+                      color: @text-color;
+                    }
+                  }
+                }
+                .kthead-desc {
+                  font-size: 14px;
+                  line-height: 24px;
+                }
+              }
+              .kcol-kcattopics,
+              .kcol-kcatreplies {
+                text-align: center;
+                padding: 22px 10px 8px;
+                .kcat-topics-number,
+                .kcat-replies-number {
+                  margin: 0 auto;
+                  color: @body-bg;
+                  font-size: 14px;
+                  line-height: 30px;
+                  font-weight: 400;
+                  width: 30px;
+                  height: 30px;
+                  background: @text-color;
+                  .border-radius(50%);
+                }
+                .kcat-topics,
+                .kcat-replies {
+                  font-size: 14px;
+                  line-height: 22px;
+                }
+              }
+              .kcol-kcatreplies {
+                padding: 22px 14px 8px;
+              }
+              .kcol-kcatlastpost {
+                padding: 0 15px;
+                font-size: 14px;
+                line-height: 22px;
+                .klatest-subject-by {
+                  span.subject-by,
+                  span.nowrap {
+                    &:before {
+                      font-family: @fa;
+                      font-size: 14px;
+                      line-height: 14px;
+                      color: @text-color;
+                      margin-right: 6px;
+                    }
+                  }
+                  .subject-by {
+                    &:before{
+                      content: '\f007';
+                    }
+                  }
+                  .nowrap {
+                    &:before{
+                      content: '\f073';
+                    }
+                  }
+                }
+              }
+              .kcol-knoposts {
+                padding: 21px 0 0 20px;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 400;
+                vertical-align: top;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.kwhoisonline,
+    &.kfrontstats {
+      .kwhoicon,
+      .kstatsicon {
+        height: @forum-category-icon-height;
+        padding-top: 0;
+        width: @forum-category-icon-width;
+        font-size: @forum-category-icon-size;
+        line-height: @forum-category-icon-line-height;
+        .border-radius(@forum-category-icon-border-radius);
+        color: @forum-category-icon-color;
+        .transition(.3s all ease);
+        &:before {
+          font-family: @forum-category-icon-fontfamily;
+        }
+      }
+    }
+
+    &.kwhoisonline {
+      .kwhoicon {
+        &:before {
+          content: '\f0c0';
+        }
+      }
+    }
+
+    &.kfrontstats {
+      .kstatsicon {
+        &:before {
+          content: '\f1fe';
+        }
+      }
+    }
+
+    #searchform {
+      #mode_chzn,
+      #limit_chzn {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .kadvsearch {
+    .kcontainer {
+      > .kbody {
+        @media(max-width:767px){
+          overflow-x: scroll;
+        }
+      }
+    }
+  }
+
+  .chzn-container-active {
+    &.chzn-with-drop {
+      .chzn-single {
+        div {
+          background: @global-color;
+        }
+      }
+    }
+  }
+
+  .klist-actions {
+    border: none;
+    .klist-actions-info-all,
+    .klist-times-all,
+    .klist-jump-all,
+    .klist-pages-all {
+      border: none;
+    }
+    .klist-actions-info-all {
+      width: 1%;
+    }
+    @media(max-width: 767px) {
+      display: block;
+      .klist-actions-info-all,
+      .klist-times-all,
+      .klist-jump-all,
+      .klist-pages-all {
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: auto;
+        height: auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  #helpbox {
+    background: transparent;
+  }
+  
+  img {
+    .box-shadow(none);
+  }
+
+  div.kblock {
+    div.kheader {
+      color: white;
+      > span:not(.kcheckbox) {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        padding: @table-header-padding;
+        font-size: @table-header-font-size;
+        line-height: @table-header-line-height;
+        font-weight: @table-header-font-weight;
+        color: @table-header-color;
+        background: @table-header-bg;
+        border: 1px solid @table-border-color;
+        .border-radius(@table-border-radius);
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  div.kblock {
+    div.khelprulescontent {
+      border-left: 1px solid @table-border-color;
+      border-right: 1px solid @table-border-color;
+      border-bottom: 1px solid @table-border-color;
+    }
+  }
+
+  .kcol-ktopictitle,
+  .kcol-ktopiclastpost {
+    min-width: 150px;
+  }
+
+  @media(max-width:767px) {
+    #kstatslistright{
+      float: left;
+      text-align: left;
+    }
+  }
+
+  .kheadbtn {
+    a {
+      color: white;
+      &:hover {
+        color: fade(white, 60%) !important;
+      }
+    }
+  }
+
+  #searchuser_tbody {
+    display: block;
+    margin-top: 20px;
+    .search-user {
+      margin-bottom: 15px;
+    }
+    #kusersearch {
+      float: left;
+    }
+    .userlist-jump,
+    .search-user {
+      @media(max-width:767px) {
+        float: none !important;
+        .kbutton {
+          padding: 7px 17px;
+        }
+      }
+    }
+  }
+
+  .klist-actions-forum {
+    border: none;
+  }
+
+  #mode_chzn {
+    .box-sizing(initial) !important;
+  }
+
+  #kprofile {
+    .kcol-mid {
+      min-width: 500px;
+    }
+  }
+
+  dl.tabs {
+    dt.open {
+      background: @global-color;
+      color: white;
+    }
+    dt {
+      border: none !important;
+      &:hover {
+        background: @text-color;
+        color: @body-bg;
+      }
+    }
+  }
+
+  .kheader {
+    h2,
+    h2 a {
+      font: 24px/30px @font-family-base !important;
+      color: white !important;
+      letter-spacing: 0 !important;
+      text-transform: uppercase;
+    }
+    h2 a {
+      &:hover {
+        color: fade(white, 50%) !important;
+      }
+    }
+    div {
+      span {
+        font: 24px/30px @font-family-base !important;
+        color: white !important;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .progress-bar {
+    margin-top: @font-size-base;
+  }
+  
+}
+
+.tip-wrap {
+  background: #eaeaea;
+  padding: 5px;
+}

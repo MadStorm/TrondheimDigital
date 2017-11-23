@@ -1,0 +1,345 @@
+@import "_variables.less";
+@import "bootstrap/_mixins.less";
+
+.jg_catelem_photo{
+  font-size: 0;
+  line-height: 0;
+}
+
+.loaded{
+  .jg_element_cat{
+    display: none;
+  }
+}
+
+.jg_element_cat{
+  padding-bottom: @grid-gutter-width;
+
+  @media(max-width:767px){
+    width: 100%;
+  }
+}
+
+//Choose Category page - Item
+.jg_imgalign_catsubs{
+  font-size: 0;
+  margin-bottom: @grid-gutter-width;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  .jg_photo_custom{
+    .transition(transform .5s ease);
+  }
+  &:hover{
+    .jg_photo_custom{
+      .scale(1.1);
+    }
+    .jg_subcatelem_txt{
+      .opacity(100);
+    }
+  }
+}
+
+.jg_subcatelem_cat a{
+  height: auto;
+}
+
+//Choose Category page - Image
+.jg_subcatelem_photo{
+  a{
+    display: block;
+  }
+
+  img{
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+}
+
+//Choose Category page - Hover block
+.jg_subcatelem_txt{
+  background: fade(@global-color, 50%);
+  bottom: 0;
+  color: #fff;
+  font-size: @font-size-base;
+  left: 0;
+  .opacity(0);
+  position: absolute;
+  right: 0;
+  top: 0;
+  .transition(.5s ease);
+  &:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 0;
+    background: @global-color;
+  }
+  ul{
+    .box-sizing(border-box);
+    display: inline-block;
+    max-width: 99%;
+    vertical-align: middle;
+    li{
+      font-size: @font-size-base;
+      line-height: @line-height-base;
+      &:before{
+        display: none;
+      }
+    }
+    a{
+      color: #fff;
+      position: relative;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }  
+
+  .jg_subcatelem_txt__link{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.jg_catelem_txt{
+  margin: 0;
+  text-align: center !important;
+  .gallery_desc{
+    p{
+      & + p{
+        display: none;
+      }
+    }
+  }
+  ul{
+    li{
+      a{
+        &:hover{
+          color: @text-color;
+        }
+      }
+      &:before{
+        display: none;
+      }
+      >*{
+        color: @white;
+      }
+    }
+  }
+}
+
+.jg_dtl_photo{
+  font-size: 0;
+  line-height: 0;
+  .lazy_container{
+    width: 100%;
+    .lazy_preloader{
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    img{
+      position: relative;
+    }
+  }
+}
+
+div.jg_details, 
+div.jg_voting, 
+div.jg_commentsarea, 
+div.jg_send2friend, 
+div.jg_bbcode, 
+div.jg_exif, 
+div.jg_panemodule{
+  border: none;
+  margin: 0;
+}
+
+.jg_detailnavi{
+  margin-bottom: 0;
+}
+
+.jg_iconbar{
+  padding: 0;
+}
+
+.jg_imgtitle{
+  text-align: left;
+}
+
+//Choose Gallery page - Hover block
+.jg_imgalign_catimgs{
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+
+  img{
+    width: 100%;
+    max-width:none;
+    height: auto;
+  }
+
+  .jg_photo_custom{
+    .transition(transform .5s ease);
+  }
+  .jg_catelem_txt{
+    background: fade(@global-color, 50%);
+    color: #fff;
+    height: 100%;
+    left: 0;
+    .opacity(0);
+    position: absolute;
+    top: 0;
+    .transition(.5s ease);
+    width: 100%;
+    //z-index: 10;
+    .item_title{
+      color: inherit;
+    }
+    &:before{
+      content: '';
+      display: inline-block;
+      height: 100%;
+      overflow: hidden;
+      vertical-align: middle;
+      width: 0;
+      background: @global-color;
+    }
+    ul{
+      .box-sizing(border-box);
+      display: inline-block;
+      font-size: @font-size-base;
+      line-height: @line-height-base;
+      max-width: 99%;
+      padding: 0 10px;
+      vertical-align: middle;
+    }
+    .jg_links{
+      a{
+        font-size: 28px;
+        margin: 0 5px;
+      }
+    }
+  }
+  &:hover{
+    .jg_photo_custom{
+      .scale(1.1);
+    }
+    .jg_catelem_txt{
+      .opacity(100);
+    }
+  }
+}
+
+.jg_gallery{
+  font-size: 0;
+  line-height: 0;
+  text-align: left;
+  margin-bottom: @line-height-base*2;
+}
+
+.jg_catorderlist{
+  text-align: left;
+  white-space: normal;
+  >strong{
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+.jg_links{
+  .fancybox-thumb{
+    .lazy,
+    img{
+      display: none;
+    }
+  }
+}
+
+#joomcommentform {
+  margin-bottom: @line-height-base*2;
+  text-align: left;
+  & + .jg_row1 {
+    padding-bottom: 0;
+  }
+  .btn-group {
+    display: block;
+  }
+  .input_wrapper {
+    position: relative;
+  }
+}
+
+.jg_comments_title {
+  margin-bottom: 30px;
+}
+
+.jg_cmtf {
+  border: 1px dashed #ddd;
+  .border-radius(2px);
+  padding: 30px 0;
+  text-align: center;
+}
+
+.ui-loader{
+  display: none;
+}
+
+.jg_pathway{
+  margin: 0 0 @line-height-base;
+  padding: 0;
+}
+
+ul#order{
+  margin: 0 0 15px;
+  overflow: hidden;
+  li{
+    display: inline-block;
+  }
+}
+
+.jg_commentsarea{
+  clear: both;
+  padding-top: 20px;
+  textarea{
+    height: 200px;
+    width: 100%;
+  }
+  .username{
+    display: block;
+    font-size: @font-size-base*1.2;
+    font-weight: 500;
+    line-height: @line-height-base*1.2;
+    margin-bottom: @line-height-base;
+  }
+  div[class*="jg_row"]{
+    padding-bottom: 40px;
+    .comment_text{
+      display: block;
+    }
+  }
+}
+
+.jg-details-header h4{
+  padding: 0;
+  text-align: inherit;
+}
+
+.jg_dtl_photo{
+  text-align: center;
+}
+
+.jg_subcat {
+  margin-bottom: @line-height-base*2;
+}

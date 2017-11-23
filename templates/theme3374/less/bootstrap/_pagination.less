@@ -1,0 +1,110 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+
+// Pagination
+// -------------------------
+//
+//##
+
+@pagination-color:                     @global-color;
+@pagination-bg:                        @text-color;
+@pagination-border:                    #ddd;
+@pagination-border-radius:             @btn-border-radius-base;
+
+@pagination-hover-color:               @text-color;
+@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-border:              #ddd;
+
+@pagination-active-color:              @input-border-focus #fff;
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-border:             #fff;
+
+@pagination-disabled-color:            @gray-light;
+@pagination-disabled-bg:               #fff;
+@pagination-disabled-border:           #ddd;
+
+@paginationSpan: @btn-default-hover-color;
+
+// Space out pagination from surrounding content
+
+.pagination {
+  height: auto;
+  margin: 0;
+  padding: 0px 0 @line-height-base*2;
+  ul {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    li {
+      display: inline-block;
+      margin: 0 2px;
+      > a,
+      > span {
+        display: block;
+        padding: 7px 13px;
+        line-height: @line-height-base;
+        border: none !important;
+        .border-radius(@border-radius-base);
+        &:focus {
+          background: @pagination-bg;
+          &:hover {
+            background: @pagination-active-bg;
+          }
+        }
+        &:hover {
+          background: @pagination-active-bg;
+          color: @paginationSpan;
+        }
+      }
+      > .pagenav,
+      > .hasTooltip {
+        background: @pagination-bg;
+        color: @pagination-color;
+      }
+      > span.pagenav {
+        background: @pagination-active-bg;
+        color: @paginationSpan;
+      }
+    }
+  }
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  cursor: default;
+}
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover {
+  cursor: default;
+}
+
+// Alignment
+// --------------------------------------------------
+
+.pagination-centered {
+  text-align: center;
+}
+
+.pagination-right {
+  text-align: right;
+}
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-lg {
+  .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+
+// Small
+.pagination-sm {
+  .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}

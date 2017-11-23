@@ -1,0 +1,277 @@
+//
+// Buttons
+// --------------------------------------------------
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+
+@btn-font-size: @font-size-base + 4;
+@btn-line-height: @line-height-base;
+@btn-font-weight: 400;
+
+@btn-height: 58px;
+@btn-padding: ((@btn-height - @btn-line-height)/2) 22px;
+@btn-border-radius: 0;
+
+@btn-color: @btn-default-color;
+
+@btn-background: @btn-default-bg;
+
+@btn-border: none;
+
+// Info button(Read More)
+
+@btn-info-color-highlight: @btn-default-hover-color;
+
+@btn-info-highlight-background: @btn-default-hover-bg;
+@btn-act-info-background: @btn-default-hover-bg;
+
+@btn-info-border: @btn-border;
+
+// Base styles
+// --------------------------------------------------
+
+.btn,
+.kbutton {
+  .border-radius(@btn-border-radius);
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: @btn-font-weight;
+  font-size: @btn-font-size;
+  line-height: @btn-line-height;
+  vertical-align: middle;
+  color: white;
+  background: @global-color;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: none;
+  border-bottom: 4px solid @global-color2;
+  max-width: 100%;
+  padding: @btn-padding;
+  text-transform: uppercase;
+  .user-select(none);
+  .transition(all 0.3s ease);
+
+  .fa{
+    margin: 0 3px;
+  }
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      .tab-focus();
+      outline: none;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &.active,
+  &.selected {
+    color: white;
+    background: @global-color2;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: @cursor-disabled;
+    .opacity(.65);
+    .box-shadow(none);
+    pointer-events: none;
+  }
+
+  a& {
+    &.disabled,
+    fieldset[disabled] & {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+
+  &.jmodedit {
+    &:hover,
+    &:focus,
+    &:active {
+      > span {
+        .transform(rotateX(0deg) translateY(0px));
+      }
+    }
+  }
+
+  &.btn-info,
+  &.readmore {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+}
+
+#style_switcher_form{
+  .btn,
+  .kbutton{
+    color: @white;
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+// Set the backgrounds
+// -------------------------
+// Warning appears are orange
+.btn-warning {
+  background: @btn-warning-bg;
+  color: @btn-warning-color;
+  &:hover {
+    background: @btn-warning-bg-highlight;
+    color: @btn-default-hover-color;
+  }
+}
+
+// Danger and error appear as red
+.btn-danger {
+  background: @btn-danger-bg;
+  color: @btn-color;
+  &:hover {
+    background: @btn-danger-bg-highlight;
+    color: @btn-default-hover-color;
+  }
+}
+
+// Success appears as green
+.btn-success {
+  background: @btn-success-bg;
+  color: @btn-color;
+  &:hover {
+    background: @btn-success-bg-highlight;
+    color: @btn-default-hover-color;
+  }
+}
+
+/* .btn-info {
+  background: @btn-info-bg;
+  color: @btn-color;
+  &:hover {
+    background: @btn-info-highlight-background;
+    color: @btn-default-hover-color;
+  }
+} */
+
+// Inverse appears as dark gray
+.btn-inverse {
+  background: @btnInverseBackground;
+  color: @btn-color;
+  &:hover {
+    background: @btnInverseBackgroundHighlight;
+    color: @btn-default-hover-color;
+  }
+}
+/* .btn-default {
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn-primary {
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Success appears as green
+.btn-success {
+  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+ */
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: @link-color;
+  font-weight: normal;
+  border-radius: 0;
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    .box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+}
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

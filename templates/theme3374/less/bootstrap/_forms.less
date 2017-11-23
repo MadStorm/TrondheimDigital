@@ -1,0 +1,1164 @@
+//
+// Forms
+// --------------------------------------------------
+// Core variables and mixins
+
+
+// Forms Variables
+
+// Horizontal forms & lists
+// -------------------------
+@horizontalComponentOffset: 180px;
+
+// Input
+@input-bg:                       #f4f4f4;
+@input-bg-disabled:              @gray-lighter;
+@input-color:                    @body-bg;
+@input-border:                   #f4f4f4;
+@input-border-radius:            0;
+@input-border-radius-large:      0;
+@input-border-radius-small:      0;
+@input-border-focus:             #d70000;
+@input-color-placeholder:        @body-bg;
+@input-height-base:              62px;
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+@input-margin-bottom:            30px;
+@form-group-margin-bottom:       30px;
+
+@inputShadow: rgba(82, 168, 236, 0.6);
+// Font
+@input-font-size: @font-size-base;
+@input-line-height: @line-height-base;
+
+@input-height: 62px;
+@inputPadding: ((@input-height - @input-line-height)/2) 20px;
+
+//Actions
+@form-actions-bg: #F5F5F5;
+
+//TextArea
+@text-area-height: 154px;
+
+//Select
+@select-act-bg: @global-color;
+@select-act-color: @white;
+
+
+//Radio
+@radio-height: 14px;
+@radio-width: 14px;
+@radio-border-radius: 50%;
+@radio-background: white;
+@radio-border: 1px solid white;
+
+//Radio Inner
+@radio-inner-width: 6px;
+@radio-inner-height: 6px;
+@radio-inner-bg: #333;
+
+//Checkbox
+@check-height: 14px;
+@check-width: 14px;
+@check-bg: @white;
+@check-border: #cadbe3;
+@check-border-radius: 0;
+
+//Checkbox Icon
+@check-icon: '\f00c';
+@check-icon-size: 13px;
+@check-icon-color: @body-bg;
+
+//Error input
+@input-border-error: red;
+@input-error-message-color: red;
+
+// Form states and alerts
+// -------------------------
+@warning-text-color: #000;
+@warning-bg: #faffbd;
+@warning-border: none;
+@warning-icon-color: #fcdd9a;
+
+@error-text-color: #000;
+@error-bg: #ffe6e7;
+@error-border: none;
+@error-icon-color: #ff6363;
+
+@success-text-color: #000;
+@success-bg: #cffeca;
+@success-border: none;
+@success-icon-color: #ade4f9;
+
+@info-text-color: #000;
+@info-bg: #d8f3fd;
+@info-border: none;
+@info-icon-color: #39aa5e;
+
+//===========================================
+// Input Error Message Styles
+//===========================================
+
+form {
+  margin-bottom: @line-height-base*2;
+  mark {
+    background: none !important;
+    font-size: 14px;
+    line-height: 18px;
+    bottom: 100%;
+    right: 0;
+    padding: 0 !important;
+    position: absolute;
+    z-index: 1;
+    label {
+      color: @input-error-message-color;
+      display: block;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0 !important;
+      &.error{
+        display: inline;
+      }
+    }
+  }
+  textarea {
+    min-height: @text-area-height;
+    max-height: @text-area-height;
+  }
+  .btn,
+  .kbutton {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.controls, .control-group, .mod_tm_ajax_contact_form .control-group {
+  position: relative;
+  //margin-bottom: @input-margin-bottom;
+  &.reset-margin,
+  &:last-child,
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  .uneditable-input {
+
+  }
+  &.reset-margin {
+    margin-bottom: 0;
+  }
+}
+
+//===========================================
+// Input Styles
+//===========================================
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: block;
+  max-width: 100%;
+  height: @input-height;
+  background: @input-bg;
+  border: 2px solid @input-border;
+  color: @input-color;
+  font-family: @font-family-base;
+  font-size: @input-font-size;
+  line-height: @input-line-height;
+  padding: @inputPadding;
+  vertical-align: middle;
+  outline: none;
+  margin-bottom: @input-margin-bottom;
+  .border-radius(@input-border-radius);
+  .box-sizing(border-box);
+  .transition(border-color 1s ease ~"," box-shadow 1s ease);
+  .box-shadow(none);
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 40px/2 @input-bg !important;
+    -webkit-text-fill-color: @input-color !important;
+    color: @input-color !important;
+  }
+  &:focus {
+    border-color: lighten(@input-border-focus, 10%);
+  }
+}
+
+label.inline {
+  display: inline-block;
+}
+
+//===========================================
+// Select Styles
+//===========================================
+
+.mod_tm_ajax_contact_form_select{
+  margin-bottom: @input-margin-bottom;
+  font-size: 0;
+}
+
+// Dropdown List
+div.chzn-container {
+  font-size: @input-font-size;
+  line-height: @input-line-height;
+  text-align: left;
+  margin-bottom: @input-margin-bottom;
+  .chzn-results {
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 10px 20px;
+      color: @input-color;
+      background: @input-bg;
+      &.highlighted {
+        background: @select-act-bg;
+        color: @select-act-color;
+      }
+    }
+  }
+}
+
+// Toggle
+div.chzn-container-single {
+  .chzn-single {
+    background: @input-bg;
+    height: @input-height;
+    padding: @inputPadding;
+    line-height: inherit;
+    .box-sizing(border-box);
+    .border-radius(@input-border-radius);
+    .box-shadow(none);
+    border: 1px solid @input-border;
+    color: @input-color;
+    > span {
+      padding-right: @input-height;
+    }
+    div {
+      background: @input-bg;
+      color: @input-color;
+      height: @input-height;
+      top: -1px;
+      right: -1px;
+      width: @input-height;
+      .transition(.3s all ease);
+      b {
+        display: none;
+      }
+      &:before {
+        content: '\f078';
+        font-size: 13px;
+        font-family: @fa;
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    span {
+      margin: 0;
+    }
+  }
+
+  //Active State
+  &.chzn-container-active {
+    &.chzn-with-drop {
+      .chzn-single {
+        background: @input-bg;
+        border: 1px solid @table-border-color;
+        div {
+          background: @input-bg;
+          color: @input-color;
+          &:before {
+            content: '\f077';
+          }
+        }
+      }
+    }
+  }
+  .chzn-drop {
+    .border-radius(0 0 @input-border-radius @input-border-radius);
+    .box-shadow(none);
+    border: 1px solid @table-border-color;
+    border-top: none;
+    margin: 0;
+    height: auto;
+    color: #374046;
+  }
+
+  .chzn-results{
+    li{
+      color: #374046;
+    }
+  }
+}
+
+.chzn-container .chzn-drop{
+  z-index: 1009;
+}
+
+//===========================================
+// Checkbox Styles
+//===========================================
+span.checkbox {
+  position: relative;
+  display: inline-block;
+  min-height: 0;
+  height: @check-height;
+  line-height: @check-height;
+  width: @check-width;
+  background: @check-bg;
+  border: 1px solid @check-border;
+  .border-radius(@check-border-radius);
+  vertical-align: middle;
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    margin: 0;
+    .opacity(0);
+    &:checked {
+      + label.checkbox_inner {
+        &:before {
+          content: @check-icon;
+        }
+      }
+    }
+  }
+  label.checkbox_inner {
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    &:before {
+      content: '';
+      font-family: @fa;
+      font-size: @check-icon-size;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: @check-icon-color;
+      text-align: center;
+    }
+  }
+  & + label {
+    margin: 0 0 0 2px;
+    vertical-align: middle;
+  }
+}
+
+//===========================================
+// Radio Buttons Styles
+//===========================================
+span.radio {
+  display: inline-block;
+  height: @radio-height;
+  line-height: @radio-height;
+  min-height: 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: @radio-width;
+  border: @radio-border;
+  .border-radius(@radio-border-radius);
+  background: @radio-background;
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    margin: 0;
+    .opacity(0);
+    &:checked {
+      & + label.radio_inner {
+        &:before {
+          border-radius: @radio-border-radius;
+          content: "";
+          height: @radio-inner-height;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          .translate(-50%, -50%);
+          width: @radio-inner-width;
+          background: @radio-inner-bg;
+        }
+      }
+    }
+  }
+  label.radio_inner {
+    bottom: 0;
+    left: 0;
+    line-height: @radio-height;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  & + label {
+    margin: 0 0 0 2px;
+    vertical-align: middle;
+  }
+}
+
+.item_introtext,
+.item_fulltext,
+.category_desc,
+.controls{
+  input,
+  select,
+  .select,
+  textarea {
+    width: 100%;
+  }
+  textarea {
+    height: @text-area-height;
+  }
+}
+
+.form-inline .checkbox input[type="checkbox"] {
+  float: none;
+}
+
+.form-horizontal .control-label {
+  padding-top: 11px;
+  label {
+    margin-bottom: 0;
+  }
+}
+
+.acymailing_module {
+  .acyfield_email {
+    display: inline-block;
+    position: relative;
+    input {
+      margin: 0;
+    }
+  }
+}
+
+.form_placeholder {
+  border-color: transparent;
+  border-style: solid;
+  .box-sizing(border-box);
+  cursor: text;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  //z-index: 2;
+}
+
+.ie_placeholder_controls {
+  position: relative;
+}
+
+.btn#jform_profile_dob_img {
+  .box-sizing(border-box);
+  height: @input-height !important;
+  line-height: 100%;
+  padding: 0 !important;
+  text-align: center;
+  width: @input-height !important;
+  i {
+    margin: 0;
+  }
+}
+
+input.search-query {
+  .border-radius(0);
+}
+
+.chzn-container-multi .chzn-choices li.search-field .default {
+  .box-sizing(content-box);
+}
+
+textarea#jform_profile_aboutme {
+  height: 200px;
+  width: 100%;
+}
+
+#helpsite-refresh {
+  margin-bottom: 9px;
+}
+
+.page-registration,
+.page-remind,
+.page-reset,
+.page-login,
+.page-login,
+.page-profile__edit {
+  form {
+    label {
+      display: inline-block !important;
+    }
+  }
+}
+
+textarea.invalid {
+  border: @input-border-error;
+}
+
+.form-vertical {
+  label {
+    display: inline-block;
+    margin-bottom: @line-height-base;
+  }
+}
+
+select[name=ordering] {
+  margin: 0;
+}
+
+textarea[style*="overflow"] {
+  overflow: auto !important;
+}
+
+#form-login {
+  .btn {
+    margin-bottom: 30px;
+  }
+}
+
+.add-on.btn {
+  padding-left: 0;
+  padding-right: 0;
+  width: @input-height;
+}
+
+// BOOTSTRAP STYLES
+//==============================================
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+// Groups of fields with labels on top (legends)
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: @line-height-base;
+  font-size: @font-size-base * 1.5;
+  line-height: @line-height-base * 2;
+  color: @text-color;
+  border: 0;
+  border-bottom: 1px solid #E5E5E5;
+
+  // Small
+  small {
+    font-size: @line-height-base * .75;
+    color: @gray-light;
+  }
+}
+
+// Identify controls by their labels
+label {
+  color: @label-color;
+  font-size: 16px;
+  font-weight: 400;
+  //display: block !important;
+  + * {
+    margin-top: 30px;
+  }
+}
+
+// Reset appearance properties for textual inputs and textarea
+// Declare width for legacy (can't be on input[type=*] selectors or it's too specific)
+.uneditable-input {
+  width: 206px; // plus 12px padding and 2px border
+}
+
+input,
+textarea {
+  width: 100%;
+  .placeholder();
+}
+
+textarea {
+  resize: none;
+  height: auto;
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+  margin: -2px 0 0;
+  line-height: normal;
+}
+
+// Reset width of input images, buttons, radios, checkboxes
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto; // Override of generic input selector
+}
+
+// Set the height of select and file controls to match text inputs
+select,
+input[type="file"] {
+  height: @input-height; // In IE7, the height of the select element cannot be changed by height, only font-size
+  line-height: @input-height;
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Make multiple select elements height not fixed
+select[multiple] {
+  height: auto;
+}
+
+// Uneditable inputs
+// -------------------------
+
+// Make uneditable inputs look inactive
+.uneditable-input,
+.uneditable-textarea {
+  color: @gray-light;
+  background-color: darken(@input-bg, 1%);
+  border-color: @table-border-color;
+  .box-shadow(inset 0 1px 2px rgba(0, 0, 0, .025));
+  cursor: not-allowed;
+}
+
+// For text that needs to appear as an input but should not be an input
+.uneditable-input {
+  overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
+  white-space: nowrap;
+}
+
+// Make uneditable textareas behave like a textarea
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+
+// CHECKBOXES & RADIOS
+// -------------------
+
+// Indent the labels to position radios/checkboxes as hanging
+.radio,
+.checkbox {
+  min-height: @line-height-base; // clear the floating input if there is no label text
+  //  padding-left: 20px;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  //  margin-left: -20px;
+}
+
+// Move the options list down to align with labels
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  padding-top: 5px; // has to be padding because margin collaspes
+}
+
+// Radios and checkboxes on same line
+// TODO v3: Convert .inline to .control-inline
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px; // space out consecutive inline controls
+}
+
+// INPUT SIZES
+// -----------
+
+// General classes for quick sizes
+.input-mini { width: 60px; }
+
+.input-small { width: 120px; }
+
+.input-medium { width: 150px; }
+
+.input-large { width: 210px; }
+
+.input-xlarge { width: 270px; }
+
+.input-xxlarge { width: 530px; }
+
+// Grid style input sizes
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input[class*="span"],
+  // Redeclare since the fluid row class is more specific
+  .row-fluid input[class*="span"],
+  .row-fluid select[class*="span"],
+  .row-fluid textarea[class*="span"],
+  .row-fluid .uneditable-input[class*="span"] {
+    float: none;
+    margin-left: 0;
+  }
+
+// Ensure input-prepend/append never wraps
+.input-append input[class*="span"],
+.input-append .uneditable-input[class*="span"],
+.input-prepend input[class*="span"],
+.input-prepend .uneditable-input[class*="span"],
+.row-fluid input[class*="span"],
+.row-fluid select[class*="span"],
+.row-fluid textarea[class*="span"],
+.row-fluid .uneditable-input[class*="span"],
+.row-fluid .input-prepend [class*="span"],
+.row-fluid .input-append [class*="span"] {
+  display: inline-block;
+}
+
+// GRID SIZING FOR INPUTS
+// ----------------------
+
+// Grid sizes
+//#grid > .input(@gridColumnWidth, @gridGutterWidth);
+
+// Control row for multiple inputs per line
+.controls-row {
+  .clearfix(); // Clear the float from controls
+}
+
+// Float to collapse white-space for proper grid alignment
+.controls-row [class*="span"],
+  // Redeclare the fluid grid collapse since we undo the float for inputs
+  .row-fluid .controls-row [class*="span"] {
+    float: left;
+  }
+
+// Explicity set top padding on all checkboxes/radios, not just first-child
+.controls-row .checkbox[class*="span"],
+.controls-row .radio[class*="span"] {
+  padding-top: 5px;
+}
+
+// DISABLED STATE
+// --------------
+
+// Disabled and read-only inputs
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: @input-bg-disabled;
+}
+
+// Explicitly reset the colors here
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+// FORM FIELD FEEDBACK STATES
+// --------------------------
+
+// Warning
+.control-group.warning {
+  .formFieldState(@warning-text-color, @warning-text-color, @warning-bg);
+}
+
+// Error
+.control-group.error {
+  .formFieldState(@error-text-color, @error-text-color, @error-bg);
+}
+
+// Success
+.control-group.success {
+  .formFieldState(@success-text-color, @success-text-color, @success-bg);
+}
+
+// Success
+.control-group.info {
+  .formFieldState(@info-text-color, @info-text-color, @info-bg);
+}
+
+// HTML5 invalid states
+// Shares styles with the .control-group.error above
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: @input-color;
+  border-color: @input-border-error;
+  &:focus {
+    border-color: @input-border-focus;
+  }
+}
+
+input.error,
+textarea.error,
+select.error {
+  border-color: @input-border-error !important;
+  color: @input-color !important;
+}
+
+input.error::-webkit-input-placeholder,
+input.error:-moz-placeholder,
+input.error::-moz-placeholder,
+input.error:-ms-input-placeholder,
+textarea.error::-webkit-input-placeholder,
+textarea.error:-moz-placeholder,
+textarea.error::-moz-placeholder,
+textarea.error:-ms-input-placeholder {
+  color: @input-color !important;
+}
+
+// FORM ACTIONS
+// ------------
+
+.form-actions {
+  padding: (@line-height-base - 1) 20px @line-height-base;
+  margin-top: @line-height-base;
+  margin-bottom: @line-height-base;
+  background-color: @form-actions-bg;
+  border-top: 1px solid #E5E5E5;
+  .clearfix(); // Adding clearfix to allow for .pull-right button containers
+}
+
+// HELP TEXT
+// ---------
+
+.help-block,
+.help-inline {
+  color: lighten(@text-color, 15%); // lighten the text some for contrast
+}
+
+.help-block {
+  display: block; // account for any element using help-block
+  margin-bottom: @line-height-base / 2;
+}
+
+.help-inline {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+// INPUT GROUPS
+// ------------
+
+// Allow us to put symbols and text within the input field for a cleaner look
+.input-append,
+.input-prepend {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0; // white space collapse hack
+  white-space: nowrap; // Prevent span and input from separating
+  // Reset the white space collapse hack
+  input,
+  select,
+  .uneditable-input,
+  .dropdown-menu,
+  .popover {
+    font-size: @font-size-base;
+  }
+  input,
+  select,
+  .uneditable-input {
+    position: relative; // placed here by default so that on :focus we can place the input above the .add-on for full border and box-shadow goodness
+    vertical-align: top;
+    display: inline-block;
+    // Make input on top when focused so blue border and shadow always show
+    &:focus {
+      //z-index: 2;
+    }
+  }
+  .add-on,
+  .btn,
+  .btn-group > .dropdown-toggle {
+    vertical-align: top;
+    .border-radius(0);
+  }
+  .active {
+    background-color: lighten(@green, 30);
+    border-color: @green;
+  }
+  .btn.hasTooltip {
+    width: @input-height;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.input-prepend {
+  position: relative;
+  /* .add-on:first-child,
+  .btn:first-child {
+    .border-radius(@input-border-radius 0 0 @input-border-radius);
+    } */
+    input {
+    //padding-left: @input-height;
+  }
+  .add-on {
+    display: none;
+    font-size: @font-size-base + 1;
+    width: @input-height;
+    height: @input-height;
+    line-height: 40px;
+    text-align: center;
+    .box-sizing(border-box);
+    background: transparent !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    i, > span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      //margin: -@input-height/4 - 2 0 0 -@input-height/4 - 2;
+      .transform(translate(-50%,-50%));
+      border: 1px solid @table-border-color;
+      .border-radius(100px);
+      line-height: @input-height/2;
+      width: @input-height/2;
+      color: @global-color;
+      font-size: 13px;
+      .transition(.3s all ease);
+    }
+    &:hover i {
+      background: @global-color;
+      color: @white;
+    }
+  }
+  &:focus {
+    .add-on {
+      background: #F00;
+    }
+  }
+}
+
+.input-append {
+  input,
+  select,
+  .uneditable-input {
+    .border-radius(@input-border-radius 0 0 @input-border-radius);
+    + .btn-group .btn:last-child {
+      .border-radius(0 @input-border-radius @input-border-radius 0);
+    }
+  }
+  .add-on,
+  .btn,
+  .btn-group {
+    margin-left: -1px;
+  }
+  .add-on:last-child,
+  .btn:last-child,
+  .btn-group:last-child > .dropdown-toggle {
+    .border-radius(0 @input-border-radius @input-border-radius 0);
+  }
+}
+
+// Remove all border-radius for inputs with both prepend and append
+.input-prepend.input-append {
+  input,
+  select,
+  .uneditable-input {
+    .border-radius(@input-border-radius 0 0 @input-border-radius);
+    + .btn-group .btn {
+      .border-radius(0 @input-border-radius @input-border-radius 0);
+    }
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    margin-right: -1px;
+    .border-radius(@input-border-radius 0 0 @input-border-radius);
+  }
+  .add-on:last-child,
+  .btn:last-child {
+    margin-left: -1px;
+    .border-radius(0 @input-border-radius @input-border-radius 0);
+  }
+  .btn-group:first-child {
+    margin-left: 0;
+  }
+}
+
+// SEARCH FORM
+// -----------
+
+input.search-query {
+  padding-right: 14px;
+  padding-left: 14px;
+  margin-bottom: 0; // Remove the default margin on all inputs
+  .border-radius(15px);
+}
+
+/* Allow for input prepend/append in search forms */
+.form-search .input-append .search-query {
+  .border-radius(14px 0 0 14px);
+}
+
+.form-search .input-append .btn {
+  .border-radius(0 14px 14px 0);
+}
+
+.form-search .input-prepend .search-query {
+  .border-radius(0 14px 14px 0);
+}
+
+.form-search .input-prepend .btn {
+  .border-radius(14px 0 0 14px);
+}
+
+// HORIZONTAL & VERTICAL FORMS
+// ---------------------------
+
+// Common properties
+// -----------------
+
+.form-search,
+.form-inline,
+.form-horizontal {
+  input,
+  textarea,
+  select,
+  .help-inline,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  // Re-hide hidden elements due to specifity
+  .hide {
+    display: none;
+  }
+}
+
+.form-search label,
+.form-inline label,
+.form-search .btn-group,
+.form-inline .btn-group {
+  display: inline-block;
+}
+
+// Remove margin for input-prepend/-append
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+
+// Inline checkbox/radio labels (remove padding on left)
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+// Remove float and margin, set to inline-block
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+
+// Legend collapses margin, so next element is responsible for spacing
+legend + .control-group {
+  margin-top: @line-height-base;
+  -webkit-margin-top-collapse: separate;
+}
+
+// Horizontal-specific styles
+// --------------------------
+
+.form-horizontal {
+  // Increase spacing between groups
+  .control-group {
+    margin-bottom: @line-height-base;
+    .clearfix();
+  }
+  // Float the labels left
+  .control-label {
+    float: left;
+    width: @horizontalComponentOffset - 20;
+    padding-top: 5px;
+    text-align: right;
+  }
+  // Move over all input controls and content
+  .controls {
+    // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
+    // don't inherit the margin of the parent, in this case .controls
+    margin-left: @horizontalComponentOffset;
+  }
+  // Remove bottom margin on block level help text since that's accounted for on .control-group
+  .help-block {
+    margin-bottom: 0;
+  }
+  // And apply it only to .help-block instances that follow a form control
+  input,
+  select,
+  textarea,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    + .help-block {
+      margin-top: @line-height-base / 2;
+    }
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-actions {
+    padding-left: @horizontalComponentOffset;
+  }
+}

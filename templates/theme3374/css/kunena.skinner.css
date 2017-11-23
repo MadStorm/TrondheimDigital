@@ -1,0 +1,481 @@
+#Kunena td,
+#Kunena table,
+#Kunena th,
+#Kunena div,
+#Kunena p,
+#Kunena span,
+#Kunena .knewchar,
+#Kunena #ktab a span {
+  font-family: inherit;
+}
+#Kunena {
+  margin-bottom: 48px;
+}
+#Kunena .progress-bar-horizontal .progress-bar__body {
+  top: -22px;
+}
+#Kunena #sel_chzn,
+#Kunena #catid_chzn,
+#Kunena #mode_chzn,
+#Kunena #date_chzn,
+#Kunena #beforeafter_chzn,
+#Kunena #sort_chzn,
+#Kunena #order_chzn {
+  margin-bottom: 10px;
+  width: auto !important;
+}
+#Kunena #categorylist_chzn {
+  width: 100% !important;
+}
+#Kunena + div[style] {
+  display: none;
+}
+#Kunena div.kblock {
+  margin-top: 30px;
+}
+#Kunena .kfile-hide .kbutton,
+#Kunena .kfile-hide .kfile-input {
+  background: #3ec7c2;
+}
+#Kunena .kbutton {
+  vertical-align: top;
+}
+#Kunena .kbutton.ks {
+  margin-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#Kunena td {
+  border: 1px solid #dddddd;
+}
+#Kunena a:hover {
+  color: #3ec7c2;
+}
+#Kunena ul li a:hover {
+  color: #3ec7c2;
+}
+#Kunena .chzn-container-single .chzn-single span {
+  text-overflow: clip;
+}
+#Kunena div.chzn-container {
+  margin-bottom: 0;
+}
+#Kunena div.chzn-container .chzn-results li {
+  background: #ffffff;
+  color: #333333;
+  padding: 10px 20px;
+  min-width: auto;
+}
+#Kunena div.chzn-container .chzn-results li:hover {
+  background: #3ec7c2;
+  color: #ffffff;
+}
+#Kunena a.ktoggler,
+#Kunena .ktoggler {
+  display: none !important;
+}
+#Kunena #ktop {
+  border: none;
+  margin-bottom: 30px;
+}
+#Kunena #ktop #ktopmenu #ktab {
+  text-align: center;
+  margin: 0;
+}
+#Kunena #ktop #ktopmenu #ktab ul.menu li {
+  display: inline-block;
+  margin: 0px 8px 8px 0 !important;
+  padding: 0;
+}
+#Kunena #ktop #ktopmenu #ktab ul.menu li a {
+  background: transparent;
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: 2px solid transparent;
+}
+#Kunena #ktop #ktopmenu #ktab ul.menu li.active a,
+#Kunena #ktop #ktopmenu #ktab ul.menu li:hover a {
+  border-bottom-color: #ffffff;
+}
+#Kunena .klist-markallcatsread {
+  border: none;
+  background: transparent;
+  margin-bottom: 30px;
+}
+#Kunena .klist-markallcatsread:before,
+#Kunena .klist-markallcatsread:after {
+  content: " ";
+  display: table;
+}
+#Kunena .klist-markallcatsread:after {
+  clear: both;
+}
+#Kunena .klist-markallcatsread .ksectionbody > div {
+  margin-right: 15px;
+}
+#Kunena .klist-markallcatsread .ksectionbody > div + div {
+  margin-right: 0;
+}
+#Kunena .klist-markallcatsread + div.kblock {
+  margin-top: 0;
+}
+#Kunena .klist-markallcatsread form#jumpto select#catid,
+#Kunena .klist-jump-all form#jumpto select#catid,
+#Kunena .klist-times-all form#jumpto select#catid,
+#Kunena div.kmoderatorslist-jump form#jumpto select#catid,
+#Kunena .klist-markallcatsread form#timeselect select#catid,
+#Kunena .klist-jump-all form#timeselect select#catid,
+#Kunena .klist-times-all form#timeselect select#catid,
+#Kunena div.kmoderatorslist-jump form#timeselect select#catid {
+  width: 370px;
+}
+#Kunena .klist-markallcatsread form#jumpto select#sel,
+#Kunena .klist-jump-all form#jumpto select#sel,
+#Kunena .klist-times-all form#jumpto select#sel,
+#Kunena div.kmoderatorslist-jump form#jumpto select#sel,
+#Kunena .klist-markallcatsread form#timeselect select#sel,
+#Kunena .klist-jump-all form#timeselect select#sel,
+#Kunena .klist-times-all form#timeselect select#sel,
+#Kunena div.kmoderatorslist-jump form#timeselect select#sel {
+  width: 194px;
+}
+#Kunena .klist-markallcatsread form#jumpto select#catid,
+#Kunena .klist-jump-all form#jumpto select#catid,
+#Kunena .klist-times-all form#jumpto select#catid,
+#Kunena div.kmoderatorslist-jump form#jumpto select#catid,
+#Kunena .klist-markallcatsread form#timeselect select#catid,
+#Kunena .klist-jump-all form#timeselect select#catid,
+#Kunena .klist-times-all form#timeselect select#catid,
+#Kunena div.kmoderatorslist-jump form#timeselect select#catid,
+#Kunena .klist-markallcatsread form#jumpto select#sel,
+#Kunena .klist-jump-all form#jumpto select#sel,
+#Kunena .klist-times-all form#jumpto select#sel,
+#Kunena div.kmoderatorslist-jump form#jumpto select#sel,
+#Kunena .klist-markallcatsread form#timeselect select#sel,
+#Kunena .klist-jump-all form#timeselect select#sel,
+#Kunena .klist-times-all form#timeselect select#sel,
+#Kunena div.kmoderatorslist-jump form#timeselect select#sel {
+  max-width: 370px;
+}
+#Kunena div.kblock {
+  border-bottom: none;
+}
+#Kunena div.kblock div.kheader {
+  background: #3ec7c2;
+  padding: 0;
+  text-align: center;
+  border-bottom: none;
+  padding: 16px 0 20px 0;
+}
+#Kunena div.kblock div.kheader .kheader-title a {
+  font: 24px/30px 'Raleway', sans-serif !important;
+  color: white !important;
+  text-transform: uppercase;
+}
+#Kunena div.kblock div.kheader .kheader-title a:hover {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+#Kunena div.kblock .kcontainer .kbody {
+  border: none;
+  overflow: visible;
+}
+@media (max-width: 767px) {
+  #Kunena div.kblock .kcontainer .kbody {
+    overflow-x: scroll;
+  }
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable {
+  border: 1px solid #dddddd;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-category-icon {
+  padding: 34px 17px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-category-icon .kicon.kreadforum {
+  border-radius: 0;
+  font-size: 24px;
+  height: auto;
+  line-height: 24px;
+  padding-top: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  width: auto;
+  color: #ffffff;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-category-icon .kicon.kreadforum:before {
+  content: '\f115';
+  font-family: 'FontAwesome';
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-category-icon.kcol-first {
+  border-bottom: 1px solid #dddddd;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr td.kcol-first {
+  border-bottom: 1px solid #dddddd;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr td.kcol-mid {
+  border-bottom: 1px solid #dddddd;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattitle {
+  min-width: 300px;
+  padding: 21px 22px 14px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattitle .kthead-title {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattitle .kthead-title a {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattitle .kthead-title a:hover {
+  color: #ffffff;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattitle .kthead-desc {
+  font-size: 14px;
+  line-height: 24px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattopics,
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatreplies {
+  text-align: center;
+  padding: 22px 10px 8px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattopics .kcat-topics-number,
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatreplies .kcat-topics-number,
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattopics .kcat-replies-number,
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatreplies .kcat-replies-number {
+  margin: 0 auto;
+  color: #27292b;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattopics .kcat-topics,
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatreplies .kcat-topics,
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcattopics .kcat-replies,
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatreplies .kcat-replies {
+  font-size: 14px;
+  line-height: 22px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatreplies {
+  padding: 22px 14px 8px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatlastpost {
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 22px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatlastpost .klatest-subject-by span.subject-by:before,
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatlastpost .klatest-subject-by span.nowrap:before {
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  margin-right: 6px;
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatlastpost .klatest-subject-by .subject-by:before {
+  content: '\f007';
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-kcatlastpost .klatest-subject-by .nowrap:before {
+  content: '\f073';
+}
+#Kunena div.kblock .kcontainer .kbody .kblocktable tbody tr .kcol-knoposts {
+  padding: 21px 0 0 20px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  vertical-align: top;
+}
+#Kunena div.kblock.kwhoisonline .kwhoicon,
+#Kunena div.kblock.kfrontstats .kwhoicon,
+#Kunena div.kblock.kwhoisonline .kstatsicon,
+#Kunena div.kblock.kfrontstats .kstatsicon {
+  height: auto;
+  padding-top: 0;
+  width: auto;
+  font-size: 24px;
+  line-height: 24px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  color: #ffffff;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+#Kunena div.kblock.kwhoisonline .kwhoicon:before,
+#Kunena div.kblock.kfrontstats .kwhoicon:before,
+#Kunena div.kblock.kwhoisonline .kstatsicon:before,
+#Kunena div.kblock.kfrontstats .kstatsicon:before {
+  font-family: 'FontAwesome';
+}
+#Kunena div.kblock.kwhoisonline .kwhoicon:before {
+  content: '\f0c0';
+}
+#Kunena div.kblock.kfrontstats .kstatsicon:before {
+  content: '\f1fe';
+}
+#Kunena div.kblock #searchform #mode_chzn,
+#Kunena div.kblock #searchform #limit_chzn {
+  margin-top: 15px;
+}
+@media (max-width: 767px) {
+  #Kunena .kadvsearch .kcontainer > .kbody {
+    overflow-x: scroll;
+  }
+}
+#Kunena .chzn-container-active.chzn-with-drop .chzn-single div {
+  background: #3ec7c2;
+}
+#Kunena .klist-actions {
+  border: none;
+}
+#Kunena .klist-actions .klist-actions-info-all,
+#Kunena .klist-actions .klist-times-all,
+#Kunena .klist-actions .klist-jump-all,
+#Kunena .klist-actions .klist-pages-all {
+  border: none;
+}
+#Kunena .klist-actions .klist-actions-info-all {
+  width: 1%;
+}
+@media (max-width: 767px) {
+  #Kunena .klist-actions {
+    display: block;
+  }
+  #Kunena .klist-actions .klist-actions-info-all,
+  #Kunena .klist-actions .klist-times-all,
+  #Kunena .klist-actions .klist-jump-all,
+  #Kunena .klist-actions .klist-pages-all {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+#Kunena #helpbox {
+  background: transparent;
+}
+#Kunena img {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#Kunena div.kblock div.kheader {
+  color: white;
+}
+#Kunena div.kblock div.kheader > span:not(.kcheckbox) {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 3.5px 10px 3.5px 15px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #3ec7c2;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-bottom: 0 !important;
+}
+#Kunena div.kblock div.khelprulescontent {
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+#Kunena .kcol-ktopictitle,
+#Kunena .kcol-ktopiclastpost {
+  min-width: 150px;
+}
+@media (max-width: 767px) {
+  #Kunena #kstatslistright {
+    float: left;
+    text-align: left;
+  }
+}
+#Kunena .kheadbtn a {
+  color: white;
+}
+#Kunena .kheadbtn a:hover {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+#Kunena #searchuser_tbody {
+  display: block;
+  margin-top: 20px;
+}
+#Kunena #searchuser_tbody .search-user {
+  margin-bottom: 15px;
+}
+#Kunena #searchuser_tbody #kusersearch {
+  float: left;
+}
+@media (max-width: 767px) {
+  #Kunena #searchuser_tbody .userlist-jump,
+  #Kunena #searchuser_tbody .search-user {
+    float: none !important;
+  }
+  #Kunena #searchuser_tbody .userlist-jump .kbutton,
+  #Kunena #searchuser_tbody .search-user .kbutton {
+    padding: 7px 17px;
+  }
+}
+#Kunena .klist-actions-forum {
+  border: none;
+}
+#Kunena #mode_chzn {
+  -webkit-box-sizing: initial !important;
+  -moz-box-sizing: initial !important;
+  box-sizing: initial !important;
+}
+#Kunena #kprofile .kcol-mid {
+  min-width: 500px;
+}
+#Kunena dl.tabs dt.open {
+  background: #3ec7c2;
+  color: white;
+}
+#Kunena dl.tabs dt {
+  border: none !important;
+}
+#Kunena dl.tabs dt:hover {
+  background: #ffffff;
+  color: #27292b;
+}
+#Kunena .kheader h2,
+#Kunena .kheader h2 a {
+  font: 24px/30px 'Raleway', sans-serif !important;
+  color: white !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase;
+}
+#Kunena .kheader h2 a:hover {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+#Kunena .kheader div span {
+  font: 24px/30px 'Raleway', sans-serif !important;
+  color: white !important;
+  text-transform: uppercase;
+}
+#Kunena .progress-bar {
+  margin-top: 14px;
+}
+.tip-wrap {
+  background: #eaeaea;
+  padding: 5px;
+}

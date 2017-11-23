@@ -1,0 +1,333 @@
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+//
+// Lists
+// --------------------------------------------------
+
+//===========================================
+//   Ordered and Unordered List Styles
+//===========================================
+ul, ol {
+  margin: 0 0 @line-height-base;
+  padding: 0;
+  list-style: none;
+  li {
+    line-height: @line-height-base;
+    a {
+      text-decoration: none;
+      color: @global-color;
+      &:hover {
+        color: @text-color;
+      }
+    }
+    &.fa {
+      font-family: @font-family-base;
+      display: block;
+      &:before {
+        font-family: @fa;
+      }
+    }
+  }
+}
+
+//===========================================
+//   Ordered List Styles
+//===========================================
+ol {
+  list-style: none;
+  counter-reset: list;
+  li {
+    font-size: @line-height-base;
+    line-height: @line-height-base + 6;
+    padding-left: 45px;
+    position: relative;
+    &:before {
+      content: counter(list, decimal-leading-zero)'.';
+      counter-increment: list;
+      left: 0;
+      padding: 0px;
+      position: absolute;
+      top: 0;
+      color: @global-color;
+    }
+    a {
+      color: @text-color;
+      &:hover {
+        color: @global-color;
+      }
+    }
+    + li {
+      margin-top: 30px;
+    }
+  }
+}
+
+//===========================================
+// Unordered List Styles
+//===========================================
+.item_introtext,
+.item_fulltext,
+.category_desc,
+.site_map {
+  ul {
+    li {
+      + li {
+        margin-top: 12px;
+      }
+    }
+    &.nav-tabs {
+      li {
+        padding: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    a,
+    span {
+      text-decoration: none;
+    }
+  }
+}
+
+ul.tags,
+ul.nav,
+ul.btn-toolbar,
+ul.dropdown-menu,
+ul.chzn-results,
+ul.chzn-choices {
+  li {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+// =======================
+// SOCIAL LIST
+// =======================
+.nav.menu.social {
+  font-size: 0;
+  line-height: 0;
+  margin: 0 0 31px;
+  text-align: center;
+  li {
+    display: inline-block;
+    padding: 0 23px 10px;
+    &:before {
+      display: none;
+    }
+    a {
+      color: @global-color;
+      display: block;
+      font-size: 21px;
+      line-height: 30px;
+      .transition(all 0.5s ease);
+      &:hover {
+        background: transparent;
+        color: @text-color;
+      }
+    }
+  }
+}
+
+//===========================================
+// List Styles
+//===========================================
+ul.list {
+  li {
+    font-size: @line-height-base;
+    line-height: @line-height-base + 6;
+    list-style: none;
+    position: relative;
+    padding-left: 45px;
+    &:before {
+      color: @global-color;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '\f058';
+      font-family: @fa;
+      font-size: 24px;
+    }
+    a {
+      color: @text-color;
+      &:hover {
+        color: @global-color;
+      }
+    }
+    + li {
+      margin-top: 30px;
+    }
+  }
+}
+
+//===========================================
+// Icon List Styles
+//===========================================
+ul.icons {
+  li {
+    list-style: none;
+    position: relative;
+    font-size: @line-height-base;
+    line-height: @line-height-base + 6;
+    padding-left: 40px;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: @global-color;
+    }
+    a {
+      color: @text-color;
+      &:hover {
+        color: @global-color;
+      }
+    }
+    + li {
+      margin-top: 30px;
+    }
+  }
+}
+
+ul.systems {
+  li {
+    display: inline-block;
+    position: relative;
+    .fa {
+      font-size: 0;
+      line-height: 0;
+      &:before {
+        font-size: 60px;
+        line-height: 60px;
+      }
+    }
+    + li {
+      margin-left: 20px;
+      padding-left: 20px;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        .translate(0%, -50%);
+        height: 32px;
+        width: 1px;
+        background: white;
+      }
+    }
+  }
+}
+
+ul.item_list {
+  margin: 10px auto 49px;
+  text-align: left;
+  li {
+    font-size: @line-height-base;
+    line-height: @line-height-base + 10;
+    &.fa-check-circle {
+      &:before {
+        color: @global-color;
+      }
+    }
+    &:before {
+      margin-right: 24px;
+    }
+    & + li{
+      margin-top: 26px;
+    }
+  }
+}
+
+//===========================================
+// Bootstrap Styles
+//===========================================
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  &.nav-child {
+    margin: 5px 0 0;
+  }
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl + * {
+  margin-top: @line-height-base;
+}
+
+dt,
+dd {
+  line-height: @line-height-base;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: @line-height-base / 2;
+}
+
+// Horizontal layout (like forms)
+.dl-horizontal {
+  .clearfix(); // Ensure dl clears floats if empty dd elements present
+  dt {
+    float: left;
+    width: @component-offset-horizontal - 20;
+    clear: left;
+    text-align: right;
+    .text-overflow();
+  }
+  dd {
+    margin-left: @component-offset-horizontal;
+  }
+}
+
+.portfolio-meta-list {
+  display: table;
+  margin-left: 0;
+  overflow: hidden;
+  li {
+    color: @link-hover-color;
+    display: table-row;
+    strong {
+      color: @text-color;
+    }
+    > strong,
+    > span {
+      display: table-cell;
+    }
+    > span {
+      padding-left: 5px;
+      color: @text-color;
+    }
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.item_fulltext .portfolio-meta-list li span:hover {
+  color: inherit;
+}

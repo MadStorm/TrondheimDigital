@@ -1,0 +1,2770 @@
+.counters .radial-progress {
+  border-radius: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+.counters .radial-progress .circle .fill {
+  position: absolute;
+  border-radius: 1000px;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.counters .radial-progress .circle .mask {
+  border-radius: 1000px;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.counters .radial-progress .inset {
+  position: absolute;
+  border-radius: 1000px;
+}
+.counters .radial-progress .inset .percentage {
+  overflow: hidden;
+  position: absolute;
+  line-height: 1;
+}
+.counters .radial-progress .inset .percentage .numbers span {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.counters .radial-progress .inset .title{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+.counters .radial-progress[data-progress="177"] .circle .mask,
+.counters .radial-progress__hours[data-progress="172"] .circle .mask,
+.counters .radial-progress__days[data-progress="174"] .circle .mask,
+.counters .radial-progress[data-progress="177"] .circle .fill,
+.counters .radial-progress__hours[data-progress="172"] .circle .fill,
+.counters .radial-progress__days[data-progress="174"] .circle .fill {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.counters .radial-progress[data-progress="0"] .circle .mask.full {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.counters .radial-progress[data-progress="0"] .circle .fill {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.counters .radial-progress[data-progress="0"] .circle .fill.fix {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.counters .radial-progress[data-progress="1"] .circle .mask.full {
+  -webkit-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+.counters .radial-progress[data-progress="1"] .circle .fill {
+  -webkit-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+.counters .radial-progress[data-progress="1"] .circle .fill.fix {
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.counters .radial-progress[data-progress="2"] .circle .mask.full {
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.counters .radial-progress[data-progress="2"] .circle .fill {
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.counters .radial-progress[data-progress="2"] .circle .fill.fix {
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+.counters .radial-progress[data-progress="3"] .circle .mask.full {
+  -webkit-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.counters .radial-progress[data-progress="3"] .circle .fill {
+  -webkit-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.counters .radial-progress[data-progress="3"] .circle .fill.fix {
+  -webkit-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
+}
+.counters .radial-progress[data-progress="4"] .circle .mask.full {
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+.counters .radial-progress[data-progress="4"] .circle .fill {
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+.counters .radial-progress[data-progress="4"] .circle .fill.fix {
+  -webkit-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.counters .radial-progress[data-progress="5"] .circle .mask.full {
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.counters .radial-progress[data-progress="5"] .circle .fill {
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.counters .radial-progress[data-progress="5"] .circle .fill.fix {
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.counters .radial-progress[data-progress="6"] .circle .mask.full {
+  -webkit-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
+}
+.counters .radial-progress[data-progress="6"] .circle .fill {
+  -webkit-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
+}
+.counters .radial-progress[data-progress="6"] .circle .fill.fix {
+  -webkit-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+  transform: rotate(12deg);
+}
+.counters .radial-progress[data-progress="7"] .circle .mask.full {
+  -webkit-transform: rotate(7deg);
+  -ms-transform: rotate(7deg);
+  transform: rotate(7deg);
+}
+.counters .radial-progress[data-progress="7"] .circle .fill {
+  -webkit-transform: rotate(7deg);
+  -ms-transform: rotate(7deg);
+  transform: rotate(7deg);
+}
+.counters .radial-progress[data-progress="7"] .circle .fill.fix {
+  -webkit-transform: rotate(14deg);
+  -ms-transform: rotate(14deg);
+  transform: rotate(14deg);
+}
+.counters .radial-progress[data-progress="8"] .circle .mask.full {
+  -webkit-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.counters .radial-progress[data-progress="8"] .circle .fill {
+  -webkit-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.counters .radial-progress[data-progress="8"] .circle .fill.fix {
+  -webkit-transform: rotate(16deg);
+  -ms-transform: rotate(16deg);
+  transform: rotate(16deg);
+}
+.counters .radial-progress[data-progress="9"] .circle .mask.full {
+  -webkit-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  transform: rotate(9deg);
+}
+.counters .radial-progress[data-progress="9"] .circle .fill {
+  -webkit-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  transform: rotate(9deg);
+}
+.counters .radial-progress[data-progress="9"] .circle .fill.fix {
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.counters .radial-progress[data-progress="10"] .circle .mask.full {
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.counters .radial-progress[data-progress="10"] .circle .fill {
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.counters .radial-progress[data-progress="10"] .circle .fill.fix {
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.counters .radial-progress[data-progress="11"] .circle .mask.full {
+  -webkit-transform: rotate(11deg);
+  -ms-transform: rotate(11deg);
+  transform: rotate(11deg);
+}
+.counters .radial-progress[data-progress="11"] .circle .fill {
+  -webkit-transform: rotate(11deg);
+  -ms-transform: rotate(11deg);
+  transform: rotate(11deg);
+}
+.counters .radial-progress[data-progress="11"] .circle .fill.fix {
+  -webkit-transform: rotate(22deg);
+  -ms-transform: rotate(22deg);
+  transform: rotate(22deg);
+}
+.counters .radial-progress[data-progress="12"] .circle .mask.full {
+  -webkit-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+  transform: rotate(12deg);
+}
+.counters .radial-progress[data-progress="12"] .circle .fill {
+  -webkit-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+  transform: rotate(12deg);
+}
+.counters .radial-progress[data-progress="12"] .circle .fill.fix {
+  -webkit-transform: rotate(24deg);
+  -ms-transform: rotate(24deg);
+  transform: rotate(24deg);
+}
+.counters .radial-progress[data-progress="13"] .circle .mask.full {
+  -webkit-transform: rotate(13deg);
+  -ms-transform: rotate(13deg);
+  transform: rotate(13deg);
+}
+.counters .radial-progress[data-progress="13"] .circle .fill {
+  -webkit-transform: rotate(13deg);
+  -ms-transform: rotate(13deg);
+  transform: rotate(13deg);
+}
+.counters .radial-progress[data-progress="13"] .circle .fill.fix {
+  -webkit-transform: rotate(26deg);
+  -ms-transform: rotate(26deg);
+  transform: rotate(26deg);
+}
+.counters .radial-progress[data-progress="14"] .circle .mask.full {
+  -webkit-transform: rotate(14deg);
+  -ms-transform: rotate(14deg);
+  transform: rotate(14deg);
+}
+.counters .radial-progress[data-progress="14"] .circle .fill {
+  -webkit-transform: rotate(14deg);
+  -ms-transform: rotate(14deg);
+  transform: rotate(14deg);
+}
+.counters .radial-progress[data-progress="14"] .circle .fill.fix {
+  -webkit-transform: rotate(28deg);
+  -ms-transform: rotate(28deg);
+  transform: rotate(28deg);
+}
+.counters .radial-progress[data-progress="15"] .circle .mask.full {
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.counters .radial-progress[data-progress="15"] .circle .fill {
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.counters .radial-progress[data-progress="15"] .circle .fill.fix {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.counters .radial-progress[data-progress="16"] .circle .mask.full {
+  -webkit-transform: rotate(16deg);
+  -ms-transform: rotate(16deg);
+  transform: rotate(16deg);
+}
+.counters .radial-progress[data-progress="16"] .circle .fill {
+  -webkit-transform: rotate(16deg);
+  -ms-transform: rotate(16deg);
+  transform: rotate(16deg);
+}
+.counters .radial-progress[data-progress="16"] .circle .fill.fix {
+  -webkit-transform: rotate(32deg);
+  -ms-transform: rotate(32deg);
+  transform: rotate(32deg);
+}
+.counters .radial-progress[data-progress="17"] .circle .mask.full {
+  -webkit-transform: rotate(17deg);
+  -ms-transform: rotate(17deg);
+  transform: rotate(17deg);
+}
+.counters .radial-progress[data-progress="17"] .circle .fill {
+  -webkit-transform: rotate(17deg);
+  -ms-transform: rotate(17deg);
+  transform: rotate(17deg);
+}
+.counters .radial-progress[data-progress="17"] .circle .fill.fix {
+  -webkit-transform: rotate(34deg);
+  -ms-transform: rotate(34deg);
+  transform: rotate(34deg);
+}
+.counters .radial-progress[data-progress="18"] .circle .mask.full {
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.counters .radial-progress[data-progress="18"] .circle .fill {
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.counters .radial-progress[data-progress="18"] .circle .fill.fix {
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.counters .radial-progress[data-progress="19"] .circle .mask.full {
+  -webkit-transform: rotate(19deg);
+  -ms-transform: rotate(19deg);
+  transform: rotate(19deg);
+}
+.counters .radial-progress[data-progress="19"] .circle .fill {
+  -webkit-transform: rotate(19deg);
+  -ms-transform: rotate(19deg);
+  transform: rotate(19deg);
+}
+.counters .radial-progress[data-progress="19"] .circle .fill.fix {
+  -webkit-transform: rotate(38deg);
+  -ms-transform: rotate(38deg);
+  transform: rotate(38deg);
+}
+.counters .radial-progress[data-progress="20"] .circle .mask.full {
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.counters .radial-progress[data-progress="20"] .circle .fill {
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.counters .radial-progress[data-progress="20"] .circle .fill.fix {
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+.counters .radial-progress[data-progress="21"] .circle .mask.full {
+  -webkit-transform: rotate(21deg);
+  -ms-transform: rotate(21deg);
+  transform: rotate(21deg);
+}
+.counters .radial-progress[data-progress="21"] .circle .fill {
+  -webkit-transform: rotate(21deg);
+  -ms-transform: rotate(21deg);
+  transform: rotate(21deg);
+}
+.counters .radial-progress[data-progress="21"] .circle .fill.fix {
+  -webkit-transform: rotate(42deg);
+  -ms-transform: rotate(42deg);
+  transform: rotate(42deg);
+}
+.counters .radial-progress[data-progress="22"] .circle .mask.full {
+  -webkit-transform: rotate(22deg);
+  -ms-transform: rotate(22deg);
+  transform: rotate(22deg);
+}
+.counters .radial-progress[data-progress="22"] .circle .fill {
+  -webkit-transform: rotate(22deg);
+  -ms-transform: rotate(22deg);
+  transform: rotate(22deg);
+}
+.counters .radial-progress[data-progress="22"] .circle .fill.fix {
+  -webkit-transform: rotate(44deg);
+  -ms-transform: rotate(44deg);
+  transform: rotate(44deg);
+}
+.counters .radial-progress[data-progress="23"] .circle .mask.full {
+  -webkit-transform: rotate(23deg);
+  -ms-transform: rotate(23deg);
+  transform: rotate(23deg);
+}
+.counters .radial-progress[data-progress="23"] .circle .fill {
+  -webkit-transform: rotate(23deg);
+  -ms-transform: rotate(23deg);
+  transform: rotate(23deg);
+}
+.counters .radial-progress[data-progress="23"] .circle .fill.fix {
+  -webkit-transform: rotate(46deg);
+  -ms-transform: rotate(46deg);
+  transform: rotate(46deg);
+}
+.counters .radial-progress[data-progress="24"] .circle .mask.full {
+  -webkit-transform: rotate(24deg);
+  -ms-transform: rotate(24deg);
+  transform: rotate(24deg);
+}
+.counters .radial-progress[data-progress="24"] .circle .fill {
+  -webkit-transform: rotate(24deg);
+  -ms-transform: rotate(24deg);
+  transform: rotate(24deg);
+}
+.counters .radial-progress[data-progress="24"] .circle .fill.fix {
+  -webkit-transform: rotate(48deg);
+  -ms-transform: rotate(48deg);
+  transform: rotate(48deg);
+}
+.counters .radial-progress[data-progress="25"] .circle .mask.full {
+  -webkit-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  transform: rotate(25deg);
+}
+.counters .radial-progress[data-progress="25"] .circle .fill {
+  -webkit-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  transform: rotate(25deg);
+}
+.counters .radial-progress[data-progress="25"] .circle .fill.fix {
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+.counters .radial-progress[data-progress="26"] .circle .mask.full {
+  -webkit-transform: rotate(26deg);
+  -ms-transform: rotate(26deg);
+  transform: rotate(26deg);
+}
+.counters .radial-progress[data-progress="26"] .circle .fill {
+  -webkit-transform: rotate(26deg);
+  -ms-transform: rotate(26deg);
+  transform: rotate(26deg);
+}
+.counters .radial-progress[data-progress="26"] .circle .fill.fix {
+  -webkit-transform: rotate(52deg);
+  -ms-transform: rotate(52deg);
+  transform: rotate(52deg);
+}
+.counters .radial-progress[data-progress="27"] .circle .mask.full {
+  -webkit-transform: rotate(27deg);
+  -ms-transform: rotate(27deg);
+  transform: rotate(27deg);
+}
+.counters .radial-progress[data-progress="27"] .circle .fill {
+  -webkit-transform: rotate(27deg);
+  -ms-transform: rotate(27deg);
+  transform: rotate(27deg);
+}
+.counters .radial-progress[data-progress="27"] .circle .fill.fix {
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.counters .radial-progress[data-progress="28"] .circle .mask.full {
+  -webkit-transform: rotate(28deg);
+  -ms-transform: rotate(28deg);
+  transform: rotate(28deg);
+}
+.counters .radial-progress[data-progress="28"] .circle .fill {
+  -webkit-transform: rotate(28deg);
+  -ms-transform: rotate(28deg);
+  transform: rotate(28deg);
+}
+.counters .radial-progress[data-progress="28"] .circle .fill.fix {
+  -webkit-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  transform: rotate(56deg);
+}
+.counters .radial-progress[data-progress="29"] .circle .mask.full {
+  -webkit-transform: rotate(29deg);
+  -ms-transform: rotate(29deg);
+  transform: rotate(29deg);
+}
+.counters .radial-progress[data-progress="29"] .circle .fill {
+  -webkit-transform: rotate(29deg);
+  -ms-transform: rotate(29deg);
+  transform: rotate(29deg);
+}
+.counters .radial-progress[data-progress="29"] .circle .fill.fix {
+  -webkit-transform: rotate(58deg);
+  -ms-transform: rotate(58deg);
+  transform: rotate(58deg);
+}
+.counters .radial-progress[data-progress="30"] .circle .mask.full {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.counters .radial-progress[data-progress="30"] .circle .fill {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.counters .radial-progress[data-progress="30"] .circle .fill.fix {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.counters .radial-progress[data-progress="31"] .circle .mask.full {
+  -webkit-transform: rotate(31deg);
+  -ms-transform: rotate(31deg);
+  transform: rotate(31deg);
+}
+.counters .radial-progress[data-progress="31"] .circle .fill {
+  -webkit-transform: rotate(31deg);
+  -ms-transform: rotate(31deg);
+  transform: rotate(31deg);
+}
+.counters .radial-progress[data-progress="31"] .circle .fill.fix {
+  -webkit-transform: rotate(62deg);
+  -ms-transform: rotate(62deg);
+  transform: rotate(62deg);
+}
+.counters .radial-progress[data-progress="32"] .circle .mask.full {
+  -webkit-transform: rotate(32deg);
+  -ms-transform: rotate(32deg);
+  transform: rotate(32deg);
+}
+.counters .radial-progress[data-progress="32"] .circle .fill {
+  -webkit-transform: rotate(32deg);
+  -ms-transform: rotate(32deg);
+  transform: rotate(32deg);
+}
+.counters .radial-progress[data-progress="32"] .circle .fill.fix {
+  -webkit-transform: rotate(64deg);
+  -ms-transform: rotate(64deg);
+  transform: rotate(64deg);
+}
+.counters .radial-progress[data-progress="33"] .circle .mask.full {
+  -webkit-transform: rotate(33deg);
+  -ms-transform: rotate(33deg);
+  transform: rotate(33deg);
+}
+.counters .radial-progress[data-progress="33"] .circle .fill {
+  -webkit-transform: rotate(33deg);
+  -ms-transform: rotate(33deg);
+  transform: rotate(33deg);
+}
+.counters .radial-progress[data-progress="33"] .circle .fill.fix {
+  -webkit-transform: rotate(66deg);
+  -ms-transform: rotate(66deg);
+  transform: rotate(66deg);
+}
+.counters .radial-progress[data-progress="34"] .circle .mask.full {
+  -webkit-transform: rotate(34deg);
+  -ms-transform: rotate(34deg);
+  transform: rotate(34deg);
+}
+.counters .radial-progress[data-progress="34"] .circle .fill {
+  -webkit-transform: rotate(34deg);
+  -ms-transform: rotate(34deg);
+  transform: rotate(34deg);
+}
+.counters .radial-progress[data-progress="34"] .circle .fill.fix {
+  -webkit-transform: rotate(68deg);
+  -ms-transform: rotate(68deg);
+  transform: rotate(68deg);
+}
+.counters .radial-progress[data-progress="35"] .circle .mask.full {
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.counters .radial-progress[data-progress="35"] .circle .fill {
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.counters .radial-progress[data-progress="35"] .circle .fill.fix {
+  -webkit-transform: rotate(70deg);
+  -ms-transform: rotate(70deg);
+  transform: rotate(70deg);
+}
+.counters .radial-progress[data-progress="36"] .circle .mask.full {
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.counters .radial-progress[data-progress="36"] .circle .fill {
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.counters .radial-progress[data-progress="36"] .circle .fill.fix {
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.counters .radial-progress[data-progress="37"] .circle .mask.full {
+  -webkit-transform: rotate(37deg);
+  -ms-transform: rotate(37deg);
+  transform: rotate(37deg);
+}
+.counters .radial-progress[data-progress="37"] .circle .fill {
+  -webkit-transform: rotate(37deg);
+  -ms-transform: rotate(37deg);
+  transform: rotate(37deg);
+}
+.counters .radial-progress[data-progress="37"] .circle .fill.fix {
+  -webkit-transform: rotate(74deg);
+  -ms-transform: rotate(74deg);
+  transform: rotate(74deg);
+}
+.counters .radial-progress[data-progress="38"] .circle .mask.full {
+  -webkit-transform: rotate(38deg);
+  -ms-transform: rotate(38deg);
+  transform: rotate(38deg);
+}
+.counters .radial-progress[data-progress="38"] .circle .fill {
+  -webkit-transform: rotate(38deg);
+  -ms-transform: rotate(38deg);
+  transform: rotate(38deg);
+}
+.counters .radial-progress[data-progress="38"] .circle .fill.fix {
+  -webkit-transform: rotate(76deg);
+  -ms-transform: rotate(76deg);
+  transform: rotate(76deg);
+}
+.counters .radial-progress[data-progress="39"] .circle .mask.full {
+  -webkit-transform: rotate(39deg);
+  -ms-transform: rotate(39deg);
+  transform: rotate(39deg);
+}
+.counters .radial-progress[data-progress="39"] .circle .fill {
+  -webkit-transform: rotate(39deg);
+  -ms-transform: rotate(39deg);
+  transform: rotate(39deg);
+}
+.counters .radial-progress[data-progress="39"] .circle .fill.fix {
+  -webkit-transform: rotate(78deg);
+  -ms-transform: rotate(78deg);
+  transform: rotate(78deg);
+}
+.counters .radial-progress[data-progress="40"] .circle .mask.full {
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+.counters .radial-progress[data-progress="40"] .circle .fill {
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+.counters .radial-progress[data-progress="40"] .circle .fill.fix {
+  -webkit-transform: rotate(80deg);
+  -ms-transform: rotate(80deg);
+  transform: rotate(80deg);
+}
+.counters .radial-progress[data-progress="41"] .circle .mask.full {
+  -webkit-transform: rotate(41deg);
+  -ms-transform: rotate(41deg);
+  transform: rotate(41deg);
+}
+.counters .radial-progress[data-progress="41"] .circle .fill {
+  -webkit-transform: rotate(41deg);
+  -ms-transform: rotate(41deg);
+  transform: rotate(41deg);
+}
+.counters .radial-progress[data-progress="41"] .circle .fill.fix {
+  -webkit-transform: rotate(82deg);
+  -ms-transform: rotate(82deg);
+  transform: rotate(82deg);
+}
+.counters .radial-progress[data-progress="42"] .circle .mask.full {
+  -webkit-transform: rotate(42deg);
+  -ms-transform: rotate(42deg);
+  transform: rotate(42deg);
+}
+.counters .radial-progress[data-progress="42"] .circle .fill {
+  -webkit-transform: rotate(42deg);
+  -ms-transform: rotate(42deg);
+  transform: rotate(42deg);
+}
+.counters .radial-progress[data-progress="42"] .circle .fill.fix {
+  -webkit-transform: rotate(84deg);
+  -ms-transform: rotate(84deg);
+  transform: rotate(84deg);
+}
+.counters .radial-progress[data-progress="43"] .circle .mask.full {
+  -webkit-transform: rotate(43deg);
+  -ms-transform: rotate(43deg);
+  transform: rotate(43deg);
+}
+.counters .radial-progress[data-progress="43"] .circle .fill {
+  -webkit-transform: rotate(43deg);
+  -ms-transform: rotate(43deg);
+  transform: rotate(43deg);
+}
+.counters .radial-progress[data-progress="43"] .circle .fill.fix {
+  -webkit-transform: rotate(86deg);
+  -ms-transform: rotate(86deg);
+  transform: rotate(86deg);
+}
+.counters .radial-progress[data-progress="44"] .circle .mask.full {
+  -webkit-transform: rotate(44deg);
+  -ms-transform: rotate(44deg);
+  transform: rotate(44deg);
+}
+.counters .radial-progress[data-progress="44"] .circle .fill {
+  -webkit-transform: rotate(44deg);
+  -ms-transform: rotate(44deg);
+  transform: rotate(44deg);
+}
+.counters .radial-progress[data-progress="44"] .circle .fill.fix {
+  -webkit-transform: rotate(88deg);
+  -ms-transform: rotate(88deg);
+  transform: rotate(88deg);
+}
+.counters .radial-progress[data-progress="45"] .circle .mask.full {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.counters .radial-progress[data-progress="45"] .circle .fill {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.counters .radial-progress[data-progress="45"] .circle .fill.fix {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.counters .radial-progress[data-progress="46"] .circle .mask.full {
+  -webkit-transform: rotate(46deg);
+  -ms-transform: rotate(46deg);
+  transform: rotate(46deg);
+}
+.counters .radial-progress[data-progress="46"] .circle .fill {
+  -webkit-transform: rotate(46deg);
+  -ms-transform: rotate(46deg);
+  transform: rotate(46deg);
+}
+.counters .radial-progress[data-progress="46"] .circle .fill.fix {
+  -webkit-transform: rotate(92deg);
+  -ms-transform: rotate(92deg);
+  transform: rotate(92deg);
+}
+.counters .radial-progress[data-progress="47"] .circle .mask.full {
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+.counters .radial-progress[data-progress="47"] .circle .fill {
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+.counters .radial-progress[data-progress="47"] .circle .fill.fix {
+  -webkit-transform: rotate(94deg);
+  -ms-transform: rotate(94deg);
+  transform: rotate(94deg);
+}
+.counters .radial-progress[data-progress="48"] .circle .mask.full {
+  -webkit-transform: rotate(48deg);
+  -ms-transform: rotate(48deg);
+  transform: rotate(48deg);
+}
+.counters .radial-progress[data-progress="48"] .circle .fill {
+  -webkit-transform: rotate(48deg);
+  -ms-transform: rotate(48deg);
+  transform: rotate(48deg);
+}
+.counters .radial-progress[data-progress="48"] .circle .fill.fix {
+  -webkit-transform: rotate(96deg);
+  -ms-transform: rotate(96deg);
+  transform: rotate(96deg);
+}
+.counters .radial-progress[data-progress="49"] .circle .mask.full {
+  -webkit-transform: rotate(49deg);
+  -ms-transform: rotate(49deg);
+  transform: rotate(49deg);
+}
+.counters .radial-progress[data-progress="49"] .circle .fill {
+  -webkit-transform: rotate(49deg);
+  -ms-transform: rotate(49deg);
+  transform: rotate(49deg);
+}
+.counters .radial-progress[data-progress="49"] .circle .fill.fix {
+  -webkit-transform: rotate(98deg);
+  -ms-transform: rotate(98deg);
+  transform: rotate(98deg);
+}
+.counters .radial-progress[data-progress="50"] .circle .mask.full {
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+.counters .radial-progress[data-progress="50"] .circle .fill {
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+.counters .radial-progress[data-progress="50"] .circle .fill.fix {
+  -webkit-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  transform: rotate(100deg);
+}
+.counters .radial-progress[data-progress="51"] .circle .mask.full {
+  -webkit-transform: rotate(51deg);
+  -ms-transform: rotate(51deg);
+  transform: rotate(51deg);
+}
+.counters .radial-progress[data-progress="51"] .circle .fill {
+  -webkit-transform: rotate(51deg);
+  -ms-transform: rotate(51deg);
+  transform: rotate(51deg);
+}
+.counters .radial-progress[data-progress="51"] .circle .fill.fix {
+  -webkit-transform: rotate(102deg);
+  -ms-transform: rotate(102deg);
+  transform: rotate(102deg);
+}
+.counters .radial-progress[data-progress="52"] .circle .mask.full {
+  -webkit-transform: rotate(52deg);
+  -ms-transform: rotate(52deg);
+  transform: rotate(52deg);
+}
+.counters .radial-progress[data-progress="52"] .circle .fill {
+  -webkit-transform: rotate(52deg);
+  -ms-transform: rotate(52deg);
+  transform: rotate(52deg);
+}
+.counters .radial-progress[data-progress="52"] .circle .fill.fix {
+  -webkit-transform: rotate(104deg);
+  -ms-transform: rotate(104deg);
+  transform: rotate(104deg);
+}
+.counters .radial-progress[data-progress="53"] .circle .mask.full {
+  -webkit-transform: rotate(53deg);
+  -ms-transform: rotate(53deg);
+  transform: rotate(53deg);
+}
+.counters .radial-progress[data-progress="53"] .circle .fill {
+  -webkit-transform: rotate(53deg);
+  -ms-transform: rotate(53deg);
+  transform: rotate(53deg);
+}
+.counters .radial-progress[data-progress="53"] .circle .fill.fix {
+  -webkit-transform: rotate(106deg);
+  -ms-transform: rotate(106deg);
+  transform: rotate(106deg);
+}
+.counters .radial-progress[data-progress="54"] .circle .mask.full {
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.counters .radial-progress[data-progress="54"] .circle .fill {
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.counters .radial-progress[data-progress="54"] .circle .fill.fix {
+  -webkit-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.counters .radial-progress[data-progress="55"] .circle .mask.full {
+  -webkit-transform: rotate(55deg);
+  -ms-transform: rotate(55deg);
+  transform: rotate(55deg);
+}
+.counters .radial-progress[data-progress="55"] .circle .fill {
+  -webkit-transform: rotate(55deg);
+  -ms-transform: rotate(55deg);
+  transform: rotate(55deg);
+}
+.counters .radial-progress[data-progress="55"] .circle .fill.fix {
+  -webkit-transform: rotate(110deg);
+  -ms-transform: rotate(110deg);
+  transform: rotate(110deg);
+}
+.counters .radial-progress[data-progress="56"] .circle .mask.full {
+  -webkit-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  transform: rotate(56deg);
+}
+.counters .radial-progress[data-progress="56"] .circle .fill {
+  -webkit-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  transform: rotate(56deg);
+}
+.counters .radial-progress[data-progress="56"] .circle .fill.fix {
+  -webkit-transform: rotate(112deg);
+  -ms-transform: rotate(112deg);
+  transform: rotate(112deg);
+}
+.counters .radial-progress[data-progress="57"] .circle .mask.full {
+  -webkit-transform: rotate(57deg);
+  -ms-transform: rotate(57deg);
+  transform: rotate(57deg);
+}
+.counters .radial-progress[data-progress="57"] .circle .fill {
+  -webkit-transform: rotate(57deg);
+  -ms-transform: rotate(57deg);
+  transform: rotate(57deg);
+}
+.counters .radial-progress[data-progress="57"] .circle .fill.fix {
+  -webkit-transform: rotate(114deg);
+  -ms-transform: rotate(114deg);
+  transform: rotate(114deg);
+}
+.counters .radial-progress[data-progress="58"] .circle .mask.full {
+  -webkit-transform: rotate(58deg);
+  -ms-transform: rotate(58deg);
+  transform: rotate(58deg);
+}
+.counters .radial-progress[data-progress="58"] .circle .fill {
+  -webkit-transform: rotate(58deg);
+  -ms-transform: rotate(58deg);
+  transform: rotate(58deg);
+}
+.counters .radial-progress[data-progress="58"] .circle .fill.fix {
+  -webkit-transform: rotate(116deg);
+  -ms-transform: rotate(116deg);
+  transform: rotate(116deg);
+}
+.counters .radial-progress[data-progress="59"] .circle .mask.full {
+  -webkit-transform: rotate(59deg);
+  -ms-transform: rotate(59deg);
+  transform: rotate(59deg);
+}
+.counters .radial-progress[data-progress="59"] .circle .fill {
+  -webkit-transform: rotate(59deg);
+  -ms-transform: rotate(59deg);
+  transform: rotate(59deg);
+}
+.counters .radial-progress[data-progress="59"] .circle .fill.fix {
+  -webkit-transform: rotate(118deg);
+  -ms-transform: rotate(118deg);
+  transform: rotate(118deg);
+}
+.counters .radial-progress[data-progress="60"] .circle .mask.full {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.counters .radial-progress[data-progress="60"] .circle .fill {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.counters .radial-progress[data-progress="60"] .circle .fill.fix {
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.counters .radial-progress[data-progress="61"] .circle .mask.full {
+  -webkit-transform: rotate(61deg);
+  -ms-transform: rotate(61deg);
+  transform: rotate(61deg);
+}
+.counters .radial-progress[data-progress="61"] .circle .fill {
+  -webkit-transform: rotate(61deg);
+  -ms-transform: rotate(61deg);
+  transform: rotate(61deg);
+}
+.counters .radial-progress[data-progress="61"] .circle .fill.fix {
+  -webkit-transform: rotate(122deg);
+  -ms-transform: rotate(122deg);
+  transform: rotate(122deg);
+}
+.counters .radial-progress[data-progress="62"] .circle .mask.full {
+  -webkit-transform: rotate(62deg);
+  -ms-transform: rotate(62deg);
+  transform: rotate(62deg);
+}
+.counters .radial-progress[data-progress="62"] .circle .fill {
+  -webkit-transform: rotate(62deg);
+  -ms-transform: rotate(62deg);
+  transform: rotate(62deg);
+}
+.counters .radial-progress[data-progress="62"] .circle .fill.fix {
+  -webkit-transform: rotate(124deg);
+  -ms-transform: rotate(124deg);
+  transform: rotate(124deg);
+}
+.counters .radial-progress[data-progress="63"] .circle .mask.full {
+  -webkit-transform: rotate(63deg);
+  -ms-transform: rotate(63deg);
+  transform: rotate(63deg);
+}
+.counters .radial-progress[data-progress="63"] .circle .fill {
+  -webkit-transform: rotate(63deg);
+  -ms-transform: rotate(63deg);
+  transform: rotate(63deg);
+}
+.counters .radial-progress[data-progress="63"] .circle .fill.fix {
+  -webkit-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.counters .radial-progress[data-progress="64"] .circle .mask.full {
+  -webkit-transform: rotate(64deg);
+  -ms-transform: rotate(64deg);
+  transform: rotate(64deg);
+}
+.counters .radial-progress[data-progress="64"] .circle .fill {
+  -webkit-transform: rotate(64deg);
+  -ms-transform: rotate(64deg);
+  transform: rotate(64deg);
+}
+.counters .radial-progress[data-progress="64"] .circle .fill.fix {
+  -webkit-transform: rotate(128deg);
+  -ms-transform: rotate(128deg);
+  transform: rotate(128deg);
+}
+.counters .radial-progress[data-progress="65"] .circle .mask.full {
+  -webkit-transform: rotate(65deg);
+  -ms-transform: rotate(65deg);
+  transform: rotate(65deg);
+}
+.counters .radial-progress[data-progress="65"] .circle .fill {
+  -webkit-transform: rotate(65deg);
+  -ms-transform: rotate(65deg);
+  transform: rotate(65deg);
+}
+.counters .radial-progress[data-progress="65"] .circle .fill.fix {
+  -webkit-transform: rotate(130deg);
+  -ms-transform: rotate(130deg);
+  transform: rotate(130deg);
+}
+.counters .radial-progress[data-progress="66"] .circle .mask.full {
+  -webkit-transform: rotate(66deg);
+  -ms-transform: rotate(66deg);
+  transform: rotate(66deg);
+}
+.counters .radial-progress[data-progress="66"] .circle .fill {
+  -webkit-transform: rotate(66deg);
+  -ms-transform: rotate(66deg);
+  transform: rotate(66deg);
+}
+.counters .radial-progress[data-progress="66"] .circle .fill.fix {
+  -webkit-transform: rotate(132deg);
+  -ms-transform: rotate(132deg);
+  transform: rotate(132deg);
+}
+.counters .radial-progress[data-progress="67"] .circle .mask.full {
+  -webkit-transform: rotate(67deg);
+  -ms-transform: rotate(67deg);
+  transform: rotate(67deg);
+}
+.counters .radial-progress[data-progress="67"] .circle .fill {
+  -webkit-transform: rotate(67deg);
+  -ms-transform: rotate(67deg);
+  transform: rotate(67deg);
+}
+.counters .radial-progress[data-progress="67"] .circle .fill.fix {
+  -webkit-transform: rotate(134deg);
+  -ms-transform: rotate(134deg);
+  transform: rotate(134deg);
+}
+.counters .radial-progress[data-progress="68"] .circle .mask.full {
+  -webkit-transform: rotate(68deg);
+  -ms-transform: rotate(68deg);
+  transform: rotate(68deg);
+}
+.counters .radial-progress[data-progress="68"] .circle .fill {
+  -webkit-transform: rotate(68deg);
+  -ms-transform: rotate(68deg);
+  transform: rotate(68deg);
+}
+.counters .radial-progress[data-progress="68"] .circle .fill.fix {
+  -webkit-transform: rotate(136deg);
+  -ms-transform: rotate(136deg);
+  transform: rotate(136deg);
+}
+.counters .radial-progress[data-progress="69"] .circle .mask.full {
+  -webkit-transform: rotate(69deg);
+  -ms-transform: rotate(69deg);
+  transform: rotate(69deg);
+}
+.counters .radial-progress[data-progress="69"] .circle .fill {
+  -webkit-transform: rotate(69deg);
+  -ms-transform: rotate(69deg);
+  transform: rotate(69deg);
+}
+.counters .radial-progress[data-progress="69"] .circle .fill.fix {
+  -webkit-transform: rotate(138deg);
+  -ms-transform: rotate(138deg);
+  transform: rotate(138deg);
+}
+.counters .radial-progress[data-progress="70"] .circle .mask.full {
+  -webkit-transform: rotate(70deg);
+  -ms-transform: rotate(70deg);
+  transform: rotate(70deg);
+}
+.counters .radial-progress[data-progress="70"] .circle .fill {
+  -webkit-transform: rotate(70deg);
+  -ms-transform: rotate(70deg);
+  transform: rotate(70deg);
+}
+.counters .radial-progress[data-progress="70"] .circle .fill.fix {
+  -webkit-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  transform: rotate(140deg);
+}
+.counters .radial-progress[data-progress="71"] .circle .mask.full {
+  -webkit-transform: rotate(71deg);
+  -ms-transform: rotate(71deg);
+  transform: rotate(71deg);
+}
+.counters .radial-progress[data-progress="71"] .circle .fill {
+  -webkit-transform: rotate(71deg);
+  -ms-transform: rotate(71deg);
+  transform: rotate(71deg);
+}
+.counters .radial-progress[data-progress="71"] .circle .fill.fix {
+  -webkit-transform: rotate(142deg);
+  -ms-transform: rotate(142deg);
+  transform: rotate(142deg);
+}
+.counters .radial-progress[data-progress="72"] .circle .mask.full {
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.counters .radial-progress[data-progress="72"] .circle .fill {
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.counters .radial-progress[data-progress="72"] .circle .fill.fix {
+  -webkit-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.counters .radial-progress[data-progress="73"] .circle .mask.full {
+  -webkit-transform: rotate(73deg);
+  -ms-transform: rotate(73deg);
+  transform: rotate(73deg);
+}
+.counters .radial-progress[data-progress="73"] .circle .fill {
+  -webkit-transform: rotate(73deg);
+  -ms-transform: rotate(73deg);
+  transform: rotate(73deg);
+}
+.counters .radial-progress[data-progress="73"] .circle .fill.fix {
+  -webkit-transform: rotate(146deg);
+  -ms-transform: rotate(146deg);
+  transform: rotate(146deg);
+}
+.counters .radial-progress[data-progress="74"] .circle .mask.full {
+  -webkit-transform: rotate(74deg);
+  -ms-transform: rotate(74deg);
+  transform: rotate(74deg);
+}
+.counters .radial-progress[data-progress="74"] .circle .fill {
+  -webkit-transform: rotate(74deg);
+  -ms-transform: rotate(74deg);
+  transform: rotate(74deg);
+}
+.counters .radial-progress[data-progress="74"] .circle .fill.fix {
+  -webkit-transform: rotate(148deg);
+  -ms-transform: rotate(148deg);
+  transform: rotate(148deg);
+}
+.counters .radial-progress[data-progress="75"] .circle .mask.full {
+  -webkit-transform: rotate(75deg);
+  -ms-transform: rotate(75deg);
+  transform: rotate(75deg);
+}
+.counters .radial-progress[data-progress="75"] .circle .fill {
+  -webkit-transform: rotate(75deg);
+  -ms-transform: rotate(75deg);
+  transform: rotate(75deg);
+}
+.counters .radial-progress[data-progress="75"] .circle .fill.fix {
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+.counters .radial-progress[data-progress="76"] .circle .mask.full {
+  -webkit-transform: rotate(76deg);
+  -ms-transform: rotate(76deg);
+  transform: rotate(76deg);
+}
+.counters .radial-progress[data-progress="76"] .circle .fill {
+  -webkit-transform: rotate(76deg);
+  -ms-transform: rotate(76deg);
+  transform: rotate(76deg);
+}
+.counters .radial-progress[data-progress="76"] .circle .fill.fix {
+  -webkit-transform: rotate(152deg);
+  -ms-transform: rotate(152deg);
+  transform: rotate(152deg);
+}
+.counters .radial-progress[data-progress="77"] .circle .mask.full {
+  -webkit-transform: rotate(77deg);
+  -ms-transform: rotate(77deg);
+  transform: rotate(77deg);
+}
+.counters .radial-progress[data-progress="77"] .circle .fill {
+  -webkit-transform: rotate(77deg);
+  -ms-transform: rotate(77deg);
+  transform: rotate(77deg);
+}
+.counters .radial-progress[data-progress="77"] .circle .fill.fix {
+  -webkit-transform: rotate(154deg);
+  -ms-transform: rotate(154deg);
+  transform: rotate(154deg);
+}
+.counters .radial-progress[data-progress="78"] .circle .mask.full {
+  -webkit-transform: rotate(78deg);
+  -ms-transform: rotate(78deg);
+  transform: rotate(78deg);
+}
+.counters .radial-progress[data-progress="78"] .circle .fill {
+  -webkit-transform: rotate(78deg);
+  -ms-transform: rotate(78deg);
+  transform: rotate(78deg);
+}
+.counters .radial-progress[data-progress="78"] .circle .fill.fix {
+  -webkit-transform: rotate(156deg);
+  -ms-transform: rotate(156deg);
+  transform: rotate(156deg);
+}
+.counters .radial-progress[data-progress="79"] .circle .mask.full {
+  -webkit-transform: rotate(79deg);
+  -ms-transform: rotate(79deg);
+  transform: rotate(79deg);
+}
+.counters .radial-progress[data-progress="79"] .circle .fill {
+  -webkit-transform: rotate(79deg);
+  -ms-transform: rotate(79deg);
+  transform: rotate(79deg);
+}
+.counters .radial-progress[data-progress="79"] .circle .fill.fix {
+  -webkit-transform: rotate(158deg);
+  -ms-transform: rotate(158deg);
+  transform: rotate(158deg);
+}
+.counters .radial-progress[data-progress="80"] .circle .mask.full {
+  -webkit-transform: rotate(80deg);
+  -ms-transform: rotate(80deg);
+  transform: rotate(80deg);
+}
+.counters .radial-progress[data-progress="80"] .circle .fill {
+  -webkit-transform: rotate(80deg);
+  -ms-transform: rotate(80deg);
+  transform: rotate(80deg);
+}
+.counters .radial-progress[data-progress="80"] .circle .fill.fix {
+  -webkit-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+}
+.counters .radial-progress[data-progress="81"] .circle .mask.full {
+  -webkit-transform: rotate(81deg);
+  -ms-transform: rotate(81deg);
+  transform: rotate(81deg);
+}
+.counters .radial-progress[data-progress="81"] .circle .fill {
+  -webkit-transform: rotate(81deg);
+  -ms-transform: rotate(81deg);
+  transform: rotate(81deg);
+}
+.counters .radial-progress[data-progress="81"] .circle .fill.fix {
+  -webkit-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.counters .radial-progress[data-progress="82"] .circle .mask.full {
+  -webkit-transform: rotate(82deg);
+  -ms-transform: rotate(82deg);
+  transform: rotate(82deg);
+}
+.counters .radial-progress[data-progress="82"] .circle .fill {
+  -webkit-transform: rotate(82deg);
+  -ms-transform: rotate(82deg);
+  transform: rotate(82deg);
+}
+.counters .radial-progress[data-progress="82"] .circle .fill.fix {
+  -webkit-transform: rotate(164deg);
+  -ms-transform: rotate(164deg);
+  transform: rotate(164deg);
+}
+.counters .radial-progress[data-progress="83"] .circle .mask.full {
+  -webkit-transform: rotate(83deg);
+  -ms-transform: rotate(83deg);
+  transform: rotate(83deg);
+}
+.counters .radial-progress[data-progress="83"] .circle .fill {
+  -webkit-transform: rotate(83deg);
+  -ms-transform: rotate(83deg);
+  transform: rotate(83deg);
+}
+.counters .radial-progress[data-progress="83"] .circle .fill.fix {
+  -webkit-transform: rotate(166deg);
+  -ms-transform: rotate(166deg);
+  transform: rotate(166deg);
+}
+.counters .radial-progress[data-progress="84"] .circle .mask.full {
+  -webkit-transform: rotate(84deg);
+  -ms-transform: rotate(84deg);
+  transform: rotate(84deg);
+}
+.counters .radial-progress[data-progress="84"] .circle .fill {
+  -webkit-transform: rotate(84deg);
+  -ms-transform: rotate(84deg);
+  transform: rotate(84deg);
+}
+.counters .radial-progress[data-progress="84"] .circle .fill.fix {
+  -webkit-transform: rotate(168deg);
+  -ms-transform: rotate(168deg);
+  transform: rotate(168deg);
+}
+.counters .radial-progress[data-progress="85"] .circle .mask.full {
+  -webkit-transform: rotate(85deg);
+  -ms-transform: rotate(85deg);
+  transform: rotate(85deg);
+}
+.counters .radial-progress[data-progress="85"] .circle .fill {
+  -webkit-transform: rotate(85deg);
+  -ms-transform: rotate(85deg);
+  transform: rotate(85deg);
+}
+.counters .radial-progress[data-progress="85"] .circle .fill.fix {
+  -webkit-transform: rotate(170deg);
+  -ms-transform: rotate(170deg);
+  transform: rotate(170deg);
+}
+.counters .radial-progress[data-progress="86"] .circle .mask.full {
+  -webkit-transform: rotate(86deg);
+  -ms-transform: rotate(86deg);
+  transform: rotate(86deg);
+}
+.counters .radial-progress[data-progress="86"] .circle .fill {
+  -webkit-transform: rotate(86deg);
+  -ms-transform: rotate(86deg);
+  transform: rotate(86deg);
+}
+.counters .radial-progress[data-progress="86"] .circle .fill.fix {
+  -webkit-transform: rotate(172deg);
+  -ms-transform: rotate(172deg);
+  transform: rotate(172deg);
+}
+.counters .radial-progress[data-progress="87"] .circle .mask.full {
+  -webkit-transform: rotate(87deg);
+  -ms-transform: rotate(87deg);
+  transform: rotate(87deg);
+}
+.counters .radial-progress[data-progress="87"] .circle .fill {
+  -webkit-transform: rotate(87deg);
+  -ms-transform: rotate(87deg);
+  transform: rotate(87deg);
+}
+.counters .radial-progress[data-progress="87"] .circle .fill.fix {
+  -webkit-transform: rotate(174deg);
+  -ms-transform: rotate(174deg);
+  transform: rotate(174deg);
+}
+.counters .radial-progress[data-progress="88"] .circle .mask.full {
+  -webkit-transform: rotate(88deg);
+  -ms-transform: rotate(88deg);
+  transform: rotate(88deg);
+}
+.counters .radial-progress[data-progress="88"] .circle .fill {
+  -webkit-transform: rotate(88deg);
+  -ms-transform: rotate(88deg);
+  transform: rotate(88deg);
+}
+.counters .radial-progress[data-progress="88"] .circle .fill.fix {
+  -webkit-transform: rotate(176deg);
+  -ms-transform: rotate(176deg);
+  transform: rotate(176deg);
+}
+.counters .radial-progress[data-progress="89"] .circle .mask.full {
+  -webkit-transform: rotate(89deg);
+  -ms-transform: rotate(89deg);
+  transform: rotate(89deg);
+}
+.counters .radial-progress[data-progress="89"] .circle .fill {
+  -webkit-transform: rotate(89deg);
+  -ms-transform: rotate(89deg);
+  transform: rotate(89deg);
+}
+.counters .radial-progress[data-progress="89"] .circle .fill.fix {
+  -webkit-transform: rotate(178deg);
+  -ms-transform: rotate(178deg);
+  transform: rotate(178deg);
+}
+.counters .radial-progress[data-progress="90"] .circle .mask.full {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.counters .radial-progress[data-progress="90"] .circle .fill {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.counters .radial-progress[data-progress="90"] .circle .fill.fix {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.counters .radial-progress[data-progress="91"] .circle .mask.full {
+  -webkit-transform: rotate(91deg);
+  -ms-transform: rotate(91deg);
+  transform: rotate(91deg);
+}
+.counters .radial-progress[data-progress="91"] .circle .fill {
+  -webkit-transform: rotate(91deg);
+  -ms-transform: rotate(91deg);
+  transform: rotate(91deg);
+}
+.counters .radial-progress[data-progress="91"] .circle .fill.fix {
+  -webkit-transform: rotate(182deg);
+  -ms-transform: rotate(182deg);
+  transform: rotate(182deg);
+}
+.counters .radial-progress[data-progress="92"] .circle .mask.full {
+  -webkit-transform: rotate(92deg);
+  -ms-transform: rotate(92deg);
+  transform: rotate(92deg);
+}
+.counters .radial-progress[data-progress="92"] .circle .fill {
+  -webkit-transform: rotate(92deg);
+  -ms-transform: rotate(92deg);
+  transform: rotate(92deg);
+}
+.counters .radial-progress[data-progress="92"] .circle .fill.fix {
+  -webkit-transform: rotate(184deg);
+  -ms-transform: rotate(184deg);
+  transform: rotate(184deg);
+}
+.counters .radial-progress[data-progress="93"] .circle .mask.full {
+  -webkit-transform: rotate(93deg);
+  -ms-transform: rotate(93deg);
+  transform: rotate(93deg);
+}
+.counters .radial-progress[data-progress="93"] .circle .fill {
+  -webkit-transform: rotate(93deg);
+  -ms-transform: rotate(93deg);
+  transform: rotate(93deg);
+}
+.counters .radial-progress[data-progress="93"] .circle .fill.fix {
+  -webkit-transform: rotate(186deg);
+  -ms-transform: rotate(186deg);
+  transform: rotate(186deg);
+}
+.counters .radial-progress[data-progress="94"] .circle .mask.full {
+  -webkit-transform: rotate(94deg);
+  -ms-transform: rotate(94deg);
+  transform: rotate(94deg);
+}
+.counters .radial-progress[data-progress="94"] .circle .fill {
+  -webkit-transform: rotate(94deg);
+  -ms-transform: rotate(94deg);
+  transform: rotate(94deg);
+}
+.counters .radial-progress[data-progress="94"] .circle .fill.fix {
+  -webkit-transform: rotate(188deg);
+  -ms-transform: rotate(188deg);
+  transform: rotate(188deg);
+}
+.counters .radial-progress[data-progress="95"] .circle .mask.full {
+  -webkit-transform: rotate(95deg);
+  -ms-transform: rotate(95deg);
+  transform: rotate(95deg);
+}
+.counters .radial-progress[data-progress="95"] .circle .fill {
+  -webkit-transform: rotate(95deg);
+  -ms-transform: rotate(95deg);
+  transform: rotate(95deg);
+}
+.counters .radial-progress[data-progress="95"] .circle .fill.fix {
+  -webkit-transform: rotate(190deg);
+  -ms-transform: rotate(190deg);
+  transform: rotate(190deg);
+}
+.counters .radial-progress[data-progress="96"] .circle .mask.full {
+  -webkit-transform: rotate(96deg);
+  -ms-transform: rotate(96deg);
+  transform: rotate(96deg);
+}
+.counters .radial-progress[data-progress="96"] .circle .fill {
+  -webkit-transform: rotate(96deg);
+  -ms-transform: rotate(96deg);
+  transform: rotate(96deg);
+}
+.counters .radial-progress[data-progress="96"] .circle .fill.fix {
+  -webkit-transform: rotate(192deg);
+  -ms-transform: rotate(192deg);
+  transform: rotate(192deg);
+}
+.counters .radial-progress[data-progress="97"] .circle .mask.full {
+  -webkit-transform: rotate(97deg);
+  -ms-transform: rotate(97deg);
+  transform: rotate(97deg);
+}
+.counters .radial-progress[data-progress="97"] .circle .fill {
+  -webkit-transform: rotate(97deg);
+  -ms-transform: rotate(97deg);
+  transform: rotate(97deg);
+}
+.counters .radial-progress[data-progress="97"] .circle .fill.fix {
+  -webkit-transform: rotate(194deg);
+  -ms-transform: rotate(194deg);
+  transform: rotate(194deg);
+}
+.counters .radial-progress[data-progress="98"] .circle .mask.full {
+  -webkit-transform: rotate(98deg);
+  -ms-transform: rotate(98deg);
+  transform: rotate(98deg);
+}
+.counters .radial-progress[data-progress="98"] .circle .fill {
+  -webkit-transform: rotate(98deg);
+  -ms-transform: rotate(98deg);
+  transform: rotate(98deg);
+}
+.counters .radial-progress[data-progress="98"] .circle .fill.fix {
+  -webkit-transform: rotate(196deg);
+  -ms-transform: rotate(196deg);
+  transform: rotate(196deg);
+}
+.counters .radial-progress[data-progress="99"] .circle .mask.full {
+  -webkit-transform: rotate(99deg);
+  -ms-transform: rotate(99deg);
+  transform: rotate(99deg);
+}
+.counters .radial-progress[data-progress="99"] .circle .fill {
+  -webkit-transform: rotate(99deg);
+  -ms-transform: rotate(99deg);
+  transform: rotate(99deg);
+}
+.counters .radial-progress[data-progress="99"] .circle .fill.fix {
+  -webkit-transform: rotate(198deg);
+  -ms-transform: rotate(198deg);
+  transform: rotate(198deg);
+}
+.counters .radial-progress[data-progress="100"] .circle .mask.full {
+  -webkit-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  transform: rotate(100deg);
+}
+.counters .radial-progress[data-progress="100"] .circle .fill {
+  -webkit-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  transform: rotate(100deg);
+}
+.counters .radial-progress[data-progress="100"] .circle .fill.fix {
+  -webkit-transform: rotate(200deg);
+  -ms-transform: rotate(200deg);
+  transform: rotate(200deg);
+}
+.counters .radial-progress[data-progress="101"] .circle .mask.full {
+  -webkit-transform: rotate(101deg);
+  -ms-transform: rotate(101deg);
+  transform: rotate(101deg);
+}
+.counters .radial-progress[data-progress="101"] .circle .fill {
+  -webkit-transform: rotate(101deg);
+  -ms-transform: rotate(101deg);
+  transform: rotate(101deg);
+}
+.counters .radial-progress[data-progress="101"] .circle .fill.fix {
+  -webkit-transform: rotate(202deg);
+  -ms-transform: rotate(202deg);
+  transform: rotate(202deg);
+}
+.counters .radial-progress[data-progress="102"] .circle .mask.full {
+  -webkit-transform: rotate(102deg);
+  -ms-transform: rotate(102deg);
+  transform: rotate(102deg);
+}
+.counters .radial-progress[data-progress="102"] .circle .fill {
+  -webkit-transform: rotate(102deg);
+  -ms-transform: rotate(102deg);
+  transform: rotate(102deg);
+}
+.counters .radial-progress[data-progress="102"] .circle .fill.fix {
+  -webkit-transform: rotate(204deg);
+  -ms-transform: rotate(204deg);
+  transform: rotate(204deg);
+}
+.counters .radial-progress[data-progress="103"] .circle .mask.full {
+  -webkit-transform: rotate(103deg);
+  -ms-transform: rotate(103deg);
+  transform: rotate(103deg);
+}
+.counters .radial-progress[data-progress="103"] .circle .fill {
+  -webkit-transform: rotate(103deg);
+  -ms-transform: rotate(103deg);
+  transform: rotate(103deg);
+}
+.counters .radial-progress[data-progress="103"] .circle .fill.fix {
+  -webkit-transform: rotate(206deg);
+  -ms-transform: rotate(206deg);
+  transform: rotate(206deg);
+}
+.counters .radial-progress[data-progress="104"] .circle .mask.full {
+  -webkit-transform: rotate(104deg);
+  -ms-transform: rotate(104deg);
+  transform: rotate(104deg);
+}
+.counters .radial-progress[data-progress="104"] .circle .fill {
+  -webkit-transform: rotate(104deg);
+  -ms-transform: rotate(104deg);
+  transform: rotate(104deg);
+}
+.counters .radial-progress[data-progress="104"] .circle .fill.fix {
+  -webkit-transform: rotate(208deg);
+  -ms-transform: rotate(208deg);
+  transform: rotate(208deg);
+}
+.counters .radial-progress[data-progress="105"] .circle .mask.full {
+  -webkit-transform: rotate(105deg);
+  -ms-transform: rotate(105deg);
+  transform: rotate(105deg);
+}
+.counters .radial-progress[data-progress="105"] .circle .fill {
+  -webkit-transform: rotate(105deg);
+  -ms-transform: rotate(105deg);
+  transform: rotate(105deg);
+}
+.counters .radial-progress[data-progress="105"] .circle .fill.fix {
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+.counters .radial-progress[data-progress="106"] .circle .mask.full {
+  -webkit-transform: rotate(106deg);
+  -ms-transform: rotate(106deg);
+  transform: rotate(106deg);
+}
+.counters .radial-progress[data-progress="106"] .circle .fill {
+  -webkit-transform: rotate(106deg);
+  -ms-transform: rotate(106deg);
+  transform: rotate(106deg);
+}
+.counters .radial-progress[data-progress="106"] .circle .fill.fix {
+  -webkit-transform: rotate(212deg);
+  -ms-transform: rotate(212deg);
+  transform: rotate(212deg);
+}
+.counters .radial-progress[data-progress="107"] .circle .mask.full {
+  -webkit-transform: rotate(107deg);
+  -ms-transform: rotate(107deg);
+  transform: rotate(107deg);
+}
+.counters .radial-progress[data-progress="107"] .circle .fill {
+  -webkit-transform: rotate(107deg);
+  -ms-transform: rotate(107deg);
+  transform: rotate(107deg);
+}
+.counters .radial-progress[data-progress="107"] .circle .fill.fix {
+  -webkit-transform: rotate(214deg);
+  -ms-transform: rotate(214deg);
+  transform: rotate(214deg);
+}
+.counters .radial-progress[data-progress="108"] .circle .mask.full {
+  -webkit-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.counters .radial-progress[data-progress="108"] .circle .fill {
+  -webkit-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.counters .radial-progress[data-progress="108"] .circle .fill.fix {
+  -webkit-transform: rotate(216deg);
+  -ms-transform: rotate(216deg);
+  transform: rotate(216deg);
+}
+.counters .radial-progress[data-progress="109"] .circle .mask.full {
+  -webkit-transform: rotate(109deg);
+  -ms-transform: rotate(109deg);
+  transform: rotate(109deg);
+}
+.counters .radial-progress[data-progress="109"] .circle .fill {
+  -webkit-transform: rotate(109deg);
+  -ms-transform: rotate(109deg);
+  transform: rotate(109deg);
+}
+.counters .radial-progress[data-progress="109"] .circle .fill.fix {
+  -webkit-transform: rotate(218deg);
+  -ms-transform: rotate(218deg);
+  transform: rotate(218deg);
+}
+.counters .radial-progress[data-progress="110"] .circle .mask.full {
+  -webkit-transform: rotate(110deg);
+  -ms-transform: rotate(110deg);
+  transform: rotate(110deg);
+}
+.counters .radial-progress[data-progress="110"] .circle .fill {
+  -webkit-transform: rotate(110deg);
+  -ms-transform: rotate(110deg);
+  transform: rotate(110deg);
+}
+.counters .radial-progress[data-progress="110"] .circle .fill.fix {
+  -webkit-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  transform: rotate(220deg);
+}
+.counters .radial-progress[data-progress="111"] .circle .mask.full {
+  -webkit-transform: rotate(111deg);
+  -ms-transform: rotate(111deg);
+  transform: rotate(111deg);
+}
+.counters .radial-progress[data-progress="111"] .circle .fill {
+  -webkit-transform: rotate(111deg);
+  -ms-transform: rotate(111deg);
+  transform: rotate(111deg);
+}
+.counters .radial-progress[data-progress="111"] .circle .fill.fix {
+  -webkit-transform: rotate(222deg);
+  -ms-transform: rotate(222deg);
+  transform: rotate(222deg);
+}
+.counters .radial-progress[data-progress="112"] .circle .mask.full {
+  -webkit-transform: rotate(112deg);
+  -ms-transform: rotate(112deg);
+  transform: rotate(112deg);
+}
+.counters .radial-progress[data-progress="112"] .circle .fill {
+  -webkit-transform: rotate(112deg);
+  -ms-transform: rotate(112deg);
+  transform: rotate(112deg);
+}
+.counters .radial-progress[data-progress="112"] .circle .fill.fix {
+  -webkit-transform: rotate(224deg);
+  -ms-transform: rotate(224deg);
+  transform: rotate(224deg);
+}
+.counters .radial-progress[data-progress="113"] .circle .mask.full {
+  -webkit-transform: rotate(113deg);
+  -ms-transform: rotate(113deg);
+  transform: rotate(113deg);
+}
+.counters .radial-progress[data-progress="113"] .circle .fill {
+  -webkit-transform: rotate(113deg);
+  -ms-transform: rotate(113deg);
+  transform: rotate(113deg);
+}
+.counters .radial-progress[data-progress="113"] .circle .fill.fix {
+  -webkit-transform: rotate(226deg);
+  -ms-transform: rotate(226deg);
+  transform: rotate(226deg);
+}
+.counters .radial-progress[data-progress="114"] .circle .mask.full {
+  -webkit-transform: rotate(114deg);
+  -ms-transform: rotate(114deg);
+  transform: rotate(114deg);
+}
+.counters .radial-progress[data-progress="114"] .circle .fill {
+  -webkit-transform: rotate(114deg);
+  -ms-transform: rotate(114deg);
+  transform: rotate(114deg);
+}
+.counters .radial-progress[data-progress="114"] .circle .fill.fix {
+  -webkit-transform: rotate(228deg);
+  -ms-transform: rotate(228deg);
+  transform: rotate(228deg);
+}
+.counters .radial-progress[data-progress="115"] .circle .mask.full {
+  -webkit-transform: rotate(115deg);
+  -ms-transform: rotate(115deg);
+  transform: rotate(115deg);
+}
+.counters .radial-progress[data-progress="115"] .circle .fill {
+  -webkit-transform: rotate(115deg);
+  -ms-transform: rotate(115deg);
+  transform: rotate(115deg);
+}
+.counters .radial-progress[data-progress="115"] .circle .fill.fix {
+  -webkit-transform: rotate(230deg);
+  -ms-transform: rotate(230deg);
+  transform: rotate(230deg);
+}
+.counters .radial-progress[data-progress="116"] .circle .mask.full {
+  -webkit-transform: rotate(116deg);
+  -ms-transform: rotate(116deg);
+  transform: rotate(116deg);
+}
+.counters .radial-progress[data-progress="116"] .circle .fill {
+  -webkit-transform: rotate(116deg);
+  -ms-transform: rotate(116deg);
+  transform: rotate(116deg);
+}
+.counters .radial-progress[data-progress="116"] .circle .fill.fix {
+  -webkit-transform: rotate(232deg);
+  -ms-transform: rotate(232deg);
+  transform: rotate(232deg);
+}
+.counters .radial-progress[data-progress="117"] .circle .mask.full {
+  -webkit-transform: rotate(117deg);
+  -ms-transform: rotate(117deg);
+  transform: rotate(117deg);
+}
+.counters .radial-progress[data-progress="117"] .circle .fill {
+  -webkit-transform: rotate(117deg);
+  -ms-transform: rotate(117deg);
+  transform: rotate(117deg);
+}
+.counters .radial-progress[data-progress="117"] .circle .fill.fix {
+  -webkit-transform: rotate(234deg);
+  -ms-transform: rotate(234deg);
+  transform: rotate(234deg);
+}
+.counters .radial-progress[data-progress="118"] .circle .mask.full {
+  -webkit-transform: rotate(118deg);
+  -ms-transform: rotate(118deg);
+  transform: rotate(118deg);
+}
+.counters .radial-progress[data-progress="118"] .circle .fill {
+  -webkit-transform: rotate(118deg);
+  -ms-transform: rotate(118deg);
+  transform: rotate(118deg);
+}
+.counters .radial-progress[data-progress="118"] .circle .fill.fix {
+  -webkit-transform: rotate(236deg);
+  -ms-transform: rotate(236deg);
+  transform: rotate(236deg);
+}
+.counters .radial-progress[data-progress="119"] .circle .mask.full {
+  -webkit-transform: rotate(119deg);
+  -ms-transform: rotate(119deg);
+  transform: rotate(119deg);
+}
+.counters .radial-progress[data-progress="119"] .circle .fill {
+  -webkit-transform: rotate(119deg);
+  -ms-transform: rotate(119deg);
+  transform: rotate(119deg);
+}
+.counters .radial-progress[data-progress="119"] .circle .fill.fix {
+  -webkit-transform: rotate(238deg);
+  -ms-transform: rotate(238deg);
+  transform: rotate(238deg);
+}
+.counters .radial-progress[data-progress="120"] .circle .mask.full {
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.counters .radial-progress[data-progress="120"] .circle .fill {
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.counters .radial-progress[data-progress="120"] .circle .fill.fix {
+  -webkit-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+.counters .radial-progress[data-progress="121"] .circle .mask.full {
+  -webkit-transform: rotate(121deg);
+  -ms-transform: rotate(121deg);
+  transform: rotate(121deg);
+}
+.counters .radial-progress[data-progress="121"] .circle .fill {
+  -webkit-transform: rotate(121deg);
+  -ms-transform: rotate(121deg);
+  transform: rotate(121deg);
+}
+.counters .radial-progress[data-progress="121"] .circle .fill.fix {
+  -webkit-transform: rotate(242deg);
+  -ms-transform: rotate(242deg);
+  transform: rotate(242deg);
+}
+.counters .radial-progress[data-progress="122"] .circle .mask.full {
+  -webkit-transform: rotate(122deg);
+  -ms-transform: rotate(122deg);
+  transform: rotate(122deg);
+}
+.counters .radial-progress[data-progress="122"] .circle .fill {
+  -webkit-transform: rotate(122deg);
+  -ms-transform: rotate(122deg);
+  transform: rotate(122deg);
+}
+.counters .radial-progress[data-progress="122"] .circle .fill.fix {
+  -webkit-transform: rotate(244deg);
+  -ms-transform: rotate(244deg);
+  transform: rotate(244deg);
+}
+.counters .radial-progress[data-progress="123"] .circle .mask.full {
+  -webkit-transform: rotate(123deg);
+  -ms-transform: rotate(123deg);
+  transform: rotate(123deg);
+}
+.counters .radial-progress[data-progress="123"] .circle .fill {
+  -webkit-transform: rotate(123deg);
+  -ms-transform: rotate(123deg);
+  transform: rotate(123deg);
+}
+.counters .radial-progress[data-progress="123"] .circle .fill.fix {
+  -webkit-transform: rotate(246deg);
+  -ms-transform: rotate(246deg);
+  transform: rotate(246deg);
+}
+.counters .radial-progress[data-progress="124"] .circle .mask.full {
+  -webkit-transform: rotate(124deg);
+  -ms-transform: rotate(124deg);
+  transform: rotate(124deg);
+}
+.counters .radial-progress[data-progress="124"] .circle .fill {
+  -webkit-transform: rotate(124deg);
+  -ms-transform: rotate(124deg);
+  transform: rotate(124deg);
+}
+.counters .radial-progress[data-progress="124"] .circle .fill.fix {
+  -webkit-transform: rotate(248deg);
+  -ms-transform: rotate(248deg);
+  transform: rotate(248deg);
+}
+.counters .radial-progress[data-progress="125"] .circle .mask.full {
+  -webkit-transform: rotate(125deg);
+  -ms-transform: rotate(125deg);
+  transform: rotate(125deg);
+}
+.counters .radial-progress[data-progress="125"] .circle .fill {
+  -webkit-transform: rotate(125deg);
+  -ms-transform: rotate(125deg);
+  transform: rotate(125deg);
+}
+.counters .radial-progress[data-progress="125"] .circle .fill.fix {
+  -webkit-transform: rotate(250deg);
+  -ms-transform: rotate(250deg);
+  transform: rotate(250deg);
+}
+.counters .radial-progress[data-progress="126"] .circle .mask.full {
+  -webkit-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.counters .radial-progress[data-progress="126"] .circle .fill {
+  -webkit-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.counters .radial-progress[data-progress="126"] .circle .fill.fix {
+  -webkit-transform: rotate(252deg);
+  -ms-transform: rotate(252deg);
+  transform: rotate(252deg);
+}
+.counters .radial-progress[data-progress="127"] .circle .mask.full {
+  -webkit-transform: rotate(127deg);
+  -ms-transform: rotate(127deg);
+  transform: rotate(127deg);
+}
+.counters .radial-progress[data-progress="127"] .circle .fill {
+  -webkit-transform: rotate(127deg);
+  -ms-transform: rotate(127deg);
+  transform: rotate(127deg);
+}
+.counters .radial-progress[data-progress="127"] .circle .fill.fix {
+  -webkit-transform: rotate(254deg);
+  -ms-transform: rotate(254deg);
+  transform: rotate(254deg);
+}
+.counters .radial-progress[data-progress="128"] .circle .mask.full {
+  -webkit-transform: rotate(128deg);
+  -ms-transform: rotate(128deg);
+  transform: rotate(128deg);
+}
+.counters .radial-progress[data-progress="128"] .circle .fill {
+  -webkit-transform: rotate(128deg);
+  -ms-transform: rotate(128deg);
+  transform: rotate(128deg);
+}
+.counters .radial-progress[data-progress="128"] .circle .fill.fix {
+  -webkit-transform: rotate(256deg);
+  -ms-transform: rotate(256deg);
+  transform: rotate(256deg);
+}
+.counters .radial-progress[data-progress="129"] .circle .mask.full {
+  -webkit-transform: rotate(129deg);
+  -ms-transform: rotate(129deg);
+  transform: rotate(129deg);
+}
+.counters .radial-progress[data-progress="129"] .circle .fill {
+  -webkit-transform: rotate(129deg);
+  -ms-transform: rotate(129deg);
+  transform: rotate(129deg);
+}
+.counters .radial-progress[data-progress="129"] .circle .fill.fix {
+  -webkit-transform: rotate(258deg);
+  -ms-transform: rotate(258deg);
+  transform: rotate(258deg);
+}
+.counters .radial-progress[data-progress="130"] .circle .mask.full {
+  -webkit-transform: rotate(130deg);
+  -ms-transform: rotate(130deg);
+  transform: rotate(130deg);
+}
+.counters .radial-progress[data-progress="130"] .circle .fill {
+  -webkit-transform: rotate(130deg);
+  -ms-transform: rotate(130deg);
+  transform: rotate(130deg);
+}
+.counters .radial-progress[data-progress="130"] .circle .fill.fix {
+  -webkit-transform: rotate(260deg);
+  -ms-transform: rotate(260deg);
+  transform: rotate(260deg);
+}
+.counters .radial-progress[data-progress="131"] .circle .mask.full {
+  -webkit-transform: rotate(131deg);
+  -ms-transform: rotate(131deg);
+  transform: rotate(131deg);
+}
+.counters .radial-progress[data-progress="131"] .circle .fill {
+  -webkit-transform: rotate(131deg);
+  -ms-transform: rotate(131deg);
+  transform: rotate(131deg);
+}
+.counters .radial-progress[data-progress="131"] .circle .fill.fix {
+  -webkit-transform: rotate(262deg);
+  -ms-transform: rotate(262deg);
+  transform: rotate(262deg);
+}
+.counters .radial-progress[data-progress="132"] .circle .mask.full {
+  -webkit-transform: rotate(132deg);
+  -ms-transform: rotate(132deg);
+  transform: rotate(132deg);
+}
+.counters .radial-progress[data-progress="132"] .circle .fill {
+  -webkit-transform: rotate(132deg);
+  -ms-transform: rotate(132deg);
+  transform: rotate(132deg);
+}
+.counters .radial-progress[data-progress="132"] .circle .fill.fix {
+  -webkit-transform: rotate(264deg);
+  -ms-transform: rotate(264deg);
+  transform: rotate(264deg);
+}
+.counters .radial-progress[data-progress="133"] .circle .mask.full {
+  -webkit-transform: rotate(133deg);
+  -ms-transform: rotate(133deg);
+  transform: rotate(133deg);
+}
+.counters .radial-progress[data-progress="133"] .circle .fill {
+  -webkit-transform: rotate(133deg);
+  -ms-transform: rotate(133deg);
+  transform: rotate(133deg);
+}
+.counters .radial-progress[data-progress="133"] .circle .fill.fix {
+  -webkit-transform: rotate(266deg);
+  -ms-transform: rotate(266deg);
+  transform: rotate(266deg);
+}
+.counters .radial-progress[data-progress="134"] .circle .mask.full {
+  -webkit-transform: rotate(134deg);
+  -ms-transform: rotate(134deg);
+  transform: rotate(134deg);
+}
+.counters .radial-progress[data-progress="134"] .circle .fill {
+  -webkit-transform: rotate(134deg);
+  -ms-transform: rotate(134deg);
+  transform: rotate(134deg);
+}
+.counters .radial-progress[data-progress="134"] .circle .fill.fix {
+  -webkit-transform: rotate(268deg);
+  -ms-transform: rotate(268deg);
+  transform: rotate(268deg);
+}
+.counters .radial-progress[data-progress="135"] .circle .mask.full {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.counters .radial-progress[data-progress="135"] .circle .fill {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.counters .radial-progress[data-progress="135"] .circle .fill.fix {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.counters .radial-progress[data-progress="136"] .circle .mask.full {
+  -webkit-transform: rotate(136deg);
+  -ms-transform: rotate(136deg);
+  transform: rotate(136deg);
+}
+.counters .radial-progress[data-progress="136"] .circle .fill {
+  -webkit-transform: rotate(136deg);
+  -ms-transform: rotate(136deg);
+  transform: rotate(136deg);
+}
+.counters .radial-progress[data-progress="136"] .circle .fill.fix {
+  -webkit-transform: rotate(272deg);
+  -ms-transform: rotate(272deg);
+  transform: rotate(272deg);
+}
+.counters .radial-progress[data-progress="137"] .circle .mask.full {
+  -webkit-transform: rotate(137deg);
+  -ms-transform: rotate(137deg);
+  transform: rotate(137deg);
+}
+.counters .radial-progress[data-progress="137"] .circle .fill {
+  -webkit-transform: rotate(137deg);
+  -ms-transform: rotate(137deg);
+  transform: rotate(137deg);
+}
+.counters .radial-progress[data-progress="137"] .circle .fill.fix {
+  -webkit-transform: rotate(274deg);
+  -ms-transform: rotate(274deg);
+  transform: rotate(274deg);
+}
+.counters .radial-progress[data-progress="138"] .circle .mask.full {
+  -webkit-transform: rotate(138deg);
+  -ms-transform: rotate(138deg);
+  transform: rotate(138deg);
+}
+.counters .radial-progress[data-progress="138"] .circle .fill {
+  -webkit-transform: rotate(138deg);
+  -ms-transform: rotate(138deg);
+  transform: rotate(138deg);
+}
+.counters .radial-progress[data-progress="138"] .circle .fill.fix {
+  -webkit-transform: rotate(276deg);
+  -ms-transform: rotate(276deg);
+  transform: rotate(276deg);
+}
+.counters .radial-progress[data-progress="139"] .circle .mask.full {
+  -webkit-transform: rotate(139deg);
+  -ms-transform: rotate(139deg);
+  transform: rotate(139deg);
+}
+.counters .radial-progress[data-progress="139"] .circle .fill {
+  -webkit-transform: rotate(139deg);
+  -ms-transform: rotate(139deg);
+  transform: rotate(139deg);
+}
+.counters .radial-progress[data-progress="139"] .circle .fill.fix {
+  -webkit-transform: rotate(278deg);
+  -ms-transform: rotate(278deg);
+  transform: rotate(278deg);
+}
+.counters .radial-progress[data-progress="140"] .circle .mask.full {
+  -webkit-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  transform: rotate(140deg);
+}
+.counters .radial-progress[data-progress="140"] .circle .fill {
+  -webkit-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  transform: rotate(140deg);
+}
+.counters .radial-progress[data-progress="140"] .circle .fill.fix {
+  -webkit-transform: rotate(280deg);
+  -ms-transform: rotate(280deg);
+  transform: rotate(280deg);
+}
+.counters .radial-progress[data-progress="141"] .circle .mask.full {
+  -webkit-transform: rotate(141deg);
+  -ms-transform: rotate(141deg);
+  transform: rotate(141deg);
+}
+.counters .radial-progress[data-progress="141"] .circle .fill {
+  -webkit-transform: rotate(141deg);
+  -ms-transform: rotate(141deg);
+  transform: rotate(141deg);
+}
+.counters .radial-progress[data-progress="141"] .circle .fill.fix {
+  -webkit-transform: rotate(282deg);
+  -ms-transform: rotate(282deg);
+  transform: rotate(282deg);
+}
+.counters .radial-progress[data-progress="142"] .circle .mask.full {
+  -webkit-transform: rotate(142deg);
+  -ms-transform: rotate(142deg);
+  transform: rotate(142deg);
+}
+.counters .radial-progress[data-progress="142"] .circle .fill {
+  -webkit-transform: rotate(142deg);
+  -ms-transform: rotate(142deg);
+  transform: rotate(142deg);
+}
+.counters .radial-progress[data-progress="142"] .circle .fill.fix {
+  -webkit-transform: rotate(284deg);
+  -ms-transform: rotate(284deg);
+  transform: rotate(284deg);
+}
+.counters .radial-progress[data-progress="143"] .circle .mask.full {
+  -webkit-transform: rotate(143deg);
+  -ms-transform: rotate(143deg);
+  transform: rotate(143deg);
+}
+.counters .radial-progress[data-progress="143"] .circle .fill {
+  -webkit-transform: rotate(143deg);
+  -ms-transform: rotate(143deg);
+  transform: rotate(143deg);
+}
+.counters .radial-progress[data-progress="143"] .circle .fill.fix {
+  -webkit-transform: rotate(286deg);
+  -ms-transform: rotate(286deg);
+  transform: rotate(286deg);
+}
+.counters .radial-progress[data-progress="144"] .circle .mask.full {
+  -webkit-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.counters .radial-progress[data-progress="144"] .circle .fill {
+  -webkit-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.counters .radial-progress[data-progress="144"] .circle .fill.fix {
+  -webkit-transform: rotate(288deg);
+  -ms-transform: rotate(288deg);
+  transform: rotate(288deg);
+}
+.counters .radial-progress[data-progress="145"] .circle .mask.full {
+  -webkit-transform: rotate(145deg);
+  -ms-transform: rotate(145deg);
+  transform: rotate(145deg);
+}
+.counters .radial-progress[data-progress="145"] .circle .fill {
+  -webkit-transform: rotate(145deg);
+  -ms-transform: rotate(145deg);
+  transform: rotate(145deg);
+}
+.counters .radial-progress[data-progress="145"] .circle .fill.fix {
+  -webkit-transform: rotate(290deg);
+  -ms-transform: rotate(290deg);
+  transform: rotate(290deg);
+}
+.counters .radial-progress[data-progress="146"] .circle .mask.full {
+  -webkit-transform: rotate(146deg);
+  -ms-transform: rotate(146deg);
+  transform: rotate(146deg);
+}
+.counters .radial-progress[data-progress="146"] .circle .fill {
+  -webkit-transform: rotate(146deg);
+  -ms-transform: rotate(146deg);
+  transform: rotate(146deg);
+}
+.counters .radial-progress[data-progress="146"] .circle .fill.fix {
+  -webkit-transform: rotate(292deg);
+  -ms-transform: rotate(292deg);
+  transform: rotate(292deg);
+}
+.counters .radial-progress[data-progress="147"] .circle .mask.full {
+  -webkit-transform: rotate(147deg);
+  -ms-transform: rotate(147deg);
+  transform: rotate(147deg);
+}
+.counters .radial-progress[data-progress="147"] .circle .fill {
+  -webkit-transform: rotate(147deg);
+  -ms-transform: rotate(147deg);
+  transform: rotate(147deg);
+}
+.counters .radial-progress[data-progress="147"] .circle .fill.fix {
+  -webkit-transform: rotate(294deg);
+  -ms-transform: rotate(294deg);
+  transform: rotate(294deg);
+}
+.counters .radial-progress[data-progress="148"] .circle .mask.full {
+  -webkit-transform: rotate(148deg);
+  -ms-transform: rotate(148deg);
+  transform: rotate(148deg);
+}
+.counters .radial-progress[data-progress="148"] .circle .fill {
+  -webkit-transform: rotate(148deg);
+  -ms-transform: rotate(148deg);
+  transform: rotate(148deg);
+}
+.counters .radial-progress[data-progress="148"] .circle .fill.fix {
+  -webkit-transform: rotate(296deg);
+  -ms-transform: rotate(296deg);
+  transform: rotate(296deg);
+}
+.counters .radial-progress[data-progress="149"] .circle .mask.full {
+  -webkit-transform: rotate(149deg);
+  -ms-transform: rotate(149deg);
+  transform: rotate(149deg);
+}
+.counters .radial-progress[data-progress="149"] .circle .fill {
+  -webkit-transform: rotate(149deg);
+  -ms-transform: rotate(149deg);
+  transform: rotate(149deg);
+}
+.counters .radial-progress[data-progress="149"] .circle .fill.fix {
+  -webkit-transform: rotate(298deg);
+  -ms-transform: rotate(298deg);
+  transform: rotate(298deg);
+}
+.counters .radial-progress[data-progress="150"] .circle .mask.full {
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+.counters .radial-progress[data-progress="150"] .circle .fill {
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+.counters .radial-progress[data-progress="150"] .circle .fill.fix {
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+.counters .radial-progress[data-progress="151"] .circle .mask.full {
+  -webkit-transform: rotate(151deg);
+  -ms-transform: rotate(151deg);
+  transform: rotate(151deg);
+}
+.counters .radial-progress[data-progress="151"] .circle .fill {
+  -webkit-transform: rotate(151deg);
+  -ms-transform: rotate(151deg);
+  transform: rotate(151deg);
+}
+.counters .radial-progress[data-progress="151"] .circle .fill.fix {
+  -webkit-transform: rotate(302deg);
+  -ms-transform: rotate(302deg);
+  transform: rotate(302deg);
+}
+.counters .radial-progress[data-progress="152"] .circle .mask.full {
+  -webkit-transform: rotate(152deg);
+  -ms-transform: rotate(152deg);
+  transform: rotate(152deg);
+}
+.counters .radial-progress[data-progress="152"] .circle .fill {
+  -webkit-transform: rotate(152deg);
+  -ms-transform: rotate(152deg);
+  transform: rotate(152deg);
+}
+.counters .radial-progress[data-progress="152"] .circle .fill.fix {
+  -webkit-transform: rotate(304deg);
+  -ms-transform: rotate(304deg);
+  transform: rotate(304deg);
+}
+.counters .radial-progress[data-progress="153"] .circle .mask.full {
+  -webkit-transform: rotate(153deg);
+  -ms-transform: rotate(153deg);
+  transform: rotate(153deg);
+}
+.counters .radial-progress[data-progress="153"] .circle .fill {
+  -webkit-transform: rotate(153deg);
+  -ms-transform: rotate(153deg);
+  transform: rotate(153deg);
+}
+.counters .radial-progress[data-progress="153"] .circle .fill.fix {
+  -webkit-transform: rotate(306deg);
+  -ms-transform: rotate(306deg);
+  transform: rotate(306deg);
+}
+.counters .radial-progress[data-progress="154"] .circle .mask.full {
+  -webkit-transform: rotate(154deg);
+  -ms-transform: rotate(154deg);
+  transform: rotate(154deg);
+}
+.counters .radial-progress[data-progress="154"] .circle .fill {
+  -webkit-transform: rotate(154deg);
+  -ms-transform: rotate(154deg);
+  transform: rotate(154deg);
+}
+.counters .radial-progress[data-progress="154"] .circle .fill.fix {
+  -webkit-transform: rotate(308deg);
+  -ms-transform: rotate(308deg);
+  transform: rotate(308deg);
+}
+.counters .radial-progress[data-progress="155"] .circle .mask.full {
+  -webkit-transform: rotate(155deg);
+  -ms-transform: rotate(155deg);
+  transform: rotate(155deg);
+}
+.counters .radial-progress[data-progress="155"] .circle .fill {
+  -webkit-transform: rotate(155deg);
+  -ms-transform: rotate(155deg);
+  transform: rotate(155deg);
+}
+.counters .radial-progress[data-progress="155"] .circle .fill.fix {
+  -webkit-transform: rotate(310deg);
+  -ms-transform: rotate(310deg);
+  transform: rotate(310deg);
+}
+.counters .radial-progress[data-progress="156"] .circle .mask.full {
+  -webkit-transform: rotate(156deg);
+  -ms-transform: rotate(156deg);
+  transform: rotate(156deg);
+}
+.counters .radial-progress[data-progress="156"] .circle .fill {
+  -webkit-transform: rotate(156deg);
+  -ms-transform: rotate(156deg);
+  transform: rotate(156deg);
+}
+.counters .radial-progress[data-progress="156"] .circle .fill.fix {
+  -webkit-transform: rotate(312deg);
+  -ms-transform: rotate(312deg);
+  transform: rotate(312deg);
+}
+.counters .radial-progress[data-progress="157"] .circle .mask.full {
+  -webkit-transform: rotate(157deg);
+  -ms-transform: rotate(157deg);
+  transform: rotate(157deg);
+}
+.counters .radial-progress[data-progress="157"] .circle .fill {
+  -webkit-transform: rotate(157deg);
+  -ms-transform: rotate(157deg);
+  transform: rotate(157deg);
+}
+.counters .radial-progress[data-progress="157"] .circle .fill.fix {
+  -webkit-transform: rotate(314deg);
+  -ms-transform: rotate(314deg);
+  transform: rotate(314deg);
+}
+.counters .radial-progress[data-progress="158"] .circle .mask.full {
+  -webkit-transform: rotate(158deg);
+  -ms-transform: rotate(158deg);
+  transform: rotate(158deg);
+}
+.counters .radial-progress[data-progress="158"] .circle .fill {
+  -webkit-transform: rotate(158deg);
+  -ms-transform: rotate(158deg);
+  transform: rotate(158deg);
+}
+.counters .radial-progress[data-progress="158"] .circle .fill.fix {
+  -webkit-transform: rotate(316deg);
+  -ms-transform: rotate(316deg);
+  transform: rotate(316deg);
+}
+.counters .radial-progress[data-progress="159"] .circle .mask.full {
+  -webkit-transform: rotate(159deg);
+  -ms-transform: rotate(159deg);
+  transform: rotate(159deg);
+}
+.counters .radial-progress[data-progress="159"] .circle .fill {
+  -webkit-transform: rotate(159deg);
+  -ms-transform: rotate(159deg);
+  transform: rotate(159deg);
+}
+.counters .radial-progress[data-progress="159"] .circle .fill.fix {
+  -webkit-transform: rotate(318deg);
+  -ms-transform: rotate(318deg);
+  transform: rotate(318deg);
+}
+.counters .radial-progress[data-progress="160"] .circle .mask.full {
+  -webkit-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+}
+.counters .radial-progress[data-progress="160"] .circle .fill {
+  -webkit-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+}
+.counters .radial-progress[data-progress="160"] .circle .fill.fix {
+  -webkit-transform: rotate(320deg);
+  -ms-transform: rotate(320deg);
+  transform: rotate(320deg);
+}
+.counters .radial-progress[data-progress="161"] .circle .mask.full {
+  -webkit-transform: rotate(161deg);
+  -ms-transform: rotate(161deg);
+  transform: rotate(161deg);
+}
+.counters .radial-progress[data-progress="161"] .circle .fill {
+  -webkit-transform: rotate(161deg);
+  -ms-transform: rotate(161deg);
+  transform: rotate(161deg);
+}
+.counters .radial-progress[data-progress="161"] .circle .fill.fix {
+  -webkit-transform: rotate(322deg);
+  -ms-transform: rotate(322deg);
+  transform: rotate(322deg);
+}
+.counters .radial-progress[data-progress="162"] .circle .mask.full {
+  -webkit-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.counters .radial-progress[data-progress="162"] .circle .fill {
+  -webkit-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.counters .radial-progress[data-progress="162"] .circle .fill.fix {
+  -webkit-transform: rotate(324deg);
+  -ms-transform: rotate(324deg);
+  transform: rotate(324deg);
+}
+.counters .radial-progress[data-progress="163"] .circle .mask.full {
+  -webkit-transform: rotate(163deg);
+  -ms-transform: rotate(163deg);
+  transform: rotate(163deg);
+}
+.counters .radial-progress[data-progress="163"] .circle .fill {
+  -webkit-transform: rotate(163deg);
+  -ms-transform: rotate(163deg);
+  transform: rotate(163deg);
+}
+.counters .radial-progress[data-progress="163"] .circle .fill.fix {
+  -webkit-transform: rotate(326deg);
+  -ms-transform: rotate(326deg);
+  transform: rotate(326deg);
+}
+.counters .radial-progress[data-progress="164"] .circle .mask.full {
+  -webkit-transform: rotate(164deg);
+  -ms-transform: rotate(164deg);
+  transform: rotate(164deg);
+}
+.counters .radial-progress[data-progress="164"] .circle .fill {
+  -webkit-transform: rotate(164deg);
+  -ms-transform: rotate(164deg);
+  transform: rotate(164deg);
+}
+.counters .radial-progress[data-progress="164"] .circle .fill.fix {
+  -webkit-transform: rotate(328deg);
+  -ms-transform: rotate(328deg);
+  transform: rotate(328deg);
+}
+.counters .radial-progress[data-progress="165"] .circle .mask.full {
+  -webkit-transform: rotate(165deg);
+  -ms-transform: rotate(165deg);
+  transform: rotate(165deg);
+}
+.counters .radial-progress[data-progress="165"] .circle .fill {
+  -webkit-transform: rotate(165deg);
+  -ms-transform: rotate(165deg);
+  transform: rotate(165deg);
+}
+.counters .radial-progress[data-progress="165"] .circle .fill.fix {
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+.counters .radial-progress[data-progress="166"] .circle .mask.full {
+  -webkit-transform: rotate(166deg);
+  -ms-transform: rotate(166deg);
+  transform: rotate(166deg);
+}
+.counters .radial-progress[data-progress="166"] .circle .fill {
+  -webkit-transform: rotate(166deg);
+  -ms-transform: rotate(166deg);
+  transform: rotate(166deg);
+}
+.counters .radial-progress[data-progress="166"] .circle .fill.fix {
+  -webkit-transform: rotate(332deg);
+  -ms-transform: rotate(332deg);
+  transform: rotate(332deg);
+}
+.counters .radial-progress[data-progress="167"] .circle .mask.full {
+  -webkit-transform: rotate(167deg);
+  -ms-transform: rotate(167deg);
+  transform: rotate(167deg);
+}
+.counters .radial-progress[data-progress="167"] .circle .fill {
+  -webkit-transform: rotate(167deg);
+  -ms-transform: rotate(167deg);
+  transform: rotate(167deg);
+}
+.counters .radial-progress[data-progress="167"] .circle .fill.fix {
+  -webkit-transform: rotate(334deg);
+  -ms-transform: rotate(334deg);
+  transform: rotate(334deg);
+}
+.counters .radial-progress[data-progress="168"] .circle .mask.full {
+  -webkit-transform: rotate(168deg);
+  -ms-transform: rotate(168deg);
+  transform: rotate(168deg);
+}
+.counters .radial-progress[data-progress="168"] .circle .fill {
+  -webkit-transform: rotate(168deg);
+  -ms-transform: rotate(168deg);
+  transform: rotate(168deg);
+}
+.counters .radial-progress[data-progress="168"] .circle .fill.fix {
+  -webkit-transform: rotate(336deg);
+  -ms-transform: rotate(336deg);
+  transform: rotate(336deg);
+}
+.counters .radial-progress[data-progress="169"] .circle .mask.full {
+  -webkit-transform: rotate(169deg);
+  -ms-transform: rotate(169deg);
+  transform: rotate(169deg);
+}
+.counters .radial-progress[data-progress="169"] .circle .fill {
+  -webkit-transform: rotate(169deg);
+  -ms-transform: rotate(169deg);
+  transform: rotate(169deg);
+}
+.counters .radial-progress[data-progress="169"] .circle .fill.fix {
+  -webkit-transform: rotate(338deg);
+  -ms-transform: rotate(338deg);
+  transform: rotate(338deg);
+}
+.counters .radial-progress[data-progress="170"] .circle .mask.full {
+  -webkit-transform: rotate(170deg);
+  -ms-transform: rotate(170deg);
+  transform: rotate(170deg);
+}
+.counters .radial-progress[data-progress="170"] .circle .fill {
+  -webkit-transform: rotate(170deg);
+  -ms-transform: rotate(170deg);
+  transform: rotate(170deg);
+}
+.counters .radial-progress[data-progress="170"] .circle .fill.fix {
+  -webkit-transform: rotate(340deg);
+  -ms-transform: rotate(340deg);
+  transform: rotate(340deg);
+}
+.counters .radial-progress[data-progress="171"] .circle .mask.full {
+  -webkit-transform: rotate(171deg);
+  -ms-transform: rotate(171deg);
+  transform: rotate(171deg);
+}
+.counters .radial-progress[data-progress="171"] .circle .fill {
+  -webkit-transform: rotate(171deg);
+  -ms-transform: rotate(171deg);
+  transform: rotate(171deg);
+}
+.counters .radial-progress[data-progress="171"] .circle .fill.fix {
+  -webkit-transform: rotate(342deg);
+  -ms-transform: rotate(342deg);
+  transform: rotate(342deg);
+}
+.counters .radial-progress[data-progress="172"] .circle .mask.full {
+  -webkit-transform: rotate(172deg);
+  -ms-transform: rotate(172deg);
+  transform: rotate(172deg);
+}
+.counters .radial-progress[data-progress="172"] .circle .fill {
+  -webkit-transform: rotate(172deg);
+  -ms-transform: rotate(172deg);
+  transform: rotate(172deg);
+}
+.counters .radial-progress[data-progress="172"] .circle .fill.fix {
+  -webkit-transform: rotate(344deg);
+  -ms-transform: rotate(344deg);
+  transform: rotate(344deg);
+}
+.counters .radial-progress[data-progress="173"] .circle .mask.full {
+  -webkit-transform: rotate(173deg);
+  -ms-transform: rotate(173deg);
+  transform: rotate(173deg);
+}
+.counters .radial-progress[data-progress="173"] .circle .fill {
+  -webkit-transform: rotate(173deg);
+  -ms-transform: rotate(173deg);
+  transform: rotate(173deg);
+}
+.counters .radial-progress[data-progress="173"] .circle .fill.fix {
+  -webkit-transform: rotate(346deg);
+  -ms-transform: rotate(346deg);
+  transform: rotate(346deg);
+}
+.counters .radial-progress[data-progress="174"] .circle .mask.full {
+  -webkit-transform: rotate(174deg);
+  -ms-transform: rotate(174deg);
+  transform: rotate(174deg);
+}
+.counters .radial-progress[data-progress="174"] .circle .fill {
+  -webkit-transform: rotate(174deg);
+  -ms-transform: rotate(174deg);
+  transform: rotate(174deg);
+}
+.counters .radial-progress[data-progress="174"] .circle .fill.fix {
+  -webkit-transform: rotate(348deg);
+  -ms-transform: rotate(348deg);
+  transform: rotate(348deg);
+}
+.counters .radial-progress[data-progress="175"] .circle .mask.full {
+  -webkit-transform: rotate(175deg);
+  -ms-transform: rotate(175deg);
+  transform: rotate(175deg);
+}
+.counters .radial-progress[data-progress="175"] .circle .fill {
+  -webkit-transform: rotate(175deg);
+  -ms-transform: rotate(175deg);
+  transform: rotate(175deg);
+}
+.counters .radial-progress[data-progress="175"] .circle .fill.fix {
+  -webkit-transform: rotate(350deg);
+  -ms-transform: rotate(350deg);
+  transform: rotate(350deg);
+}
+.counters .radial-progress[data-progress="176"] .circle .mask.full {
+  -webkit-transform: rotate(176deg);
+  -ms-transform: rotate(176deg);
+  transform: rotate(176deg);
+}
+.counters .radial-progress[data-progress="176"] .circle .fill {
+  -webkit-transform: rotate(176deg);
+  -ms-transform: rotate(176deg);
+  transform: rotate(176deg);
+}
+.counters .radial-progress[data-progress="176"] .circle .fill.fix {
+  -webkit-transform: rotate(352deg);
+  -ms-transform: rotate(352deg);
+  transform: rotate(352deg);
+}
+.counters .radial-progress[data-progress="177"] .circle .mask.full {
+  -webkit-transform: rotate(177deg);
+  -ms-transform: rotate(177deg);
+  transform: rotate(177deg);
+}
+.counters .radial-progress[data-progress="177"] .circle .fill {
+  -webkit-transform: rotate(177deg);
+  -ms-transform: rotate(177deg);
+  transform: rotate(177deg);
+}
+.counters .radial-progress[data-progress="177"] .circle .fill.fix {
+  -webkit-transform: rotate(354deg);
+  -ms-transform: rotate(354deg);
+  transform: rotate(354deg);
+}
+.counters .radial-progress[data-progress="178"] .circle .mask.full {
+  -webkit-transform: rotate(178deg);
+  -ms-transform: rotate(178deg);
+  transform: rotate(178deg);
+}
+.counters .radial-progress[data-progress="178"] .circle .fill {
+  -webkit-transform: rotate(178deg);
+  -ms-transform: rotate(178deg);
+  transform: rotate(178deg);
+}
+.counters .radial-progress[data-progress="178"] .circle .fill.fix {
+  -webkit-transform: rotate(356deg);
+  -ms-transform: rotate(356deg);
+  transform: rotate(356deg);
+}
+.counters .radial-progress[data-progress="179"] .circle .mask.full {
+  -webkit-transform: rotate(179deg);
+  -ms-transform: rotate(179deg);
+  transform: rotate(179deg);
+}
+.counters .radial-progress[data-progress="179"] .circle .fill {
+  -webkit-transform: rotate(179deg);
+  -ms-transform: rotate(179deg);
+  transform: rotate(179deg);
+}
+.counters .radial-progress[data-progress="179"] .circle .fill.fix {
+  -webkit-transform: rotate(358deg);
+  -ms-transform: rotate(358deg);
+  transform: rotate(358deg);
+}
+.counters .radial-progress[data-progress="180"] .circle .mask.full {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.counters .radial-progress[data-progress="180"] .circle .fill {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.counters .radial-progress[data-progress="180"] .circle .fill.fix {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}

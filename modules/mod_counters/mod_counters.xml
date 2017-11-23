@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>mod_counters</name>
+	<author>TemplateMonster</author>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (c) 2012-2015 by TemplateMonster - www.templatemonster.com</copyright>
+	<license>Licensed under the GNU/GPLv2:  http://www.opensource.org/licenses/mit-license.php</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.templatemonster.com</authorUrl>
+	<version>1.0.1</version>
+	<description>MOD_COUNTERS_XML_DESCRIPTION</description>
+
+
+	<files>
+		<filename module="mod_counters">mod_counters.php</filename>
+		<filename>mod_counters.xml</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_counters.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_counters.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="date" type="calendar" default="" label="Select a date" description="" format="%Y-%m-%d %H:%M:%S" />
+
+				<field name="max_dim" type="list" default="3" label="Max dimension" description="Select an option">
+				  <!--<option value="5">Years</option>
+				  <option value="4">Months</option>-->
+				  <option value="3">Days</option>
+				  <option value="2">Hours</option>
+				  <option value="1">Minutes</option>
+				  <option value="0">Seconds</option>
+				</field>
+
+				<field name="min_dim" type="list" default="0" label="Min dimension" description="Select an option">
+				  <!--<option value="5">Years</option>
+				  <option value="4">Months</option>-->
+				  <option value="3">Days</option>
+				  <option value="2">Hours</option>
+				  <option value="1">Minutes</option>
+				  <option value="0">Seconds</option>
+				</field>
+
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

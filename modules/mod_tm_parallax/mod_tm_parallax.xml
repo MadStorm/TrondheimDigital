@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>TM Parallax</name>
+    <author>TemplateMonster</author>
+    <creationDate>Jule 2015</creationDate>
+    <copyright>Copyright (c) 2012-2015 by TemplateMonster - www.templatemonster.com</copyright>
+    <license>Licensed under the GNU/GPLv2:  http://www.opensource.org/licenses/mit-license.php</license>
+    <authorEmail></authorEmail>
+    <authorUrl>www.templatemonster.com</authorUrl>
+    <version>1.0.0</version>
+	<description>Module allows you to create background image with parallax scrolling effect</description>
+
+	<customContent />
+
+	<files>
+		<filename module="mod_tm_parallax">mod_tm_parallax.php</filename>
+		<filename>mod_tm_parallax.xml</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_tm_parallax.ini</language>
+		<language tag="en-GB">en-GB.mod_tm_parallax.sys.ini</language>
+	</languages>
+
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_CUSTOM_HTML" />
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+					name="prepare_content"
+					type="radio"
+					class="btn-group btn-group-yesno"
+                    label="MOD_TM_PARALLAX_FIELD_PREPARE_CONTENT_LABEL"
+                    description="MOD_TM_PARALLAX_FIELD_PREPARE_CONTENT_DESC"
+					default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+                <field name="backgroundimage" type="media"
+                       label="MOD_TM_PARALLAX_FIELD_BACKGROUNDIMAGE_LABEL" description="MOD_BACKGROUNDIMAGE_FIELD_LOGO_DESC" />
+                <field
+                        name="speed"
+                        type="text"
+                        default="0.8"
+                        label="MOD_TM_PARALLAX_FIELD_SPEED_LABEL"
+                        description="MOD_TM_PARALLAX_FIELD_SPEED_DESC" />
+
+                <field
+                        name="direction"
+                        type="list"
+                        default="1"
+                        label="MOD_TM_PARALLAX_FIELD_DIRECTION_LABEL"
+                        description="MOD_TM_PARALLAX_FIELD_DIRECTION_DESC">
+                    <option
+                            value="1">Normal</option>
+                    <option
+                            value="0">Inverse</option>
+                </field>
+
+                <field
+                        name="mobile"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        label="MOD_TM_PARALLAX_FIELD_MOBILE_LABEL"
+                        description="MOD_TM_PARALLAX_FIELD_MOBILE_DESC"
+                        default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="blur"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        label="MOD_TM_PARALLAX_FIELD_BLUR_LABEL"
+                        description="MOD_TM_PARALLAX_FIELD_BLUR_DESC"
+                        default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+
+				<field
+					type="textarea"
+					name="pretext"
+					rows="5"
+					cols="5"
+					label="MOD_TM_PARALLAX_FIELD_PRETEXT_LABEL"
+					description="MOD_TM_PARALLAX_FIELD_PRETEXT_DESC">
+				</field>
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
